@@ -1,0 +1,247 @@
+.header
+    background-color: $main_color
+    height: 132px
+    padding: 25px 150px 46px 150px
+    color: $white
+    &_nav
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &_logo_title
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+        -webkit-text-stroke: 1px $black
+    &_menu
+        margin-left: 150px
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        grid-column-gap: 87px
+        &_item
+            .link
+                color: $white
+    &_btns
+        display: flex
+        justify-content: space-between
+        font-size: 16px
+        .btn:not(:first-child)
+            margin-left: 5px
+            .link
+                color: $white
+
+ul
+    margin: 0
+    list-style-type: none
+
+.logo
+    display: flex
+    justify-content: space-between
+    align-items: center
+    &_title
+        font-weight: 700
+        font-size: 30px
+        margin-left: 10px
+
+.container
+    width: 1620px
+    margin: 0 auto
+
+.title
+    font-weight: 700
+    font-size: 50px
+    color: $text_color
+
+.link
+    font-weight: 500
+    font-size: 17px
+    text-decoration: none
+    cursor: pointer
+
+.text
+    font-weight: 400
+    font-size: 18px
+    color: $text_color
+    line-height: 26px
+
+.btn
+    display: flex
+    align-items: center
+    justify-content: center
+    border: 2px solid $white
+    border-radius: 30px
+    font-weight: 700
+    padding: 0px 40px
+    height: 60px
+    cursor: pointer
+
+.btn_white
+    background: $white
+    color: $text_color
+
+.btn_red
+    background: $form_btn_color
+    border: $form_btn_color
+    color: $white
+
+.btn_transparent
+    background: none
+    color: $white
+
+.input
+    background: $white
+    border-radius: 50px
+    height: 60px
+    border: none
+    padding: 0px 30px
+    margin-right: 10px
+    font-size: 18px
+
+.promo
+    min-height: 768px
+    background: url('../img/promo.jpg') center center/cover no-repeat
+    color: $white
+    padding-top: 185px
+    position: relative
+    &_block
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        filter: drop-shadow(0px 0px 100px $text_color)
+    &_title
+        font-weight: 700
+        font-size: 90px
+    &_subtitle
+        font-weight: 400
+        font-size: 24px
+        margin-top: 30px
+    &_btn
+        margin-top: 40px
+        padding: 0px 50px
+        height: 70px
+        font-size: 18px
+    &_mask
+        position: absolute
+        left: 0
+        bottom: 0
+        min-height: 258px
+        width: 100%
+        background: url('../img/mask.png') center center/cover no-repeat
+
+.about
+    min-height: 527px
+    padding: 41px 0
+    &_container
+        display: flex
+    &_text
+        width: 804px
+        margin-right: 100px
+    .text
+        margin-top: 19px
+
+.advantages
+    min-height: 587px
+    background-color: $bg_color
+    padding-top: 30px
+
+.paid
+    min-height: 331px
+    background-color: $bg_color
+    &_services
+        margin-top: 50px
+        display: grid
+        grid-template-columns: repeat(5, 1fr)
+        gap: 114px
+        &_item
+            height: 70px
+.form
+    background-color: transparent
+    min-height: 340px
+    margin-bottom: 150px
+    .container
+        position: relative
+    &_group
+        background-color: $form_color
+        width: 100%
+        top: 0
+        border-radius: 60px
+        padding: 100px 90px
+        display: grid
+        grid-template-columns: 236px 1fr
+        gap: 50px
+    &_container
+        width: 1800px
+    &_title
+        color: $white
+    &_block
+        display: grid
+        grid-template-rows: repeat(2, 60px)
+        grid-row-gap: 20px
+        align-items: flex-start
+    &_btns
+        display: grid
+        grid-column-gap: 10px
+        grid-template-columns: repeat(2, 150px)
+    &_inputs
+        display: grid
+        grid-column-gap: 10px
+        grid-template-columns: repeat(2, 300px) 1fr 150px
+
+.background
+    background: url('../img/footer.jpg') center center/cover no-repeat
+    min-height: 570px
+    width: 100%
+    z-index: -1
+    position: absolute
+    bottom: 0
+    left: 0
+.footer
+    min-height: 150px
+    width: 100%
+    background: transparent
+    &_nav
+        display: grid
+        color: $footer_color
+        grid-template-columns: 265px 650px 1fr
+        grid-template-rows: 50px
+        grid-column-gap: 114px
+    &_menu
+        display: grid
+        grid-template-columns: repeat(6, auto)
+        grid-column-gap: 50px
+        align-content: center
+        &_item
+            .link
+                color: $footer_color
+    &_socials
+        display: grid
+        grid-template-columns: repeat(3, auto)
+        grid-column-gap: 32px
+        align-content: center
+        &_item
+            display: flex
+            justify-content: center
+            align-items: center
+            .link
+                color: $footer_color
+                margin-left: 11px
+    &_info
+        margin-top: 60px
+        color: $footer_color
+        font-weight: 400
+        display: flex
+        justify-content: space-between
+        &_terms
+            .link
+                color: $footer_color
+                font-weight: 400
+
+.terms
+    padding: 75px 0 112px 0
+    h1
+        font-size: 50px
+        color: $text_color
+    h2
+        margin-top: 30px
+        font-size: 18px
+    &_text
+        margin-top: 30px
+    &_header
+        height: 100px
