@@ -9,7 +9,6 @@
         align-items: center
     &_logo_title
         text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
-        -webkit-text-stroke: 1px $black
     &_menu
         margin-left: 150px
         display: grid
@@ -72,6 +71,9 @@ ul
     height: 60px
     cursor: pointer
 
+.signup_img
+    margin-right: 10px
+
 .btn_white
     background: $white
     color: $text_color
@@ -102,6 +104,8 @@ ul
     position: relative
     &_block
         display: flex
+        position: relative
+        z-index: 5
         flex-direction: column
         align-items: flex-start
         filter: drop-shadow(0px 0px 100px $text_color)
@@ -113,16 +117,20 @@ ul
         font-size: 24px
         margin-top: 30px
     &_btn
-        margin-top: 40px
         padding: 0px 50px
         height: 70px
         font-size: 18px
+    .btn_white
+        position: absolute
+        z-index: 5
+        bottom: -110px
     &_mask
         position: absolute
         left: 0
         bottom: 0
         min-height: 258px
         width: 100%
+        z-index: 1
         background: url('../img/mask.png') center center/cover no-repeat
 
 .about
@@ -140,6 +148,49 @@ ul
     min-height: 587px
     background-color: $bg_color
     padding-top: 30px
+    &_container
+        width: 1800px
+    &_slider
+        margin-top: 50px
+        &_wrap
+            display: grid
+            grid-template-columns: repeat(5, 1fr)
+            grid-template-rows: auto
+            grid-column-gap: 30px
+            overflow: hidden
+            width: 100%
+        &_item
+            background-color: $white
+            position: relative
+            border-radius: 60px
+            padding: 40px
+            text-align: start
+        &_title
+            font-size: 24px
+            font-weight: 700
+            margin-top: 50px
+        &_text
+            margin-top: 10px
+        &_nav
+            display: flex
+            justify-content: center
+            margin-top: 30px
+            gap: 40px
+        &_button
+            border: none
+            cursor: pointer
+        &_dots
+            display: flex
+            justify-content: space-between
+            gap: 40px
+        &_dot
+            width: 16px
+            height: 16px
+            border-radius: 100%
+            background-color: $slider_color
+            cursor: pointer
+        &_dot_active
+            background-color: $form_btn_color
 
 .paid
     min-height: 331px
