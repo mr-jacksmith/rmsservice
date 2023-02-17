@@ -2,13 +2,12 @@ section
     width: 100vw
     height: 100vh
     padding-top: calc(1vh * 53.86/10.8)
-    background: rgb(22,27,34)
-    background: linear-gradient(185deg, rgba(22,27,34,1) 0%, rgba(32,46,67,1) 76%, rgba(13,23,37,1) 100%) 
-    background-image: url("../img/clouds.png")
-
+    background: url("../img/clouds.png") 50% 50% no-repeat fixed, linear-gradient(180deg, rgba(22,27,34,0.5) 0%, rgba(32,46,67,1) 50%, rgba(13,23,37,1) 100%), url("../img/stars.png") 50% 0% no-repeat fixed
+    background-size: cover, auto, 100%
 
     nav
-        background-color: #ffacac
+        color: #828282
+        text-transform: uppercase
         width: calc(1vw * 1518.09/19.2)
         height: calc(1vw * 42.29/19.2)
         margin: 0 auto calc(1vh * 85.86/10.8) auto
@@ -18,10 +17,33 @@ section
         flex-wrap: wrap
         .logo
             width: calc(1vw * 183/19.2)
+            height: calc(1vh * 42/10.8)
+            img
+                width: 100%
+                height: 100%
         .links
             display: flex
             justify-content: space-between
+            align-content: center
+            flex-wrap: wrap
             gap: calc(1vw * 56/19.2)
+            div
+                a
+                    text-decoration: none
+                    color: #828282
+                    transition: all 0.5s
+                    &:hover
+                        color: white
+        .phone-number
+            display: flex
+            align-content: center
+            flex-wrap: wrap
+            color: white
+            img
+                width: calc(1vw * 22/19.2)
+                margin-right: calc(1vw * 11/19.2)
+        .burger
+            display: none
 
     .h1
         width: calc(1vw * 1264/19.2)
@@ -31,47 +53,96 @@ section
         display: flex
         justify-content: center
         align-content: center
+        color: white
         h1
             text-transform: uppercase
             /* Исправить на em */
-            font-size: 42px
+            font-size: 2.625em
+            font-family: "AvenirNextCyr-Light"
+            font-weight: lighter
         strong
-            font-family: "AvenirNextCyr-Bold"
+            font-family: "AvenirNextCyr-Medium"
     .choice
         margin: 0 auto
-        background-color: #c52121
         width: calc(1vw * 1520/19.2)
         height: calc(1vh * 667/10.8)
         display: flex
         justify-content: space-between
         hgroup
             text-transform: uppercase
+            h2
+                font-size: 36px
+                font-family: "AvenirNextCyr-Medium"
+                color: #63AFCD
+            h3
+                font-size: 24px
+                font-family: "AvenirNextCyr-Light"
+                font-weight: lighter
+                color: white
+        &_item
+            width: 50%
+            height: 100%
+            padding: calc(1vh * 60/10.8) calc(1vw * 53/19.2) calc(1vh * 41/10.8) calc(1vw * 58/19.2)
+            display: flex
+            flex-direction: column
+            flex-wrap: wrap
+            justify-content: space-between
+            background-color: transparent
+            background-size: 100%
+            background-repeat: no-repeat
+            background-position: center center
+            border: calc(1vw * 2/19.2) solid transparent
+            position: relative
+            transition: all 0.5s
+            &:hover
+                border-image: linear-gradient(45deg, #63AFCD 0%, #495d7c00 35%, #495D7C00 65%, #63AFCD 100%)
+                border-image-slice: 1
+                background-color: #495d7c10
         &_private
-            background-color: #3dbaba
-            width: 50%
-            height: 100%
-            padding: calc(1vh * 60/10.8) calc(1vw * 53/19.2) calc(1vh * 41/10.8) calc(1vw * 58/19.2)
-            display: flex
-            flex-direction: column
-            flex-wrap: wrap
-            justify-content: space-between
+            background-image: url("../img/bg-private.png")
+            background-size: 92%
+            background-position: center 65%
         &_business
-            background-color: #003030
-            width: 50%
-            height: 100%
-            padding: calc(1vh * 60/10.8) calc(1vw * 53/19.2) calc(1vh * 41/10.8) calc(1vw * 58/19.2)
-            display: flex
-            flex-direction: column
-            flex-wrap: wrap
-            justify-content: space-between
+            background-image: url("../img/bg-business.png")
         .advantages
             width: 100%
             display: flex
             justify-content: space-between
             align-items: center
+            a
+                padding-inline: calc(1vw * 37/19.2)
+                padding-block: calc(1vh * 20/10.8)
+                border: calc(1vw * 1/19.2) solid #FF374F
+                border-radius: calc(1vw * 35/19.2)
+                text-decoration: none
+                color: white
+                transition: all 0.5s
+                &:hover
+                    background-color: #FF374F
             &_titles
                 display: flex
                 flex-wrap: wrap
                 width: calc(1vw * 450/19.2)
+                height: calc(1vh * 100/10.8)
+                justify-content: space-between
+                align-content: center
+                row-gap: calc(1vw * 20/19.2)
                 div
-                    width: 50%
+                    display: flex
+                    align-content: center
+                    flex-wrap: wrap
+                    &:nth-of-type(odd)
+                        width: 35%
+                    &:nth-of-type(even)
+                        width: 55%
+                    img
+                        width: calc(1vw * 30/19.2)
+                        height: calc(1vw * 30/19.2)
+                    div
+                        margin-left: calc(1vw * 20/19.2)
+                        font-family: "AvenirNextCyr-Medium"
+                        color: white
+                        display: flex
+                        margin-block-start: 0
+                        margin-block-end: 0
+                        white-space: nowrap
