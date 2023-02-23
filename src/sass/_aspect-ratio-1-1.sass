@@ -1,0 +1,88 @@
+@media only screen and (max-aspect-ratio: 1/1)
+    body
+        font-size: 16px
+    section.tech-future
+        padding-top: calc(1vw * 30/3.6)
+        padding-bottom: calc(1vw * 75/3.6)
+        min-height: 200vh
+        background-size: 500%, auto, auto 150% !important
+        nav
+            width: 88.89vw
+            margin-bottom: calc(1vw * 62/3.6) 
+            .logo
+                width: calc(1vw * 154/3.6)
+                height: calc(1vw * 35/3.6)
+                a
+                    height: 100%
+                    img
+                        width: auto
+                        height: 100%
+            .links
+                display: none
+            div .phone-number
+                justify-self: flex-end
+                margin-right: calc(1vw * 26/3.6)
+                img
+                    width: auto
+                    height: 5.5555555556vw
+                div
+                    display: none
+            div .burger
+                display: flex
+        .h1
+            display: flex
+            width: 80vw
+            margin-bottom: calc(1vw * 40/3.6)
+            h1
+                text-align: center
+                line-height: calc(1vw * 36/3.6)
+                font-size: calc(1vw * 26/3.6)
+        .choice
+            width: 88.89vw
+            height: calc(1vh * 860/6.1)
+            flex-direction: column
+            &_item
+                width: 100%
+                .hgroup
+                    h2
+                        font-size: 1.625em
+                    h3
+                        font-size: 1em
+                &:hover
+                    &::before
+                        z-index: -1
+                        background: none
+        .choice .choice_private
+            background-size: 90%
+            background-position: 60% 35%
+        .choice .choice_business
+            background-size: 115%
+            background-position: 70% 20%
+        .choice .choice_item
+            height: calc(1vh * 408/6.1)
+            &:hover
+                background-color: transparent
+        .choice .choice_item .advantages
+                flex-direction: column
+                align-items: flex-start
+                row-gap: 1.625em
+                a
+                    font-size: 0.75em
+                    padding-inline: 2.25em 
+                    padding-block: 1em
+                    border-radius: calc(1vw * 35/3.6)
+                &_titles
+                    width: 100%
+                    flex-direction: row
+                    justify-content: space-between
+                    row-gap: 1em
+                    line-height: 1.25em
+                    div
+                        width: 35%
+                        align-items: center
+                        img
+                            width: calc(1vw * 14/3.6)
+                            height: calc(1vw * 14/3.6)
+                    div div
+                        margin-left: calc(1vw * 8/3.6)
+                        font-size: 0.75em

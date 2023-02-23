@@ -11,10 +11,26 @@
 
 <body>
     <section class="tech-future">
-        <div class="navigation">
+        <div id="hide-menu" class="hide-menu">
+            <div>
+                <div>
+                    <a href="#">ДЛЯ ДОМА</a>
+                    <a href="#">ДЛЯ БИЗНЕСА</a>
+                    <a href="#">ТЕХНОЛОГИЯ</a>
+                    <a href="#">КОНТАКТЫ</a>
+                </div>
+                <img src="./img/line.png" alt="line">
+                <div>
+                    <img src="./img/phone-hide-menu.png" alt="phone">
+                    <div>+1 (234) 567-89-01</div>
+                </div>
+            </div>
+        </div>
+        <div id="black-bg"></div>
+        <div id="navigation">
             <nav>
-                <div class="logo">
-                    <img src="./img/logo.png" alt="logo">
+                <div class="logo" id="logo">
+                    <a href="./index.html"><img src="./img/logo.png" alt="logo"></a>
                 </div>
                 <div class="links">
                     <div><a href="#">Для дома</a></div>
@@ -22,23 +38,25 @@
                     <div><a href="#">Технология</a></div>
                     <div><a href="#">Контакты</a></div>
                 </div>
-                <div class="phone-number">
-                    <img src="./img/phone.png" alt="phone">
-                    <div>+1 (234) 567-89-01</div>
-                </div>
-                <div class="burger">
-
+                <div class="num-burger">
+                    <div class="phone-number">
+                        <img src="./img/phone.png" alt="phone">
+                        <div>+1 (234) 567-89-01</div>
+                    </div>
+                    <div class="burger" id="burger">
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <script src="./js/burger.js"></script>
                 </div>
             </nav>
         </div>
         <div class="h1">
-            <h1>
-                Технологии будущего <strong>для любых целей</strong>
-            </h1>
+            <h1>Технологии будущего <strong>для любых целей</strong></h1>
         </div>
         <div class="choice">
             <div class="choice_item choice_private">
-                <hgroup>
+                <hgroup class="hgroup">
                     <h2>
                         CUBAX
                     </h2>
@@ -61,7 +79,7 @@
                             <div>Проекты</div>
                         </div>
                         <div>
-                            <img src="./img/variants.png" alt="variants">
+                            <img src="./img/design.png" alt="variants">
                             <div>Варианты дизайна</div>
                         </div>
                     </div>
@@ -69,7 +87,7 @@
                 </div>
             </div>
             <div class="choice_item choice_business">
-                <hgroup>
+                <hgroup class="hgroup">
                     <h2>
                         CUBAX
                     </h2>

@@ -1,15 +1,81 @@
-section
+html
+    font-size: 18px
+
+section.tech-future
     width: 100vw
     height: 100vh
     padding-top: calc(1vh * 53.86/10.8)
     background: url("../img/clouds.png") 50% 50% no-repeat fixed, linear-gradient(180deg, rgba(22,27,34,0.5) 0%, rgba(32,46,67,1) 50%, rgba(13,23,37,1) 100%), url("../img/stars.png") 50% 0% no-repeat fixed
-    background-size: cover, auto, 100%
-
+    background-size: cover, auto, auto 70%
+    .hide-menu
+        display: none
+        width: 100%
+        height: calc(1vw * 433/3.6)
+        background-color: white
+        position: fixed
+        top: 0
+        left: 0
+        z-index: 4
+        >div
+            padding-top: calc(1vw * 98/3.6)
+            width: 100%
+            margin: 0 auto
+            display: flex
+            flex-wrap: wrap
+            justify-content: center
+            align-content: flex-start
+            div:first-child
+                margin: 0 auto
+                margin-bottom: calc(1vw * 46/3.6)
+                display: flex
+                flex-wrap: wrap
+                width: calc(1vw * 123/3.6)
+                row-gap: calc(1vw * 42/3.6)
+                a
+                    display: block
+                    text-align: center
+                    width: 100%
+                    text-decoration: none
+                    color: #828282
+                    font-size: calc(1vw * 16/3.6)
+            >div:last-child
+                display: flex
+                width: 100%
+                height: calc(1vw * 22/3.6)
+                flex-wrap: nowrap
+                justify-content: center
+                align-items: center
+                margin-top: calc(1vw * 30/3.6)
+                img
+                    width: calc(1vw * 22/3.6)
+                    height: calc(1vw * 22/3.6)
+                    margin-right: calc(1vw * 13/3.6)
+                >div
+                    font-size: 4.44vw
+            >img
+                width: calc(1vw * 320/3.6)
+                height: 1px
+        &.active
+            display: block
+    #black-bg
+        display: none
+        position: fixed
+        z-index: 3
+        &.active
+            display: block
+            width: 100vw
+            height: 100vh
+            background-color: #00000066
+    #navigation
+        &.active
+            position: fixed
+            z-index: 4
+            width: 100%
     nav
         color: #828282
         text-transform: uppercase
         width: calc(1vw * 1518.09/19.2)
-        height: calc(1vw * 42.29/19.2)
+        min-height: calc(1vw * 42.29/19.2)
         margin: 0 auto calc(1vh * 85.86/10.8) auto
         display: flex
         justify-content: space-between
@@ -17,10 +83,17 @@ section
         flex-wrap: wrap
         .logo
             width: calc(1vw * 183/19.2)
-            height: calc(1vh * 42/10.8)
-            img
+            display: flex
+            flex-wrap: wrap
+            align-content: center
+            position: relative
+            z-index: 3
+            // &.active
+                // position: fixed
+            a img
                 width: 100%
-                height: 100%
+        &.active
+            margin: 0 auto
         .links
             display: flex
             justify-content: space-between
@@ -29,35 +102,69 @@ section
             gap: calc(1vw * 56/19.2)
             div
                 a
+                    font-size: 1em
                     text-decoration: none
                     color: #828282
                     transition: all 0.5s
                     &:hover
                         color: white
-        .phone-number
+        .num-burger
+                display: flex
+                flex-wrap: wrap
+                align-items: center
+        div .phone-number
             display: flex
-            align-content: center
+            align-items: center
             flex-wrap: wrap
             color: white
             img
                 width: calc(1vw * 22/19.2)
+                height: calc(1vw * 22/19.2)
                 margin-right: calc(1vw * 11/19.2)
-        .burger
+            div
+                font-size: 1em
+        div .burger
             display: none
-
+            width: calc(1vw * 32.5/3.6)
+            height: calc(1vw * 20/3.6)
+            flex-wrap: wrap
+            align-content: space-between
+            position: relative
+            z-index: 3
+            span
+                width: 100%
+                height: calc(1vw * 5/3.6)
+                border-radius: calc(1vw * 5/3.6)
+                background-color: #4899B9
+                transition: all 0.75s
+            &.active
+                // position: fixed
+                // right: calc(1vw * 5/3.6)
+                // top: calc(1vw * 35/3.6)
+                span
+                    &:nth-child(1)
+                        position: relative
+                        top: 38%
+                        transform: scale(0.5) translate(0%, 0%) rotate(45deg)
+                    &:nth-child(2)
+                        position: relative
+                        bottom: 38%
+                        transform: scale(0.5) translate(0%, 0%) rotate(-45deg)
     .h1
         width: calc(1vw * 1264/19.2)
-        height: calc(1vh * 68/10.8)
+        min-height: calc(1vh * 68/10.8)
         margin: 0 auto
         margin-bottom: calc(1vh * 68/10.8)
         display: flex
         justify-content: center
         align-content: center
         color: white
+        flex-wrap: wrap
+        align-content: flex-start
         h1
             text-transform: uppercase
             /* Исправить на em */
-            font-size: 2.625em
+            font-size: calc(1vw * 48/19.2)
             font-family: "AvenirNextCyr-Light"
             font-weight: lighter
         strong
@@ -69,39 +176,53 @@ section
         display: flex
         justify-content: space-between
         hgroup
+            position: relative
+            z-index: 2
             text-transform: uppercase
             h2
-                font-size: 36px
+                font-size: calc(1vw * 36/19.2)
                 font-family: "AvenirNextCyr-Medium"
                 color: #63AFCD
             h3
-                font-size: 24px
+                font-size: calc(1vw * 24/19.2)
                 font-family: "AvenirNextCyr-Light"
                 font-weight: lighter
                 color: white
         &_item
             width: 50%
             height: 100%
-            padding: calc(1vh * 60/10.8) calc(1vw * 53/19.2) calc(1vh * 41/10.8) calc(1vw * 58/19.2)
+            padding: calc(1vw * 60/19.2) calc(1vw * 53/19.2) calc(1vw * 41/19.2) calc(1vw * 58/19.2)
             display: flex
             flex-direction: column
             flex-wrap: wrap
             justify-content: space-between
             background-color: transparent
-            background-size: 100%
+            background-size: 80%
             background-repeat: no-repeat
             background-position: center center
             border: calc(1vw * 2/19.2) solid transparent
+            border-radius: calc(1vw * 30/19.2)
             position: relative
             transition: all 0.5s
+            z-index: 2
             &:hover
-                border-image: linear-gradient(45deg, #63AFCD 0%, #495d7c00 35%, #495D7C00 65%, #63AFCD 100%)
-                border-image-slice: 1
-                background-color: #495d7c10
+                background-color: #495d7c20
+                &::before
+                    content: ""
+                    padding: calc(1vw * 3/19.2)
+                    position: absolute
+                    inset: calc(0px - 3px)
+                    border-radius: calc(1vw * 33/19.2)
+                    background: linear-gradient(45deg, #63AFCD 0%, rgba(0,0,0,0) 35%, rgba(0,0,0,0) 65%, #63AFCD 100%)
+                    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)
+                    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)
+                    -webkit-mask-composite: xor
+                    mask-composite: exclude
+                    z-index: 1
         &_private
             background-image: url("../img/bg-private.png")
-            background-size: 92%
-            background-position: center 65%
+            background-size: 60%
+            background-position: center 55%
         &_business
             background-image: url("../img/bg-business.png")
         .advantages
@@ -110,6 +231,7 @@ section
             justify-content: space-between
             align-items: center
             a
+                font-size: 1em
                 padding-inline: calc(1vw * 37/19.2)
                 padding-block: calc(1vh * 20/10.8)
                 border: calc(1vw * 1/19.2) solid #FF374F
@@ -117,28 +239,33 @@ section
                 text-decoration: none
                 color: white
                 transition: all 0.5s
+                position: relative
+                z-index: 3
                 &:hover
                     background-color: #FF374F
             &_titles
                 display: flex
                 flex-wrap: wrap
                 width: calc(1vw * 450/19.2)
-                height: calc(1vh * 100/10.8)
+                min-height: calc(1vh * 100/10.8)
                 justify-content: space-between
                 align-content: center
                 row-gap: calc(1vw * 20/19.2)
+                column-gap: calc(1vw * 20/19.2)
+                margin-right: 1em
                 div
                     display: flex
                     align-content: center
                     flex-wrap: wrap
                     &:nth-of-type(odd)
-                        width: 35%
+                        min-width: 35%
                     &:nth-of-type(even)
-                        width: 55%
+                        min-width: 55%
                     img
                         width: calc(1vw * 30/19.2)
                         height: calc(1vw * 30/19.2)
                     div
+                        font-size: 1em
                         margin-left: calc(1vw * 20/19.2)
                         font-family: "AvenirNextCyr-Medium"
                         color: white
