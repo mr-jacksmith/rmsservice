@@ -1,12 +1,10 @@
 html
     font-size: 18px
 
-section.tech-future
-    width: 100vw
+section
+    width: 100%
     height: 100vh
-    padding-top: calc(1vh * 53.86/10.8)
-    background: url("../img/clouds.png") 50% 50% no-repeat fixed, linear-gradient(180deg, rgba(22,27,34,0.5) 0%, rgba(32,46,67,1) 50%, rgba(13,23,37,1) 100%), url("../img/stars.png") 50% 0% no-repeat fixed
-    background-size: cover, auto, auto 70%
+    // padding-top: calc(1vh * 53.86/10.8)
     .hide-menu
         display: none
         width: 100%
@@ -63,20 +61,24 @@ section.tech-future
         z-index: 3
         &.active
             display: block
-            width: 100vw
+            width: 100%
             height: 100vh
-            background-color: #00000066
-    #navigation
+            background-color: #0000007f
+    .navigation
         &.active
             position: fixed
             z-index: 4
             width: 100%
+        display: flex
+        align-items: flex-end
+        height: calc(1vh * 90/10.8)
+        margin-bottom: calc(1vh * 85.86/10.8)
     nav
         color: #828282
         text-transform: uppercase
         width: calc(1vw * 1518.09/19.2)
         min-height: calc(1vw * 42.29/19.2)
-        margin: 0 auto calc(1vh * 85.86/10.8) auto
+        margin: 0 auto
         display: flex
         justify-content: space-between
         align-content: center
@@ -88,8 +90,6 @@ section.tech-future
             align-content: center
             position: relative
             z-index: 3
-            // &.active
-                // position: fixed
             a img
                 width: 100%
         &.active
@@ -109,9 +109,9 @@ section.tech-future
                     &:hover
                         color: white
         .num-burger
-                display: flex
-                flex-wrap: wrap
-                align-items: center
+            display: flex
+            flex-wrap: wrap
+            align-items: center
         div .phone-number
             display: flex
             align-items: center
@@ -138,138 +138,435 @@ section.tech-future
                 background-color: #4899B9
                 transition: all 0.75s
             &.active
-                // position: fixed
-                // right: calc(1vw * 5/3.6)
-                // top: calc(1vw * 35/3.6)
                 span
                     &:nth-child(1)
                         position: relative
-                        top: 38%
+                        top: 37.5%
                         transform: scale(0.5) translate(0%, 0%) rotate(45deg)
                     &:nth-child(2)
                         position: relative
-                        bottom: 38%
+                        bottom: 39%
                         transform: scale(0.5) translate(0%, 0%) rotate(-45deg)
-    .h1
-        width: calc(1vw * 1264/19.2)
-        min-height: calc(1vh * 68/10.8)
-        margin: 0 auto
-        margin-bottom: calc(1vh * 68/10.8)
-        display: flex
-        justify-content: center
-        align-content: center
-        color: white
-        flex-wrap: wrap
-        align-content: flex-start
-        h1
-            text-transform: uppercase
-            /* Исправить на em */
-            font-size: calc(1vw * 48/19.2)
-            font-family: "AvenirNextCyr-Light"
-            font-weight: lighter
-        strong
-            font-family: "AvenirNextCyr-Medium"
-    .choice
-        margin: 0 auto
-        width: calc(1vw * 1520/19.2)
-        height: calc(1vh * 667/10.8)
-        display: flex
-        justify-content: space-between
-        hgroup
-            position: relative
-            z-index: 2
-            text-transform: uppercase
-            h2
-                font-size: calc(1vw * 36/19.2)
-                font-family: "AvenirNextCyr-Medium"
-                color: #63AFCD
-            h3
-                font-size: calc(1vw * 24/19.2)
+    &.buildings
+        background: url("../img/bg-first-top.png") 85% 80% no-repeat local, url("../img/bg-first.png") 50% 50% no-repeat local
+        background-size: 85%, cover
+        nav
+            .num-burger
+                .phone-number
+                    div
+                        color: black
+            .links
+                div
+                    a
+                        &:hover
+                            color: black
+        div.h1
+            width: calc(1vw * 1264/19.2)
+            margin: 0 auto
+            text-align: center
+            h1
                 font-family: "AvenirNextCyr-Light"
-                font-weight: lighter
-                color: white
-        &_item
-            width: 50%
-            height: 100%
-            padding: calc(1vw * 60/19.2) calc(1vw * 53/19.2) calc(1vw * 41/19.2) calc(1vw * 58/19.2)
+                text-transform: uppercase
+                font-size: calc(1vw * 42/19.2)
+                line-height: 1.5em
+                letter-spacing: 0.08em
+                span
+                    font-family: "AvenirNextCyr-Medium"
+        .scroll-down
+            width: calc(1vw * 1530/19.2)
+            margin: 0 auto
+            height: calc(1vh * 374/10.8)
             display: flex
-            flex-direction: column
-            flex-wrap: wrap
-            justify-content: space-between
-            background-color: transparent
-            background-size: 80%
-            background-repeat: no-repeat
-            background-position: center center
-            border: calc(1vw * 2/19.2) solid transparent
-            border-radius: calc(1vw * 30/19.2)
-            position: relative
-            transition: all 0.5s
-            z-index: 2
-            &:hover
-                background-color: #495d7c20
-                &::before
-                    content: ""
-                    padding: calc(1vw * 3/19.2)
-                    position: absolute
-                    inset: calc(0px - 3px)
-                    border-radius: calc(1vw * 33/19.2)
-                    background: linear-gradient(45deg, #63AFCD 0%, rgba(0,0,0,0) 35%, rgba(0,0,0,0) 65%, #63AFCD 100%)
-                    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)
-                    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)
-                    -webkit-mask-composite: xor
-                    mask-composite: exclude
-                    z-index: 1
-        &_private
-            background-image: url("../img/bg-private.png")
-            background-size: 60%
-            background-position: center 55%
-        &_business
-            background-image: url("../img/bg-business.png")
-        .advantages
-            width: 100%
-            display: flex
-            justify-content: space-between
             align-items: center
+            img
+                width: calc(1vw * 45/19.2)
+                height: calc(1vw * 157/19.2)
+        .button-application
+            width: calc(1vw * 1530/19.2)
+            height: calc(1vh * 70/10.8)
+            margin: 0 auto
+            display: flex
+            align-items: center
+            justify-content: center
             a
-                font-size: 1em
-                padding-inline: calc(1vw * 37/19.2)
-                padding-block: calc(1vh * 20/10.8)
-                border: calc(1vw * 1/19.2) solid #FF374F
-                border-radius: calc(1vw * 35/19.2)
                 text-decoration: none
                 color: white
-                transition: all 0.5s
-                position: relative
-                z-index: 3
-                &:hover
-                    background-color: #FF374F
-            &_titles
+                background-color: #FF374F
+                padding-inline: calc(1vw * 23/19.2)
+                padding-block: calc(1vw * 21/19.2)
+                border-radius: calc(1vw * 35/19.2)
+        .advantages-first
+            width: calc(1vw * 1678/19.2)
+            height: calc(1vh * 169/10.8)
+            margin: 0 auto
+            margin-top: calc(1vh * 55/10.8)
+            display: flex
+            column-gap: calc(1vw * 20/19.2)
+            >div
+                width: calc(1vw * 263/19.2)
+                height: calc(1vh * 169/10.8)
+                border-radius: calc(1vw * 30/19.2)
+                background-color: white
+                padding-top: calc(1vw * 41/19.2)
+                padding-left: calc(1vw * 44/19.2)
+                padding-right: calc(1vw * 38/19.2)
+                padding-bottom: calc(1vw * 38/19.2)
                 display: flex
                 flex-wrap: wrap
-                width: calc(1vw * 450/19.2)
-                min-height: calc(1vh * 100/10.8)
+                align-content: space-between
+                >div
+                    font-family: "AvenirNextCyr-Medium"
+                    font-size: calc(1vw * 14/19.2)
+                    line-height: calc(1vw * 22/19.2)
+                    height: calc(1vh * 36/10.8)
+                img
+                    height: calc(1vw * 32/19.2)
+    &.tech-future
+        background: url("../img/clouds.png") 50% 50% no-repeat local, linear-gradient(180deg, rgba(22,27,34,0.5) 0%, rgba(32,46,67,1) 50%, rgba(13,23,37,1) 100%), url("../img/stars.png") 50% 0% no-repeat local
+        background-size: cover, auto, auto 70%
+        .h1
+            width: calc(1vw * 1264/19.2)
+            min-height: calc(1vh * 68/10.8)
+            margin: 0 auto
+            margin-bottom: calc(1vh * 68/10.8)
+            display: flex
+            justify-content: center
+            align-content: center
+            color: white
+            flex-wrap: wrap
+            align-content: flex-start
+            h1
+                text-transform: uppercase
+                /* Исправить на em */
+                font-size: calc(1vw * 42/19.2)
+                font-family: "AvenirNextCyr-Light"
+                font-weight: lighter
+            strong
+                font-family: "AvenirNextCyr-Medium"
+        .choice
+            margin: 0 auto
+            width: calc(1vw * 1520/19.2)
+            height: calc(1vh * 667/10.8)
+            display: flex
+            justify-content: space-between
+            hgroup
+                position: relative
+                z-index: 2
+                text-transform: uppercase
+                h2
+                    font-size: calc(1vw * 36/19.2)
+                    font-family: "AvenirNextCyr-Medium"
+                    color: #63AFCD
+                h3
+                    font-size: calc(1vw * 24/19.2)
+                    font-family: "AvenirNextCyr-Light"
+                    font-weight: lighter
+                    color: white
+            &_item
+                width: 50%
+                height: 100%
+                padding: calc(1vw * 60/19.2) calc(1vw * 53/19.2) calc(1vw * 41/19.2) calc(1vw * 58/19.2)
+                display: flex
+                flex-direction: column
+                flex-wrap: wrap
                 justify-content: space-between
-                align-content: center
-                row-gap: calc(1vw * 20/19.2)
-                column-gap: calc(1vw * 20/19.2)
-                margin-right: 1em
-                div
+                background-color: transparent
+                background-size: 80%
+                background-repeat: no-repeat
+                background-position: center center
+                border: calc(1vw * 2/19.2) solid transparent
+                border-radius: calc(1vw * 30/19.2)
+                position: relative
+                transition: all 0.5s
+                z-index: 2
+                &:hover
+                    background-color: #495d7c20
+                    &::before
+                        content: ""
+                        padding: calc(1vw * 2/19.2)
+                        position: absolute
+                        inset: 0px
+                        border-radius: calc(1vw * 33/19.2)
+                        background: linear-gradient(45deg, #63AFCD 0%, rgba(0,0,0,0) 35%, rgba(0,0,0,0) 65%, #63AFCD 100%)
+                        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)
+                        mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)
+                        -webkit-mask-composite: xor
+                        mask-composite: exclude
+                        z-index: 1
+            &_private
+                background-image: url("../img/bg-private.png")
+                background-size: 60%
+                background-position: center 55%
+            &_business
+                background-image: url("../img/bg-business.png")
+            .advantages
+                width: 100%
+                display: flex
+                justify-content: space-between
+                align-items: center
+                a
+                    font-size: 1em
+                    padding-inline: calc(1vw * 37/19.2)
+                    padding-block: calc(1vh * 20/10.8)
+                    border: calc(1vw * 1/19.2) solid #FF374F
+                    border-radius: calc(1vw * 35/19.2)
+                    text-decoration: none
+                    color: white
+                    transition: all 0.5s
+                    position: relative
+                    z-index: 3
+                    &:hover
+                        background-color: #FF374F
+                &_titles
                     display: flex
-                    align-content: center
                     flex-wrap: wrap
-                    &:nth-of-type(odd)
-                        min-width: 35%
-                    &:nth-of-type(even)
-                        min-width: 55%
-                    img
-                        width: calc(1vw * 30/19.2)
-                        height: calc(1vw * 30/19.2)
+                    width: calc(1vw * 450/19.2)
+                    min-height: calc(1vh * 100/10.8)
+                    justify-content: space-between
+                    align-content: center
+                    row-gap: calc(1vw * 20/19.2)
+                    column-gap: calc(1vw * 20/19.2)
+                    margin-right: 1em
                     div
-                        font-size: 1em
-                        margin-left: calc(1vw * 20/19.2)
-                        font-family: "AvenirNextCyr-Medium"
-                        color: white
                         display: flex
-                        margin-block-start: 0
-                        margin-block-end: 0
-                        white-space: nowrap
+                        align-content: center
+                        flex-wrap: wrap
+                        &:nth-of-type(odd)
+                            min-width: 35%
+                        &:nth-of-type(even)
+                            min-width: 55%
+                        img
+                            width: calc(1vw * 30/19.2)
+                            height: calc(1vw * 30/19.2)
+                        div
+                            font-size: 1em
+                            margin-left: calc(1vw * 20/19.2)
+                            font-family: "AvenirNextCyr-Medium"
+                            color: white
+                            display: flex
+                            margin-block-start: 0
+                            margin-block-end: 0
+                            white-space: nowrap
+    &.contacts
+        background: url("../img/bg-contacts.png") 50% 50% no-repeat local
+        background-size: cover
+        nav
+            .num-burger
+                .phone-number
+                    div
+                        color: black
+            .links
+                div
+                    a
+                        &:hover
+                            color: black
+        .middle-contacts
+            width: calc(1vw * 1520/19.2)
+            margin: 0 auto
+            display: flex
+            justify-content: flex-start
+            align-items: center
+            position: relative
+            .contacts-data
+                position: relative
+                z-index: 1
+                border-radius: calc(1vw * 30/19.2)
+                width: calc(1vw * 493/19.2)
+                height: calc(1vw * 281/19.2)
+                background-color: #63AFCD
+                display: flex
+                justify-content: center
+                align-items: center
+                .inner-contacts
+                    width: calc(1vw * 464/19.2)
+                    height: calc(1vw * 256/19.2)
+                    border-radius: calc(1vw * 20/19.2)
+                    position: relative
+                    padding-top: calc(1vw * 44/19.2)
+                    padding-left: calc(1vw * 42/19.2)
+                    &::before
+                        content: ""
+                        padding: calc(1vw * 1.5/19.2)
+                        position: absolute
+                        inset: 0px
+                        border-radius: calc(1vw * 20/19.2)
+                        background: linear-gradient(135deg, rgb(255, 255, 255) 0%, #ffffff00 100%)
+                        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)
+                        mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)
+                        -webkit-mask-composite: xor
+                        mask-composite: exclude
+                        z-index: -1
+                    .name-contacts
+                        font-size: calc(1vw * 26/19.2)
+                        margin-bottom: calc(1vw * 30/19.2)
+                    >div
+                        display: flex
+                        row-gap: calc(1vw * 15/19.2)
+                    div
+                        color: white
+                        img
+                            margin-right: calc(1vw * 13/19.2)
+                    div:nth-of-type(2) img
+                        width: calc(1vw * 15/19.2)
+                        height: calc(1vw * 21/19.2)
+                    div:nth-of-type(3) img
+                        width: calc(1vw * 18/19.2)
+                        height: calc(1vw * 18/19.2)
+                    div:nth-of-type(4) img
+                        width: calc(1vw * 20/19.2)
+                        height: calc(1vw * 14/19.2)
+                    div:not(:first-child)
+                        margin-bottom: calc(1vw * 15/19.2)
+                        div
+                            font-family: "AvenirNextCyr-Medium"
+                            font-size: calc(1vw * 16/19.2)
+            .remain-application
+                position: relative
+                left: calc(-1vw * 139/19.2)
+                width: calc(1vw * 811/19.2)
+                height: calc(1vw * 811/19.2)
+                border-radius: 50%
+                background-color: #ffffff30
+                display: flex
+                justify-content: center
+                align-items: center
+                .first-circle
+                    position: relative
+                    z-index: 2
+                    background-color: white
+                    border-radius: 50%
+                    width: calc(1vw * 669/19.2)
+                    height: calc(1vw * 669/19.2)
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    .last-circle
+                        position: relative
+                        z-index: 2
+                        background-color: white
+                        border-radius: 50%
+                        width: calc(1vw * 627/19.2)
+                        height: calc(1vw * 627/19.2)
+                        box-shadow: 0px calc(1vw * 7/19.2) calc(1vw * 18/19.2) #495D7C0F
+                        .h1
+                            width: calc(1vw * 475/19.2)
+                            margin: 0 auto
+                            margin-top: calc(1vw * 92/19.2)
+                            margin-bottom: calc(1vw * 52/19.2)
+                            h1
+                                font-size: calc(1vw * 26/19.2)
+                                text-transform: uppercase
+                                font-family: "AvenirNextCyr-Thin"
+                                font-weight: 100
+                                line-height: calc(1vw * 34/19.2)
+                                text-align: center
+                                letter-spacing: calc(1vw * 2/19.2)
+                                span
+                                    font-family: "AvenirNextCyr-Medium"
+                                    font-weight: 1000
+                        div:nth-of-type(2)
+                            width: calc(1vw * 374/19.2)
+                            margin: 0 auto
+                            display: flex
+                            flex-direction: column
+                            justify-content: center
+                            align-items: center
+                            input[type=text]
+                                width: 100%
+                                height: calc(1vw * 43/19.2)
+                                border-width: 0 0 calc(1vw * 1/19.2) 0
+                                border-color: #63AFCD
+                                margin-bottom: calc(1vw * 5/19.2)
+                                font-family: "AvenirNextCyr-Regular"
+                                &:active
+                                    border-width: 0 0 calc(1vw * 1/19.2) 0
+                                    border-color: #63AFCD
+                                &:first-child
+                                    background: url("../img/input-name.png") no-repeat right
+                                    background-size: calc(1vw * 19/19.2) calc(1vw * 22/19.2)
+                                &:nth-of-type(2)                                    
+                                    background: url("../img/input-phone.png") no-repeat right
+                                    background-size: calc(1vw * 22/19.2) calc(1vw * 22/19.2)
+                            /* Стилизация чекбокса */                                    
+                            input[type=checkbox]
+                                width: calc(1vw * 30/19.2)
+                                height: calc(1vw * 30/19.2)
+                                border-radius: calc(1vw * 10/19.2)
+                                position: absolute
+                                z-index: -1
+                                opacity: 0
+                                &+label
+                                    display: inline-flex
+                                    justify-content: space-between
+                                    align-items: center
+                                    user-select: none
+                                &+label::before
+                                    content: ''
+                                    display: inline-block
+                                    width: calc(1vw * 30/19.2)
+                                    height: calc(1vw * 30/19.2)
+                                    flex-shrink: 0
+                                    flex-grow: 0
+                                    border: calc(1vw * 1/19.2) solid #adb5bd
+                                    border-radius: calc(1vw * 10/19.2)
+                                    margin-right: 0.5em
+                                    background-repeat: no-repeat
+                                    background-position: center center
+                                    background-size: 50% 50%
+                                &:checked+label::before
+                                    border-color: #D9D9D9
+                                    background-image: url("../img/checked.png")
+                                    background-size: calc(1vw * 17/19.2) calc(1vw * 12/19.2)
+                                /* стили при наведении курсора на checkbox */
+                                &:not(:disabled):not(:checked)+label:hover::before
+                                    border-color: #FF374F
+                                // /* стили для активного состояния чекбокса (при нажатии на него) */
+                                // &:not(:disabled):active+label::before 
+                                //     background-color: #b3d7ff
+                                //     border-color: #b3d7ff
+                                /* стили для чекбокса, находящегося в фокусе */
+                                &:focus+label::before 
+                                    border-color: #FF374F
+                                // /* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
+                                // &:focus:not(:checked)+label::before 
+                                //     border-color: #80bdff
+                                // /* стили для чекбокса, находящегося в состоянии disabled */
+                                // &:disabled+label::before 
+                                //     background-color: #e9ecef
+                            div
+                                color: #828282
+                                font-size: calc(1vw * 12/19.2)
+                            .processing-personal-data
+                                margin-top: calc(1vw * 42/19.2)
+                                width: 100%
+                                display: flex
+                                align-items: center
+                                justify-content: space-between
+                            a
+                                margin-top: calc(1vw * 42/19.2)
+                                padding-inline: calc(1vw * 23/19.2)
+                                padding-block: calc(1vw * 21/19.2)
+                                background-color: #FF374F
+                                border-radius: calc(1vw * 35/19.2)
+                                text-decoration: none
+                                color: white
+                                font-size: calc(1vw * 16/19.2)
+            .go-to-top
+                position: fixed
+                top: 45%
+                right: 9%
+                width: calc(1vw * 67/19.2)
+                height: calc(1vw * 184/19.2)
+                justify-self: flex-end
+                transition: all 0.5s
+                background: url("../img/go-to-top.png")
+                background-size: cover
+                cursor: pointer
+                z-index: 6
+                img
+                    width: 100%
+                    height: 100%
+                    cursor: pointer
+                &.btn-up_hide
+                    cursor: default
+                    opacity: 0
