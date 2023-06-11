@@ -1,18 +1,3 @@
-@keyframes test-animation {
-    from {
-        transform: 20px
-    }
-    30% {
-        width: 30%
-    }
-    60.8% {
-        width: 60%
-    }
-    to {
-        width: 100%
-    }
-}
-    
 header
     >div
         &:first-child
@@ -20,19 +5,29 @@ header
         .special-offer
             font-family: "AvenirNextCyr-Light"
             font-weight: 800
-            width: 32%
+            width: 98%
             height: 4vh
             margin: 0 auto
             display: flex
             justify-content: space-between
             align-items: center
+            .alignCenter
+                display: flex
+                justify-content: center
+                margin: 0 auto
+                .offerText i
+                    margin-right: 4px
+            .fa-solid, .fa-xmark
+                cursor: pointer
+                justify-self: flex-end 
             .more-info
                 display: flex
                 justify-content: center
-                width: 30%
+                width: 180px
                 background-color: #EDF200
                 padding: 3px 10px
                 border-radius: 100px
+                margin-left: 10px
                 img
                     width: 9.75px
                     height: 8.56px
@@ -58,6 +53,7 @@ header
             &::after
                 position: absolute
                 content: ""
+                z-index: 2
                 height: 2px
                 width: 100%
                 background-color: #CFCFE2
@@ -88,9 +84,12 @@ header
                             display: flex
                             align-items: center
                             height: 100%
+                            position: relative
                             a
                                 position: relative
                                 &:hover
+                                    color: $colorButton
+                                    i
                                         color: $colorButton
                                 &::after
                                     display: block
@@ -104,32 +103,36 @@ header
                                     transition: width 0.2s ease-out
                                 &:hover::after, &:focus::after
                                     width: 100%
-                                    animation-name: test-animation
-                                    animation-duration: 2s
-                            &:nth-of-type(2)
-                                position: relative
+                            .sub-menu
+                                display: flex
+                                flex-direction: column
+                                align-items: flex-start
+                                justify-content: space-between
+                                position: absolute
+                                top: 100%
+                                left: -10px
+                                width: 200px
+                                background-color: #fff
+                                border: solid 1.5px #CFCFE2
+                                transition: all 0.5s
+                                height: 0%  
+                                overflow: hidden
+                                z-index: 3
+                                // li
+                                //     width: 100%
+                                //     justify-content: center
+                            &:hover
                                 .sub-menu
-                                    display: flex
-                                    flex-direction: column
-                                    align-items: flex-start
-                                    justify-content: space-between
-                                    position: absolute
-                                    top: 100%
-                                    left: -150%
-                                    height: 500%
-                                    width: 200px
-                                    background-color: #fff
-                                    border: solid 1.5px #CFCFE2
-                                    transition: all 0.3s
-                                    height: 0%
-                                    overflow: hidden
-                                    li
-                                        width: 100%
-                                        justify-content: center
+                                    padding: 10px
+                                    border-width: 2px
+                            &:nth-of-type(1)
                                 &:hover
                                     .sub-menu
-                                        padding: 10px
-                                        height: 500%
+                                        height: 300%
+                            &:nth-of-type(2)
+                                &:hover
+                                    .sub-menu
+                                        height: 180%                                        
                                
                 .givePhone
                     display: flex
@@ -141,7 +144,6 @@ header
                         border-radius: 50px
                         padding: 10px 20px
                         transition: all 0.3s
-                        animation: 
                         &:hover
                             background-color: $colorButton
                             color: #fff
@@ -152,6 +154,7 @@ header
         display: flex
         justify-content: space-between
         padding: 100px 0 0 0
+        position: relative
         .left-bar
             width: 50%
             .h1
@@ -221,11 +224,389 @@ header
                 &:nth-of-type(3)
                     background-color: $thirdOfType
 main
-    .services
+    .advantages
         width: 100%
-        height: 450px
+        height: 550px
         background-color: $colorSlider
-    .whyUseUs
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        overflow: hidden
+        .advantageText
+            color: #fff
+            font-size: 50px
+            margin-bottom: 50px
+            font-family: "AvenirNextCyr-Bold"
+        .services
+            width: auto
+            height: auto
+            display: flex
+            column-gap: 30px
+            .service
+                width: 200px
+                height: 300px
+                background-color: #fff
+                border-radius: 30px
+                position: relative
+                display: flex
+                flex-direction: column
+                justify-content: flex-start
+                .background
+                    width: 50px
+                    height: 50px
+                    clip-path: circle(50% at 50% 50%)
+                    position: absolute
+                    top: 50px
+                    left: 65px
+                &:nth-of-type(1), &:nth-of-type(2), &:nth-of-type(8), &:nth-of-type(9)
+                    opacity: 5%
+                &:nth-of-type(1), &:nth-of-type(2), &:nth-of-type(3)
+                    .background
+                        background-color: $colorFourBackground
+                    i
+                        color: $brightOne
+                &:nth-of-type(4)
+                    .background
+                        background-color: $colorSpecialOffer
+                    i
+                        color: $brightTwo
+                &:nth-of-type(5)
+                    .background
+                        background-color: $secondOfType
+                    i
+                        color: $brightThree
+                &:nth-of-type(6)
+                    .background
+                        background-color: $thirdOfType
+                    i
+                        color: $brightFour
+                &:nth-of-type(8), &:nth-of-type(9), &:nth-of-type(7)
+                    .background
+                        background-color: $colorFiveBackground
+                    i
+                        color: $brightFive
+                i
+                    font-size: 40px
+                    position: absolute
+                    top: 70px
+                    left: 90px
+                .titleText, .text
+                    margin-inline: 15px
+                    user-select: none
+                .titleText
+                    font-family: "AvenirNextCyr-Bold"
+                    font-size: 20px
+                    margin-top: 140px
+                    margin-bottom: 20px
+                .text
+                    color: $colorFontSecondary
+                    line-height: 24px
+    .doors
         width: 100%
-        height: 900px
+        height: auto
         background-color: $colorSecondaryBackground
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        overflow: hidden
+        .titleText
+            font-size: 50px
+            margin-top: 70px
+            margin-bottom: 50px
+            font-family: "AvenirNextCyr-Bold"
+        .variants
+            display: flex
+            flex-wrap: wrap
+            width: 1110px
+            gap: 30px
+            justify-content: center
+            margin-bottom: 70px
+            .door
+                width: 350px
+                min-height: 460px
+                background-color: white
+                border-radius: 16px
+                display: flex
+                flex-direction: column
+                img
+                    width: 300px
+                    margin: 0 auto
+                    margin-top: 30px
+                .door-text-title, .door-text
+                    margin-inline: 24px
+                .door-text-title
+                    margin-top: 20px
+                    font-size: 24px
+                .door-text
+                    margin-top: 10px
+                    line-height: 28px
+                    min-height: 50px
+                a
+                    margin-inline: auto
+                    text-align: center
+                    margin-top: 15px
+                    width: 300px
+                    padding: 10px
+                    color: $colorButton
+                    text-decoration: none
+                    border: solid 1.5px $colorButton
+                    border-radius: 50px
+                    transition: all .3s
+                    margin-bottom: 30px
+                    &:hover
+                        color: white
+                        background-color: $colorButton
+    .windows
+        width: 100%
+        height: auto
+        background-color: $colorThirdaryBackground
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        overflow: hidden
+        .titleText
+            font-size: 50px
+            margin-top: 70px
+            margin-bottom: 50px
+            font-family: "AvenirNextCyr-Bold"
+        .variants
+            display: flex
+            flex-wrap: wrap
+            width: 1110px
+            gap: 30px
+            justify-content: center
+            margin-bottom: 70px
+            .window
+                width: 350px
+                min-height: 460px
+                background-color: white
+                border-radius: 16px
+                display: flex
+                flex-direction: column
+                img
+                    width: 300px
+                    margin: 0 auto
+                    margin-top: 30px
+                .window-text-title, .window-text
+                    margin-inline: 24px
+                .window-text-title
+                    margin-top: 20px
+                    font-size: 24px
+                .window-text
+                    margin-top: 10px
+                    line-height: 28px
+                    min-height: 50px
+                a
+                    margin-inline: auto
+                    text-align: center
+                    margin-top: 15px
+                    width: 300px
+                    padding: 10px
+                    color: $colorButton
+                    text-decoration: none
+                    border: solid 1.5px $colorButton
+                    border-radius: 50px
+                    transition: all .3s
+                    margin-bottom: 30px
+                    &:hover
+                        color: white
+                        background-color: $colorButton
+    .lukes
+        width: 100%
+        height: auto
+        background-color: $colorFourBackground
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        overflow: hidden
+        .titleText
+            font-size: 50px
+            margin-top: 70px
+            margin-bottom: 50px
+            font-family: "AvenirNextCyr-Bold"
+        .variant
+            background-color: #fff
+            width: 1110px
+            height: 600px
+            border-radius: 16px
+            display: flex
+            margin-bottom: 70px
+            .left-side
+                width: 50%
+                display: flex
+                flex-direction: column
+                justify-content: center
+                .lukes-text-title, .lukes-text
+                    margin-inline: 24px
+                .lukes-text-title
+                    font-family: "AvenirNextCyr-Bold"
+                    margin-top: 20px
+                    font-size: 24px
+                .lukes-text
+                    margin-top: 10px
+                    line-height: 28px
+                    min-height: 50px
+                a
+                    margin-inline: auto
+                    text-align: center
+                    margin-top: 15px
+                    width: 507px
+                    padding: 10px 20px
+                    color: $colorButton
+                    text-decoration: none
+                    border: solid 1.5px $colorButton
+                    border-radius: 50px
+                    transition: all .3s
+                    margin-bottom: 30px
+                    &:hover
+                        color: white
+                        background-color: $colorButton
+            .right-side
+                margin-inline: 24px
+                width: 50%
+                background: url("../img/lukes.jpg")
+                background-size: contain
+                background-repeat: no-repeat
+                background-position: center center
+    .contacts
+        width: 100%
+        height: auto
+        background-color: $colorFiveBackground
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        overflow: hidden
+        .titleText
+            font-size: 50px
+            margin-top: 70px
+            margin-bottom: 20px
+            font-family: "AvenirNextCyr-Bold"
+        .phone-number, .address, .e-mail
+            margin-bottom: 15px
+        .phone-number
+            i
+                margin-right: 10px
+            a
+                color: $colorButton
+        .address
+            span
+                color: $colorButton
+            i
+                margin-right: 10px
+        .e-mail
+            i
+                margin-right: 10px
+            a
+                color: $colorButton
+        div a
+            position: relative
+            &::after
+                display: block
+                position: absolute
+                top: 102%
+                left: 0
+                width: 0
+                height: 1.5px
+                background-color: $colorButton
+                content: ""
+                transition: width 0.2s ease-out
+            &:hover::after, &:focus::after
+                width: 100%
+        iframe
+            border-radius: 16px
+            margin-bottom: 70px
+            width: 1110px
+            height: 500px
+footer
+    background-color: $colorFontFirstly
+    min-height: 450px
+    display: flex
+    flex-direction: column
+    .container
+        width: 1110px
+        margin-inline: auto
+        .top-side
+            margin-top: 70px
+            display: grid
+            grid-template-columns: repeat(3, 1fr)
+            gap: 30px
+            .logo
+                display: flex
+                flex-direction: column
+                justify-content: flex-start
+                font-size: 30px
+                user-select: none
+                a
+                    color: white
+                span
+                    color: $colorButton
+                .text
+                    margin-top: 10px
+                    font-size: 16px
+                    color: $colorFontFooter
+                    font-family: "AvenirNextCyr-Light"
+            .important
+                .title
+                    color: white
+                    font-family: "AvenirNextCyr-Bold"
+                    font-size: 24px
+                    margin-top: 5px
+                .links
+                    margin-top: 10px
+                    display: flex
+                    flex-direction: column
+                    row-gap: 10px
+                    .link
+                        a
+                            color: $colorFontFooter
+                            font-family: "AvenirNextCyr-Light"
+            .categories
+                .title
+                    color: white
+                    font-family: "AvenirNextCyr-Bold"
+                    font-size: 24px
+                    margin-top: 5px
+                .links
+                    margin-top: 10px
+                    display: flex
+                    flex-direction: column
+                    row-gap: 10px
+                    .link
+                        a
+                            color: $colorFontFooter
+                            font-family: "AvenirNextCyr-Light"
+        .bottom-side
+            display: grid
+            grid-template-columns: repeat(3, 1fr)
+            margin-top: 50px
+            align-items: flex-end
+            gap: 30px
+            >div
+                position: relative
+                height: 70px
+                display: flex
+                align-items: flex-end
+                .text
+                    color: $colorFontFooter
+                    a
+                        color: $colorFontFooter
+                    i
+                        margin-right: 10px
+                        color: $colorButton
+                &::after
+                    display: block
+                    content: ""
+                    height: 2px
+                    width: 100%
+                    position: absolute
+                    top: 120%
+                    background-color: $bottomLine
+        .all-rights-reserved
+            margin-top: 70px
+            color: $colorAllRightsReserved
+            text-align: center
