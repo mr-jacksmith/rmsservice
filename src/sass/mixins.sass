@@ -1,0 +1,32 @@
+@mixin header_titles
+    font:
+        family: "AvenirNextCyr-Bold"
+        size: clamp(24px, calc(36 * 1vw/17.11), 48px)
+    margin-top: clamp(40px, calc(50 * 1vw/17.11), 60px)
+    @include marbot
+
+@mixin martop
+    margin-top: clamp(40px, calc(50 * 1vw/17.11), 60px)
+    
+@mixin marbot
+    margin-bottom: clamp(40px, calc(50 * 1vw/17.11), 60px)
+
+@mixin flexbox($d, $a, $j)
+    display: flex
+    flex-direction: $d
+    align-items: $a
+    justify-content: $j
+
+@mixin titles
+    margin-top: clamp(20px, calc(30 * 1vw/17.11), 60px)
+    font-family: "AvenirNextCyr-Bold"
+    font-size: clamp(16px, calc(24 * 1vw/17.11), 32px)
+
+@mixin text
+    margin-top: clamp(10px, calc(16 * 1vw/17.11), 24px)
+    color: $colorFontSecondary
+    line-height: clamp(24px, calc(24 * 1vw/17.11), 48px)
+    font-size: clamp(10px, calc(16 * 1vw/17.11), 24px)
+
+@mixin marbot-mm
+    margin-bottom: clamp(13px, calc(20 * 1vw/17.11), 30px)

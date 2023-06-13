@@ -1,4 +1,5 @@
 header
+    overflow: hidden
     >div
         &:first-child
             background-color: $colorSpecialOffer
@@ -6,7 +7,7 @@ header
             font-family: "AvenirNextCyr-Light"
             font-weight: 800
             width: 98%
-            height: 4vh
+            min-height: 4vh
             margin: 0 auto
             display: flex
             justify-content: space-between
@@ -14,26 +15,29 @@ header
             .alignCenter
                 display: flex
                 justify-content: center
+                align-items: center
                 margin: 0 auto
-                .offerText i
-                    margin-right: 4px
+                margin-block: calc(6 * 1vw/17.11)
+                .offerText 
+                    font-size: clamp(16px, calc(18 * 1vw/17.11), 30px)
+                    i
+                        margin-right: calc(4 * 1vw/17.11)
             .fa-solid, .fa-xmark
                 cursor: pointer
-                justify-self: flex-end 
+                justify-self: flex-end
+                font-size: clamp(16px, calc(18 * 1vw/17.11), 30px)
             .more-info
                 display: flex
                 justify-content: center
-                width: 180px
+                min-width: 180px
+                margin-left: calc(10 * 1vw/17.11)
                 background-color: #EDF200
-                padding: 3px 10px
-                border-radius: 100px
-                margin-left: 10px
-                img
-                    width: 9.75px
-                    height: 8.56px
+                padding: clamp(3px, calc(5 * 1vw/17.11), 10px) clamp(10px, calc(12 * 1vw/17.11), 20px)
+                border-radius: calc(100 * 1vw/17.11)
                 a
                     position: relative
                     text-decoration: none
+                    font-size: clamp(16px, calc(18 * 1vw/17.11), 30px)
                     &:hover
                         color: $colorFontFirstly
                     &::after
@@ -41,7 +45,7 @@ header
                         position: absolute
                         left: 0
                         width: 0
-                        height: 1.5px
+                        height: calc(1.5 * 1vw/17.11)
                         background-color: $colorFontFirstly
                         content: ""
                         transition: width 0.2s ease-out
@@ -52,21 +56,22 @@ header
             position: relative
             &::after
                 position: absolute
+                top: 100%
                 content: ""
                 z-index: 2
-                height: 2px
+                height: calc(2 * 1vw/17.11)
                 width: 100%
                 background-color: #CFCFE2
             .hat-bar
                 width: 80%
-                height: 5vh
+                min-height: 5vh
                 display: flex
                 justify-content: space-between
                 margin: 0 auto
                 .logo
                     display: flex
                     align-items: center
-                    font-size: 30px
+                    font-size: calc(30 * 1vw/17.11)
                     user-select: none
                     span
                         color: $colorButton
@@ -87,6 +92,7 @@ header
                             position: relative
                             a
                                 position: relative
+                                font-size: clamp(16px, calc(16 * 1vw/17.11), 30px)
                                 &:hover
                                     color: $colorButton
                                     i
@@ -97,7 +103,7 @@ header
                                     top: 102%
                                     left: 0
                                     width: 0
-                                    height: 1.5px
+                                    height: calc(1.5 * 1vw/17.11)
                                     background-color: $colorButton
                                     content: ""
                                     transition: width 0.2s ease-out
@@ -110,29 +116,26 @@ header
                                 justify-content: space-between
                                 position: absolute
                                 top: 100%
-                                left: -10px
-                                width: 200px
+                                left: calc(-10 * 1vw/17.11)
+                                width: calc(200 * 1vw/17.11)
                                 background-color: #fff
-                                border: solid 1.5px #CFCFE2
+                                border: solid 0 #CFCFE2
                                 transition: all 0.5s
                                 height: 0%  
                                 overflow: hidden
                                 z-index: 3
-                                // li
-                                //     width: 100%
-                                //     justify-content: center
                             &:hover
                                 .sub-menu
-                                    padding: 10px
-                                    border-width: 2px
+                                    padding: calc(10 * 1vw/17.11)
+                                    border-width: calc(2 * 1vw/17.11)
                             &:nth-of-type(1)
                                 &:hover
                                     .sub-menu
-                                        height: 300%
+                                        height: 400%
                             &:nth-of-type(2)
                                 &:hover
                                     .sub-menu
-                                        height: 180%                                        
+                                        height: 200%
                                
                 .givePhone
                     display: flex
@@ -142,78 +145,109 @@ header
                         text-decoration: none
                         border: solid 1.5px $colorButton
                         border-radius: 50px
-                        padding: 10px 20px
+                        padding: calc(10 * 1vw/17.11) calc(20 * 1vw/17.11)
                         transition: all 0.3s
+                        margin-block: 7px
+                        font-size: clamp(16px, calc(16 * 1vw/17.11), 30px)
                         &:hover
                             background-color: $colorButton
                             color: #fff
     .head-bar
         width: 80%
-        height: 80vh
+        min-height: 70vh
         margin: 0 auto
         display: flex
         justify-content: space-between
-        padding: 100px 0 0 0
+        align-items: flex-start
+        padding: 70px 0 0 0
         position: relative
+        .line1, .line2, .line3, .line4
+            height: calc(2 * 1vh/18.29)
+            width: calc(1100 * 1vh/18.29)
+            position: absolute
+            z-index: -1
+            background-color: $colorSecondaryBackground
+        .line1
+            top: calc(68 * 1vh/18.29)
+            left: calc(2000 * 1vh/18.29)
+        .line2
+            top: calc(118 * 1vh/18.29)
+            left: calc(2000 * 1vh/18.29)
+            transform: rotateZ(5deg)
+        .line3
+            top: calc(1100 * 1vh/18.29)
+            left: calc(-350 * 1vh/18.29)
+        .line4
+            top: calc(1052 * 1vh/18.29)
+            left: calc(-350 * 1vh/18.29)
+            transform: rotateZ(5deg)
         .left-bar
-            width: 50%
+            width: 48%
+            display: flex
+            flex-direction: column
+            justify-content: center
+            min-height: 60vh
             .h1
                 width: 100%
                 font-size: 40px
                 user-select: none
                 h1
                     font-family: "AvenirNextCyr-Thin"
+                    font-size: clamp(40px, calc(68 * 1vw/17.11), 120px)
                 span
                     font-family: "AvenirNextCyr-Bold"
             .h2
                 width: 100%
-                margin-top: 30px
                 user-select: none
                 h2
+                    margin-top: clamp(20px, calc(30 * 1vw/17.11), 30px)
                     font-family: "AvenirNextCyr-Thin"
-                    font-size: 22px
+                    font-size: clamp(18px, calc(23 * 1vw/17.11), 45px)
             .givePrice
-                margin-top: 30px
-                font-family: "AvenirNextCyr-Bold"
-                font-size: 22px
+                @include titles
                 user-select: none
             input
-                margin-top: 20px
-                height: 60px
+                margin-top: calc(20 * 1vw/17.11)
+                height: clamp(40px, calc(45 * 1vw/17.11), 90px)
                 width: 100%
                 border-radius: 100px
-                padding-inline: 25px
-                font-size: 22px
+                padding-inline: clamp(20px, calc(25 * 1vw/17.11), 45px)
+                font-size: clamp(18px, calc(23 * 1vw/17.11), 45px)
             .wrongInput
                 margin-top: 10px
                 color: red
                 display: none
+                font-size: clamp(16px, calc(18 * 1vw/17.11), 30px)
             .giveSale
-                margin-top: 20px
+                margin-top: calc(20 * 1vw/17.11)
                 button
-                    height: 60px
+                    height: clamp(40px, calc(45 * 1vw/17.11), 90px)
                     width: 100%
                     border-radius: 100px
                     padding-inline: 25px
-                    font-size: 22px
+                    font-size: clamp(18px, calc(23 * 1vw/17.11), 45px)
                     border: none
                     background-color: $colorButton
                     color: $colorFont
                     cursor: pointer
+                    margin-bottom: 70px
         .right-bar
             display: flex
             flex-direction: column
             justify-content: center
             align-items: center
-            width: 50%
-            height: 80%
+            width: 48%
+            min-height: 60vh
             background: url(https://doorhan.ru/upload/spravka/data/1C_KTR//%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D0%BE%D0%B5%20%D1%84%D0%BE%D1%82%D0%BE%2001.07.21/%D0%9D%D0%B5%D1%87%D0%B0%D0%B9%20%D0%AE%D0%BB%D0%B8%D1%8F%20%D0%AE%D1%80%D1%8C%D0%B5%D0%B2%D0%BD%D0%B0/%D0%91%D1%8B%D1%82%D0%BE%D0%B2%D1%8B%D0%B5%20%D0%B4%D0%B2%D0%B5%D1%80%D0%B8/%D0%94%D0%B2%D0%B5%D1%80%D0%B8%20%D0%B1%D1%8B%D1%82%D0%BE%D0%B2%D1%8B%D0%B5%20%D0%9B%D0%B8%D0%B4%D0%B5%D1%80.png)
-            background-size: cover
+            background-size: 70vh
+            background-repeat: no-repeat
+            background-position: center center
             >div
-                margin-top: 15px
+                margin-top: clamp(18px, calc(18 * 1vw/17.11), 35px)
                 padding: 10px
                 border-radius: 10px
                 user-select: none
+                font-size: clamp(18px, calc(18 * 1vw/17.11), 35px)
                 &:nth-of-type(1), &:nth-of-type(3)
                     position: relative
                     left: 100px
@@ -226,39 +260,43 @@ header
 main
     .advantages
         width: 100%
-        height: 550px
+        height: auto
         background-color: $colorSlider
-        display: flex
-        flex-direction: column
-        align-items: center
-        justify-content: center
+        @include flexbox($d: column, $a:center, $j: flex-start)
         overflow: hidden
         .advantageText
             color: #fff
-            font-size: 50px
-            margin-bottom: 50px
-            font-family: "AvenirNextCyr-Bold"
+            @include header_titles
         .services
             width: auto
             height: auto
             display: flex
             column-gap: 30px
+            @include marbot
             .service
-                width: 200px
-                height: 300px
+                min-width: clamp(150px, calc(250 * 1vw/17.11), 450px)
+                height: auto
                 background-color: #fff
-                border-radius: 30px
+                border-radius: clamp(22.5px, calc(30 * 1vw/17.11), 37.5px)
                 position: relative
                 display: flex
                 flex-direction: column
                 justify-content: flex-start
-                .background
-                    width: 50px
-                    height: 50px
-                    clip-path: circle(50% at 50% 50%)
-                    position: absolute
-                    top: 50px
-                    left: 65px
+                .align-bg
+                    @include martop
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    .background
+                        width: calc(50 * 1vw/17.11)
+                        height: calc(50 * 1vw/17.11)
+                        clip-path: circle(50% at 50% 50%)
+                        position: relative
+                    i
+                        font-size: calc(35 * 1vw/17.11)
+                        position: relative
+                        top: calc(10 * 1vw/17.11)
+                        left: calc(-30 * 1vw/17.11)
                 &:nth-of-type(1), &:nth-of-type(2), &:nth-of-type(8), &:nth-of-type(9)
                     opacity: 5%
                 &:nth-of-type(1), &:nth-of-type(2), &:nth-of-type(3)
@@ -286,24 +324,18 @@ main
                         background-color: $colorFiveBackground
                     i
                         color: $brightFive
-                i
-                    font-size: 40px
-                    position: absolute
-                    top: 70px
-                    left: 90px
+                
                 .titleText, .text
-                    margin-inline: 15px
+                    margin-inline: clamp(10px, calc(16 * 1vw/17.11), 24px)
                     user-select: none
                 .titleText
-                    font-family: "AvenirNextCyr-Bold"
-                    font-size: 20px
-                    margin-top: 140px
-                    margin-bottom: 20px
+                    @include titles
                 .text
-                    color: $colorFontSecondary
-                    line-height: 24px
+                    @include text
+                    @include marbot-mm
     .doors
         width: 100%
+        min-height: 800px
         height: auto
         background-color: $colorSecondaryBackground
         display: flex
@@ -312,49 +344,42 @@ main
         justify-content: center
         overflow: hidden
         .titleText
-            font-size: 50px
-            margin-top: 70px
-            margin-bottom: 50px
-            font-family: "AvenirNextCyr-Bold"
+            @include header_titles
         .variants
             display: flex
             flex-wrap: wrap
-            width: 1110px
+            width: clamp(1100px, calc(1368.8 * 1vw/17.11), 2700px)
             gap: 30px
             justify-content: center
-            margin-bottom: 70px
+            @include marbot
             .door
-                width: 350px
+                flex-basis: 550px
                 min-height: 460px
                 background-color: white
                 border-radius: 16px
-                display: flex
-                flex-direction: column
+                display: grid
+                grid-template-rows: 250px 100px auto 100px
                 img
                     width: 300px
                     margin: 0 auto
                     margin-top: 30px
                 .door-text-title, .door-text
-                    margin-inline: 24px
+                    margin-inline: clamp(10px, calc(16 * 1vw/17.11), 24px)
                 .door-text-title
-                    margin-top: 20px
-                    font-size: 24px
+                    @include titles
                 .door-text
-                    margin-top: 10px
-                    line-height: 28px
-                    min-height: 50px
+                    @include text
                 a
+                    align-self: center
                     margin-inline: auto
                     text-align: center
-                    margin-top: 15px
                     width: 300px
-                    padding: 10px
+                    padding: 10px 
                     color: $colorButton
                     text-decoration: none
                     border: solid 1.5px $colorButton
                     border-radius: 50px
                     transition: all .3s
-                    margin-bottom: 30px
                     &:hover
                         color: white
                         background-color: $colorButton
@@ -368,17 +393,14 @@ main
         justify-content: center
         overflow: hidden
         .titleText
-            font-size: 50px
-            margin-top: 70px
-            margin-bottom: 50px
-            font-family: "AvenirNextCyr-Bold"
+            @include header_titles
         .variants
             display: flex
             flex-wrap: wrap
             width: 1110px
             gap: 30px
             justify-content: center
-            margin-bottom: 70px
+            @include marbot
             .window
                 width: 350px
                 min-height: 460px
@@ -424,17 +446,14 @@ main
         justify-content: center
         overflow: hidden
         .titleText
-            font-size: 50px
-            margin-top: 70px
-            margin-bottom: 50px
-            font-family: "AvenirNextCyr-Bold"
+            @include header_titles
         .variant
             background-color: #fff
             width: 1110px
             height: 600px
             border-radius: 16px
             display: flex
-            margin-bottom: 70px
+            @include marbot
             .left-side
                 width: 50%
                 display: flex
@@ -482,10 +501,7 @@ main
         justify-content: center
         overflow: hidden
         .titleText
-            font-size: 50px
-            margin-top: 70px
-            margin-bottom: 20px
-            font-family: "AvenirNextCyr-Bold"
+            @include header-titles
         .phone-number, .address, .e-mail
             margin-bottom: 15px
         .phone-number
