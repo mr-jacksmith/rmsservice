@@ -51,152 +51,160 @@ header
                         transition: width 0.2s ease-out
                     &:hover::after, &:focus::after
                         width: 100%
-    >div
-        &:nth-child(2)
-            position: relative
-            &::after
-                position: absolute
-                top: 100%
-                content: ""
-                z-index: 2
-                height: calc(2 * 1vw/17.11)
+    .fixed
+        position: relative
+        &.pp
+            position: fixed
+            top: 0
+            left: 0
+            right: 0
+            background-color: white
+            z-index: 2
+        &::after
+            position: absolute
+            top: 100%
+            content: ""
+            z-index: 2
+            height: calc(2 * 1vw/17.11)
+            width: 100%
+            background-color: #CFCFE2
+        .hat-bar
+            width: 80%
+            display: flex
+            margin: 0 auto
+            min-height: 5vh
+            .wrapped
                 width: 100%
-                background-color: #CFCFE2
-            .hat-bar
-                width: 80%
                 display: flex
-                margin: 0 auto
-                min-height: 5vh
-                .wrapped
-                    width: 100%
+                justify-content: space-between
+                .logo
                     display: flex
-                    justify-content: space-between
-                    .logo
+                    align-items: center
+                    font-size: clamp(20px, 0.2rem + 1.6vw, 56px)
+                    user-select: none
+                    span
+                        color: $colorButton
+                .navbar
+                    display: flex
+                    width: 50%
+                    margin: 0 auto
+                    &.active
+                        height: auto
+                    ul
+                        width: 100%
                         display: flex
+                        justify-content: space-between
                         align-items: center
-                        font-size: clamp(16px, 0.2rem + 1.6vw, 56px)
-                        user-select: none
-                        span
-                            color: $colorButton
-                    .navbar
-                        display: flex
-                        width: 50%
-                        margin: 0 auto
-                        &.active
-                            height: auto
-                        ul
-                            width: 100%
+                        list-style: none
+                        li
                             display: flex
-                            justify-content: space-between
                             align-items: center
-                            list-style: none
-                            li
-                                display: flex
-                                align-items: center
-                                height: 100%
+                            height: 100%
+                            position: relative
+                            a
                                 position: relative
-                                a
-                                    position: relative
-                                    font-size: clamp(16px, 0.2rem + 0.8vw, 48px)
-                                    &:hover
+                                font-size: clamp(16px, 0.2rem + 0.8vw, 48px)
+                                &:hover
+                                    color: $colorButton
+                                    i
                                         color: $colorButton
-                                        i
-                                            color: $colorButton
-                                    &::after
-                                        display: block
-                                        position: absolute
-                                        top: 102%
-                                        left: 0
-                                        width: 0
-                                        height: calc(1.5 * 1vw/17.11)
-                                        background-color: $colorButton
-                                        content: ""
-                                        transition: width 0.2s ease-out
-                                    &:hover::after, &:focus::after
-                                        width: 100%
-                                .sub-menu
-                                    display: flex
-                                    flex-direction: column
-                                    align-items: flex-start
-                                    justify-content: space-between
+                                &::after
+                                    display: block
                                     position: absolute
-                                    top: 100%
-                                    left: calc(-10 * 1vw/17.11)
-                                    width: calc(200 * 1vw/17.11)
-                                    background-color: #fff
-                                    border: solid 0 #CFCFE2
-                                    transition: all 0.5s
-                                    height: 0%  
-                                    overflow: hidden
-                                    z-index: 3
+                                    top: 102%
+                                    left: 0
+                                    width: 0
+                                    height: calc(1.5 * 1vw/17.11)
+                                    background-color: $colorButton
+                                    content: ""
+                                    transition: width 0.2s ease-out
+                                &:hover::after, &:focus::after
+                                    width: 100%
+                            .sub-menu
+                                display: flex
+                                flex-direction: column
+                                align-items: flex-start
+                                justify-content: space-between
+                                position: absolute
+                                top: 100%
+                                left: calc(-10 * 1vw/17.11)
+                                width: calc(300 * 1vw/17.11)
+                                background-color: #fff
+                                border: solid 0 #CFCFE2
+                                transition: all 0.5s
+                                height: 0%  
+                                overflow: hidden
+                                z-index: 3
+                            &:hover
+                                .sub-menu
+                                    padding: calc(10 * 1vw/17.11)
+                                    border-width: calc(2 * 1vw/17.11)
+                            &:nth-of-type(1)
                                 &:hover
                                     .sub-menu
-                                        padding: calc(10 * 1vw/17.11)
-                                        border-width: calc(2 * 1vw/17.11)
-                                &:nth-of-type(1)
-                                    &:hover
-                                        .sub-menu
-                                            height: 400%
-                                &:nth-of-type(2)
-                                    &:hover
-                                        .sub-menu
-                                            height: 200%
-                                
-                    .givePhone
-                        display: flex
-                        align-items: center
-                        justify-content: flex-end
-                        a
-                            color: $colorButton
-                            text-decoration: none
-                            border: solid calc(1.5 * 1vw/17.11) $colorButton
-                            border-radius: 50px
-                            padding: calc(10 * 1vw/17.11) calc(20 * 1vw/17.11)
-                            transition: all 0.3s
-                            margin-block: calc(7 * 1vw/17.11)
-                            font-size: clamp(16px, 0.2rem + 0.8vw, 48px)
-                            &:hover
-                                background-color: $colorButton
-                                color: #fff
-                .burger
-                    display: none
-                    flex-direction: column
-                    justify-content: center
-                    cursor: pointer
-                    margin-left: calc(30 * 1vw/17.11)
-                    span
-                        background-color: $colorFontFirstly
-                        border-radius: 50px
-                        width: 30px
-                        height: 3px
-                        transition: 0.3s ease
-                        &:nth-of-type(1)
-                            transform: translateY(-8px)
-                        &:nth-of-type(3)
-                            transform: translateY(8px)
-                    &:hover
-                        span
-                            &:nth-of-type(1)
-                                transform: translateY(-4px)
-                            &:nth-of-type(3)
-                                transform: translateY(4px)
-                    &.active
-                        span
-                            height: 2px
-                            &:nth-of-type(1)
-                                transform: rotateZ(-45deg) translateX(14.5px) translateY(7.9px)
-                                width: 35%
+                                        height: 400%
                             &:nth-of-type(2)
-                                transform: rotateZ(45deg)
-                            &:nth-of-type(3)
-                                transform: rotateZ(-45deg) translateX(-0.5px) translateY(5.1px)
-                                width: 35%
-                    &:hover.active
-                        span
-                            &:nth-of-type(1)
-                                transform: rotateZ(-45deg) translateX(17.5px) translateY(7.9px)
-                            &:nth-of-type(3)
-                                transform: rotateZ(-45deg) translateX(-3.5px) translateY(5.1px)
+                                &:hover
+                                    .sub-menu
+                                        height: 200%
+                            
+                .givePhone
+                    display: flex
+                    align-items: center
+                    justify-content: flex-end
+                    margin-left: calc(30 * 1vw/17.11)
+                    a
+                        text-align: center
+                        color: $colorButton
+                        text-decoration: none
+                        border: solid calc(1.5 * 1vw/17.11) $colorButton
+                        border-radius: 50px
+                        padding: calc(10 * 1vw/17.11) calc(20 * 1vw/17.11)
+                        transition: all 0.3s
+                        margin-block: calc(7 * 1vw/17.11)
+                        font-size: clamp(16px, 0.2rem + 0.8vw, 48px)
+                        &:hover
+                            background-color: $colorButton
+                            color: #fff
+            .burger
+                display: none
+                flex-direction: column
+                justify-content: center
+                cursor: pointer
+                margin-left: calc(30 * 1vw/17.11)
+                span
+                    background-color: $colorFontFirstly
+                    border-radius: 50px
+                    width: 30px
+                    height: 3px
+                    transition: 0.3s ease
+                    &:nth-of-type(1)
+                        transform: translateY(-8px)
+                    &:nth-of-type(3)
+                        transform: translateY(8px)
+                &:hover
+                    span
+                        &:nth-of-type(1)
+                            transform: translateY(-4px)
+                        &:nth-of-type(3)
+                            transform: translateY(4px)
+                &.active
+                    span
+                        height: 2px
+                        &:nth-of-type(1)
+                            transform: rotateZ(-45deg) translateX(14.5px) translateY(7.9px)
+                            width: 35%
+                        &:nth-of-type(2)
+                            transform: rotateZ(45deg)
+                        &:nth-of-type(3)
+                            transform: rotateZ(-45deg) translateX(-0.5px) translateY(5.1px)
+                            width: 35%
+                &:hover.active
+                    span
+                        &:nth-of-type(1)
+                            transform: rotateZ(-45deg) translateX(17.5px) translateY(7.9px)
+                        &:nth-of-type(3)
+                            transform: rotateZ(-45deg) translateX(-3.5px) translateY(5.1px)
     .head-bar
         width: 80%
         min-height: 70vh
@@ -204,7 +212,7 @@ header
         display: flex
         justify-content: space-between
         align-items: flex-start
-        padding: 70px 0 0 0
+        padding: calc(70 * 1vw/17.11) 0 0 0
         position: relative
         // .line1, .line2, .line3, .line4
         //     height: calc(2 * 1vh/18.29)
@@ -251,7 +259,7 @@ header
                 @include titles
                 user-select: none
             input
-                margin-top: calc(20 * 1vw/17.11)
+                margin-top: clamp(16px, calc(20 * 1vw/17.11), 32px)
                 height: clamp(40px, calc(45 * 1vw/17.11), 90px)
                 width: 100%
                 border-radius: 100px
@@ -263,7 +271,7 @@ header
                 display: none
                 font-size: clamp(16px, calc(18 * 1vw/17.11), 30px)
             .giveSale
-                margin-top: calc(20 * 1vw/17.11)
+                margin-top: clamp(16px, calc(20 * 1vw/17.11), 32px)
                 button
                     height: clamp(40px, calc(45 * 1vw/17.11), 90px)
                     width: 100%
@@ -309,14 +317,16 @@ main
         @include flexbox($d: column, $a:center, $j: flex-start)
         overflow: hidden
         .advantageText
+            width: 80%
             color: #fff
+            text-align: center
             @include header_titles
         .services
             width: 140%
             height: auto
             display: flex
             // flex-wrap: wrap
-            column-gap: 30px
+            gap: 30px
             @include marbot
             .service
                 flex: 1 1 250px
@@ -333,15 +343,15 @@ main
                     justify-content: center
                     align-items: center
                     .background
-                        width: calc(50 * 1vw/17.11)
-                        height: calc(50 * 1vw/17.11)
+                        width: clamp(36px, calc(50 * 1vw/17.11), 100px)
+                        height: clamp(36px, calc(50 * 1vw/17.11), 100px)
                         clip-path: circle(50% at 50% 50%)
                         position: relative
                     i
-                        font-size: calc(35 * 1vw/17.11)
+                        font-size: clamp(28px, calc(35 * 1vw/17.11), 69px)
                         position: relative
-                        top: calc(10 * 1vw/17.11)
-                        left: calc(-30 * 1vw/17.11)
+                        top: calc(10 * 1vh/10.02)
+                        left: -20px
                 &:nth-of-type(1), &:nth-of-type(2), &:nth-of-type(8), &:nth-of-type(9)
                     opacity: 5%
                 &:nth-of-type(1), &:nth-of-type(2), &:nth-of-type(3)
@@ -381,7 +391,7 @@ main
     .doors
         position: relative
         width: 100%
-        min-height: 800px
+        min-height: 600px
         background-color: $colorSecondaryBackground
         overflow: hidden
         .titleText
@@ -465,7 +475,7 @@ main
     .windows
         position: relative
         width: 100%
-        min-height: 800px
+        min-height: 500px
         background-color: $colorThirdaryBackground
         overflow: hidden
         .titleText
@@ -562,6 +572,8 @@ main
                 @include marbot
         .titleText
             @include header-titles
+        .container
+            width: 90%
         .phone-number, .address, .e-mail
             margin-bottom: 15px
         .phone-number

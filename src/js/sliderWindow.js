@@ -44,9 +44,9 @@ function showSlidesWindow(n) {
     dots[slideIndexWindow-1].className += " active";
 }
 
-window.addEventListener('resize', start);
+window.addEventListener('resize', startWindow);
 
-function start() {
+function startWindow() {
     windowInnerWidthWindow = window.innerWidth;
     if (windowInnerWidthWindow > 768) {
         let slides = document.getElementsByClassName('window');

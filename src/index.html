@@ -15,24 +15,24 @@
 
 <body>
     <header>
-        <div class="">
+        <div class="soff-main">
             <div class="special-offer">
                 <div class="alignCenter">
                     <div class="offerText"><i class="fa-solid fa-door-open"></i>Специальное предложение от РемМашСервис
                         Специальное предложение от РемМашСервис</div>
-                    <div class="more-info"><a href="#">Узнать больше <i class="fa-solid fa-angles-right"></i></a></div>
+                    <div class="more-info"><a href="">Узнать больше <i class="fa-solid fa-angles-right"></i></a></div>
                 </div>
-                <i class="fa-solid fa-xmark"></i>
+                <i class="fa-solid fa-xmark" onclick="closeSoff()"></i>
             </div>
         </div>
-        <div>
+        <div id="fixed" class="fixed">
             <div class="hat-bar">
                 <div class="wrapped">
-                    <div class="logo"><a href="#">РемМаш<span>Сервис</a></span></div>
+                    <div class="logo"><a href="">РемМаш<span>Сервис</a></span></div>
                     <nav class="navbar">
                         <ul>
                             <li>
-                                <a href="">Двери <i class="fa-solid fa-chevron-down fa-beat-fade"></i></a>
+                                <a href="#doors">Двери <i class="fa-solid fa-chevron-down fa-beat-fade"></i></a>
                                 <ul class="sub-menu">
                                     <li><a href="">Противопожарные</a></li>
                                     <li><a href="">Входные</a></li>
@@ -42,7 +42,7 @@
                                     <li><a href="">ПВХ</a></li>
                                 </ul>
                             </li>
-                            <li><a href="">Окна <i class="fa-solid fa-chevron-down fa-beat-fade"></i></a>
+                            <li><a href="#windows">Окна <i class="fa-solid fa-chevron-down fa-beat-fade"></i></a>
                                 <ul class="sub-menu">
                                     <li><a href="">Противопожарные</a></li>
                                     <li><a href="">Алюминиевые</a></li>
@@ -51,11 +51,11 @@
                             </li>
                             <li><a href="">Люки</a></li>
                             <li><a href="">Фотогалерея</a></li>
-                            <li><a href="">Контакты</a></li>
+                            <li><a href="#contacts">Контакты</a></li>
                         </ul>
                     </nav>
                     <div class="search"></div>
-                    <div class="givePhone"><a href="#">Заказать звонок</a></div>
+                    <div class="givePhone"><a href="">Заказать звонок</a></div>
                 </div>
                 <div id="burger" class="burger">
                     <span></span>
@@ -171,7 +171,7 @@
                 </div>
             </div>
         </div>
-        <div class="doors">
+        <div id="doors" class="doors">
             <div class="titleText">Двери</div>
             <div class="variants">
                 <div class="door">
@@ -184,7 +184,7 @@
                             возгорания, не дают огню и продуктам горения распространиться, максимально уменьшая ущерб от
                             пожара и сохраняя жизни людей, находящихся в здании.</div>
                     </div>
-                    <a href="#">Подробнее</a>
+                    <a href="">Подробнее</a>
                 </div>
                 <div class="door">
                     <div class="wrapped">
@@ -197,7 +197,7 @@
                             своей безопасности и комфорте на потом, обратитесь к нам прямо сейчас и получите двери
                             мечты!</div>
                     </div>
-                    <a href="#">Подробнее</a>
+                    <a href="">Подробнее</a>
                 </div>
                 <div class="door">
                     <div class="wrapped">
@@ -207,7 +207,7 @@
                             основном, такие двери предусмотрены для установки в подъездах, тамбурах, подсобных и
                             служебных помещениях.</div>
                     </div>
-                    <a href="#">Подробнее</a>
+                    <a href="">Подробнее</a>
                 </div>
                 <div class="door">
                     <div class="wrapped">
@@ -216,7 +216,7 @@
                         <div class="door-text">Наши межкомнатные двери МДФ отвечают всем требованиям ГОСТ, отличаются
                             высоким качеством, надежностью и прочностью.</div>
                     </div>
-                    <a href="#">Подробнее</a>
+                    <a href="">Подробнее</a>
                 </div>
                 <div class="door">
                     <div class="wrapped">
@@ -226,7 +226,7 @@
                             двупольные, поворотные с наружным и внутренним открыванием, маятниковые и раздвижные, из
                             теплого и холодного профиля.</div>
                     </div>
-                    <a href="#">Подробнее</a>
+                    <a href="">Подробнее</a>
                 </div>
                 <div class="door">
                     <div class="wrapped">
@@ -235,7 +235,7 @@
                         <div class="door-text">Мы производим двери на основе ПВХ профилей известных производителей
                             Proplex, Exprof, Rehau. </div>
                     </div>
-                    <a href="#">Подробнее</a>
+                    <a href="">Подробнее</a>
                 </div>
             </div>
             <a class="prev" onclick="plusSlidesDoor(-1)">&#10094</a>
@@ -250,7 +250,7 @@
             </div>
         </div>
         <script src="./js/sliderDoor.js"></script>
-        <div class="windows">
+        <div id="windows" class="windows">
             <div class="titleText">Окна</div>
             <div class="variants">
                 <div class="window">
@@ -261,7 +261,7 @@
                             сопротивляться огню в течение 15 (EIW-15), 30 (E-30), 45 (EIW-45) и 60 (E-60, EIW-60) минут. Они
                             позволяют сократить ущерб от пожара и сохранить жизни людей в здании.</div>
                     </div>
-                    <a href="#">Подробнее</a>
+                    <a href="">Подробнее</a>
                 </div>
                 <div class="window">
                     <div class="wrapped">
@@ -271,7 +271,7 @@
                             и холодного профиля. Алюминиевые окна нашего производства отличаются доступной ценой и высоким
                             качеством.</div>
                     </div>
-                    <a href="#">Подробнее</a>
+                    <a href="">Подробнее</a>
                 </div>
                 <div class="window">
                     <div class="wrapped">
@@ -280,7 +280,7 @@
                         <div class="window-text">Наши окна – лучшее решение для остекления многоквартирных и частных домов,
                             офисных и производственных помещений. </div>
                     </div>
-                    <a href="#">Подробнее</a>
+                    <a href="">Подробнее</a>
                 </div>
             </div>
             <a class="prev" onclick="plusSlidesWindow(-1)">&#10094</a>
@@ -292,23 +292,25 @@
             </div>
         </div>
         <script src="./js/sliderWindow.js"></script>
-        <div class="contacts">
+        <div id="contacts" class="contacts">
             <div class="titleText">Наши контакты</div>
-            <div class="phone-number">
-                <i class="fa-solid fa-phone-volume"></i> Номер телефона: 
-                <a href="tel:+79583935153">+7 (958) 393-51-53</a>
-            </div>
-            <div class="e-mail">
-                <i class="fa-regular fa-envelope-open"></i>Обработка заказов: 
-                <a href="mailto:RMSkirov@mail.ru">RMSkirov@mail.ru</a>
-            </div>
-            <div class="e-mail">
-                <i class="fa-regular fa-envelope-open"></i>Начальник отдела снабжения Мосунов Вячеслав Вячеславович: 
-                <a href="mailto:Mosunov_89@mail.ru">Mosunov_89@mail.ru</a>
-            </div>
-            <div class="address">
-                <i class="fa-solid fa-location-dot"></i>
-                610044, ООО "РемМаш<span>Сервис</span>", Россия, Киров, ул. Сормовская, 2
+            <div class="container">
+                <div class="phone-number">
+                    <i class="fa-solid fa-phone-volume"></i> Номер телефона:
+                    <a href="tel:+79583935153">+7 (958) 393-51-53</a>
+                </div>
+                <div class="e-mail">
+                    <i class="fa-regular fa-envelope-open"></i>Обработка заказов:
+                    <a href="mailto:RMSkirov@mail.ru">RMSkirov@mail.ru</a>
+                </div>
+                <div class="e-mail">
+                    <i class="fa-regular fa-envelope-open"></i>Начальник отдела снабжения Мосунов Вячеслав Вадимович:
+                    <a href="mailto:Mosunov_89@mail.ru">Mosunov_89@mail.ru</a>
+                </div>
+                <div class="address">
+                    <i class="fa-solid fa-location-dot"></i>
+                    610044, ООО "РемМаш<span>Сервис</span>", Россия, Киров, ул. Сормовская, 2
+                </div>
             </div>
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2077.7436250987225!2d49.612554496750874!3d58.616657207952585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43fcf5e6acba0679%3A0x5c829483b9496db4!2z0YPQuy4g0KHQvtGA0LzQvtCy0YHQutCw0Y8sIDIsINCa0LjRgNC-0LIsINCa0LjRgNC-0LLRgdC60LDRjyDQvtCx0LsuLCA2MTAwNDQ!5e0!3m2!1sru!2sru!4v1686488331806!5m2!1sru!2sru" style="border:0;" allowfullscreen="" loading="lazy"
@@ -319,7 +321,7 @@
         <div class="container">
             <div class="top-side">
                 <div class="logo">
-                    <a href="#">РемМаш<span>Сервис</a></span>
+                    <a href="">РемМаш<span>Сервис</a></span>
                     <div class="text">Мы делаем двери, которые вы открываете.</div>
                 </div>
                 <div class="important">
@@ -358,6 +360,9 @@
             </div>
         </div>
     </footer>
+    <script src="./js/smoothScroll.js"></script>
+    <script src="./js/fixedNavbar.js"></script>
+    <script src="./js/closeSpecialOffer.js"></script>
 </body>
 
 </html>
