@@ -19,13 +19,13 @@ header
                 margin: 0 auto
                 margin-block: calc(6 * 1vw/17.11)
                 .offerText 
-                    font-size: clamp(16px, calc(18 * 1vw/17.11), 30px)
+                    font-size: clamp(12px, 0.2rem + 0.8vw, 48px)
                     i
                         margin-right: calc(4 * 1vw/17.11)
             .fa-solid, .fa-xmark
                 cursor: pointer
                 justify-self: flex-end
-                font-size: clamp(16px, calc(18 * 1vw/17.11), 30px)
+                font-size: clamp(12px, 0.2rem + 0.8vw, 48px)
             .more-info
                 display: flex
                 justify-content: center
@@ -37,7 +37,7 @@ header
                 a
                     position: relative
                     text-decoration: none
-                    font-size: clamp(16px, calc(18 * 1vw/17.11), 30px)
+                    font-size: clamp(12px, 0.2rem + 0.8vw, 48px)
                     &:hover
                         color: $colorFontFirstly
                     &::after
@@ -71,7 +71,7 @@ header
                 .logo
                     display: flex
                     align-items: center
-                    font-size: calc(30 * 1vw/17.11)
+                    font-size: clamp(16px, 0.2rem + 1.6vw, 56px)
                     user-select: none
                     span
                         color: $colorButton
@@ -92,7 +92,7 @@ header
                             position: relative
                             a
                                 position: relative
-                                font-size: clamp(16px, calc(16 * 1vw/17.11), 30px)
+                                font-size: clamp(16px, 0.2rem + 0.8vw, 48px)
                                 &:hover
                                     color: $colorButton
                                     i
@@ -143,12 +143,12 @@ header
                     a
                         color: $colorButton
                         text-decoration: none
-                        border: solid 1.5px $colorButton
+                        border: solid calc(1.5 * 1vw/17.11) $colorButton
                         border-radius: 50px
                         padding: calc(10 * 1vw/17.11) calc(20 * 1vw/17.11)
                         transition: all 0.3s
-                        margin-block: 7px
-                        font-size: clamp(16px, calc(16 * 1vw/17.11), 30px)
+                        margin-block: calc(7 * 1vw/17.11)
+                        font-size: clamp(16px, 0.2rem + 0.8vw, 48px)
                         &:hover
                             background-color: $colorButton
                             color: #fff
@@ -161,26 +161,26 @@ header
         align-items: flex-start
         padding: 70px 0 0 0
         position: relative
-        .line1, .line2, .line3, .line4
-            height: calc(2 * 1vh/18.29)
-            width: calc(1100 * 1vh/18.29)
-            position: absolute
-            z-index: -1
-            background-color: $colorSecondaryBackground
-        .line1
-            top: calc(68 * 1vh/18.29)
-            left: calc(2000 * 1vh/18.29)
-        .line2
-            top: calc(118 * 1vh/18.29)
-            left: calc(2000 * 1vh/18.29)
-            transform: rotateZ(5deg)
-        .line3
-            top: calc(1100 * 1vh/18.29)
-            left: calc(-350 * 1vh/18.29)
-        .line4
-            top: calc(1052 * 1vh/18.29)
-            left: calc(-350 * 1vh/18.29)
-            transform: rotateZ(5deg)
+        // .line1, .line2, .line3, .line4
+        //     height: calc(2 * 1vh/18.29)
+        //     width: calc(1100 * 1vh/18.29)
+        //     position: absolute
+        //     z-index: -1
+        //     background-color: $colorSecondaryBackground
+        // .line1
+        //     top: calc(68 * 1vh/18.29)
+        //     left: calc(2000 * 1vh/18.29)
+        // .line2
+        //     top: calc(118 * 1vh/18.29)
+        //     left: calc(2000 * 1vh/18.29)
+        //     transform: rotateZ(5deg)
+        // .line3
+        //     top: calc(1100 * 1vh/18.29)
+        //     left: calc(-350 * 1vh/18.29)
+        // .line4
+        //     top: calc(1052 * 1vh/18.29)
+        //     left: calc(-350 * 1vh/18.29)
+        //     transform: rotateZ(5deg)
         .left-bar
             width: 48%
             display: flex
@@ -189,11 +189,10 @@ header
             min-height: 60vh
             .h1
                 width: 100%
-                font-size: 40px
                 user-select: none
                 h1
                     font-family: "AvenirNextCyr-Thin"
-                    font-size: clamp(40px, calc(68 * 1vw/17.11), 120px)
+                    font-size: clamp(48px, 1.5rem + 2vw, 96px)
                 span
                     font-family: "AvenirNextCyr-Bold"
             .h2
@@ -268,13 +267,14 @@ main
             color: #fff
             @include header_titles
         .services
-            width: auto
+            width: 140%
             height: auto
             display: flex
+            // flex-wrap: wrap
             column-gap: 30px
             @include marbot
             .service
-                min-width: clamp(150px, calc(250 * 1vw/17.11), 450px)
+                flex: 1 1 250px
                 height: auto
                 background-color: #fff
                 border-radius: clamp(22.5px, calc(30 * 1vw/17.11), 37.5px)
@@ -334,46 +334,47 @@ main
                     @include text
                     @include marbot-mm
     .doors
+        position: relative
         width: 100%
         min-height: 800px
-        height: auto
         background-color: $colorSecondaryBackground
-        display: flex
-        flex-direction: column
-        align-items: center
-        justify-content: center
         overflow: hidden
         .titleText
             @include header_titles
+            text-align: center
         .variants
-            display: flex
-            flex-wrap: wrap
-            width: clamp(1100px, calc(1368.8 * 1vw/17.11), 2700px)
-            gap: 30px
-            justify-content: center
+            width: 80%
             @include marbot
+            margin-inline: auto
+            display: grid
+            grid-template-columns: repeat(3, 33%)
+            gap: calc(30 * 1vw/17.11)
             .door
-                flex-basis: 550px
-                min-height: 460px
                 background-color: white
                 border-radius: 16px
                 display: grid
-                grid-template-rows: 250px 100px auto 100px
-                img
-                    width: 300px
-                    margin: 0 auto
-                    margin-top: 30px
-                .door-text-title, .door-text
-                    margin-inline: clamp(10px, calc(16 * 1vw/17.11), 24px)
-                .door-text-title
-                    @include titles
-                .door-text
-                    @include text
+                grid-template-rows: auto clamp(80px, calc(80 * 1vw/17.11), 130px)
+                .wrapped
+                    width: 100%
+                    display: flex
+                    flex-direction: column
+                    img
+                        align-self: center
+                        width: 80%
+                        margin-top: 30px
+                    .door-text-title, .door-text
+                        margin-inline: 5%
+                    .door-text-title
+                        @include titles
+                    .door-text
+                        @include text
                 a
+                    @include text
+                    margin-top: 0
                     align-self: center
                     margin-inline: auto
                     text-align: center
-                    width: 300px
+                    width: 90%
                     padding: 10px 
                     color: $colorButton
                     text-decoration: none
@@ -383,114 +384,123 @@ main
                     &:hover
                         color: white
                         background-color: $colorButton
+        .prev, .next
+            display: none
+            cursor: pointer
+            position: absolute
+            top: 50%
+            width: auto
+            margin-top: -22px
+            padding: 16px
+            color: $colorButton
+            font-weight: bold
+            font-size: 24px
+            transition: 0.6s ease
+            border-radius: 0 3px 3px 0
+            user-select: none
+        .next
+            right: 0
+            border-radius: 3px 0 0 3px
+        .prev:hover, .next:hover
+            color: $colorFont
+            background-color: $colorButton
+        .dots-doors
+            @include marbot
+            .dot-doors
+                cursor: pointer
+                height: clamp(14px, calc(16 * 1vw/17.11), 24px)
+                width: clamp(14px, calc(16 * 1vw/17.11), 24px)
+                margin: 0 clamp(2px, calc(4 * 1vw/17.11), 4px)
+                background-color: #bbb
+                border-radius: 50%
+                display: none
+                transition: background-color 0.6s ease
+                &.active, &:hover
+                    background-color: #717171
     .windows
+        position: relative
         width: 100%
-        height: auto
+        min-height: 800px
         background-color: $colorThirdaryBackground
-        display: flex
-        flex-direction: column
-        align-items: center
-        justify-content: center
         overflow: hidden
         .titleText
             @include header_titles
+            text-align: center
         .variants
-            display: flex
-            flex-wrap: wrap
-            width: 1110px
-            gap: 30px
-            justify-content: center
+            width: 80%
             @include marbot
+            margin-inline: auto
+            display: grid
+            grid-template-columns: repeat(3, 33%)
+            gap: calc(30 * 1vw/17.11)
             .window
-                width: 350px
-                min-height: 460px
                 background-color: white
                 border-radius: 16px
-                display: flex
-                flex-direction: column
-                img
-                    width: 300px
-                    margin: 0 auto
-                    margin-top: 30px
-                .window-text-title, .window-text
-                    margin-inline: 24px
-                .window-text-title
-                    margin-top: 20px
-                    font-size: 24px
-                .window-text
-                    margin-top: 10px
-                    line-height: 28px
-                    min-height: 50px
+                display: grid
+                grid-template-rows: auto clamp(80px, calc(80 * 1vw/17.11), 130px)
+                .wrapped
+                    width: 100%
+                    display: flex
+                    flex-direction: column
+                    img
+                        align-self: center
+                        width: 80%
+                        margin-top: 30px
+                    .window-text-title, .window-text
+                        margin-inline: 5%
+                    .window-text-title
+                        @include titles
+                    .window-text
+                        @include text
                 a
+                    @include text
+                    margin-top: 0
+                    align-self: center
                     margin-inline: auto
                     text-align: center
-                    margin-top: 15px
-                    width: 300px
-                    padding: 10px
+                    width: 90%
+                    padding: 10px 
                     color: $colorButton
                     text-decoration: none
                     border: solid 1.5px $colorButton
                     border-radius: 50px
                     transition: all .3s
-                    margin-bottom: 30px
                     &:hover
                         color: white
                         background-color: $colorButton
-    .lukes
-        width: 100%
-        height: auto
-        background-color: $colorFourBackground
-        display: flex
-        flex-direction: column
-        align-items: center
-        justify-content: center
-        overflow: hidden
-        .titleText
-            @include header_titles
-        .variant
-            background-color: #fff
-            width: 1110px
-            height: 600px
-            border-radius: 16px
-            display: flex
+        .prev, .next
+            display: none
+            cursor: pointer
+            position: absolute
+            top: 50%
+            width: auto
+            margin-top: -22px
+            padding: 16px
+            color: $colorButton
+            font-weight: bold
+            font-size: 24px
+            transition: 0.6s ease
+            border-radius: 0 3px 3px 0
+            user-select: none
+        .next
+            right: 0
+            border-radius: 3px 0 0 3px
+        .prev:hover, .next:hover
+            color: $colorFont
+            background-color: $colorButton
+        .dots-windows
             @include marbot
-            .left-side
-                width: 50%
-                display: flex
-                flex-direction: column
-                justify-content: center
-                .lukes-text-title, .lukes-text
-                    margin-inline: 24px
-                .lukes-text-title
-                    font-family: "AvenirNextCyr-Bold"
-                    margin-top: 20px
-                    font-size: 24px
-                .lukes-text
-                    margin-top: 10px
-                    line-height: 28px
-                    min-height: 50px
-                a
-                    margin-inline: auto
-                    text-align: center
-                    margin-top: 15px
-                    width: 507px
-                    padding: 10px 20px
-                    color: $colorButton
-                    text-decoration: none
-                    border: solid 1.5px $colorButton
-                    border-radius: 50px
-                    transition: all .3s
-                    margin-bottom: 30px
-                    &:hover
-                        color: white
-                        background-color: $colorButton
-            .right-side
-                margin-inline: 24px
-                width: 50%
-                background: url("../img/lukes.jpg")
-                background-size: contain
-                background-repeat: no-repeat
-                background-position: center center
+            .dot-windows
+                cursor: pointer
+                height: clamp(14px, calc(16 * 1vw/17.11), 24px)
+                width: clamp(14px, calc(16 * 1vw/17.11), 24px)
+                margin: 0 clamp(2px, calc(4 * 1vw/17.11), 4px)
+                background-color: #bbb
+                border-radius: 50%
+                display: none
+                transition: background-color 0.6s ease
+                &.active, &:hover
+                    background-color: #717171
     .contacts
         width: 100%
         height: auto
@@ -500,6 +510,11 @@ main
         align-items: center
         justify-content: center
         overflow: hidden
+        >div
+            @include text
+            text-align: center
+            &:nth-of-type(5)
+                @include marbot
         .titleText
             @include header-titles
         .phone-number, .address, .e-mail
@@ -535,9 +550,9 @@ main
                 width: 100%
         iframe
             border-radius: 16px
-            margin-bottom: 70px
-            width: 1110px
-            height: 500px
+            @include marbot
+            width: 80%
+            height: 50vh
 footer
     background-color: $colorFontFirstly
     min-height: 450px
