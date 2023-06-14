@@ -1,34 +1,34 @@
-let slideIndex = 1;
+let slideIndexDoor = 1;
 let windowInnerWidth = window.innerWidth;
 if (windowInnerWidth < 768)
-    showSlidesDoor(slideIndex);
+    showSlidesDoor(slideIndexDoor);
 
-function plusSlides(n) {
-    showSlidesDoor(slideIndex += n);
+function plusSlidesDoor(n) {
+    showSlidesDoor(slideIndexDoor += n);
 }
 
-function currentSlide(n) {
-    showSlidesDoor(slideIndex = n)
+function currentSlideDoor(n) {
+    showSlidesDoor(slideIndexDoor = n)
 }
 
 function showSlidesDoor(n) {
     let i;
     let slides = document.getElementsByClassName('door');
     let dots = document.getElementsByClassName('dot-doors');
-    let maxheight = "0"
+    let maxheight = 0
 
     if (n > slides.length) {
-        slideIndex = 1
+        slideIndexDoor = 1
     }
 
     if (n < 1) {
-        slideIndex = slides.length
+        slideIndexDoor = slides.length
     }
 
     for (i=0; i<slides.length; i++) {
         slides[i].style.display = "grid";
         slides[i].style.height = "auto";
-        currentHeight = window.getComputedStyle(slides[i], null).height
+        currentHeight = parseFloat (window.getComputedStyle(slides[i], null).height)
         if (currentHeight > maxheight){
             maxheight = currentHeight
         }
@@ -39,9 +39,9 @@ function showSlidesDoor(n) {
         dots[i].className = dots[i].className.replace(" active", "");
     }
 
-    slides[slideIndex-1].style.display = "grid";
-    slides[slideIndex-1].style.height = maxheight
-    dots[slideIndex-1].className += " active";
+    slides[slideIndexDoor-1].style.display = "grid";
+    slides[slideIndexDoor-1].style.height = maxheight + "px"
+    dots[slideIndexDoor-1].className += " active";
 }
 
 window.addEventListener('resize', start);
@@ -57,6 +57,6 @@ function start() {
         }
     }
     else {
-        showSlidesDoor(slideIndex);
+        showSlidesDoor(slideIndexDoor);
     }
 }

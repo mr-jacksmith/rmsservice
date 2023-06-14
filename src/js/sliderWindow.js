@@ -1,17 +1,17 @@
 let slideIndexWindow = 1;
 let windowInnerWidthWindow = window.innerWidth;
 if (windowInnerWidthWindow < 768)
-    showSlides(slideIndexWindow);
+    showSlidesWindow(slideIndexWindow);
 
-function plusSlides(n) {
-    showSlides(slideIndexWindow += n);
+function plusSlidesWindow(n) {
+    showSlidesWindow(slideIndexWindow += n);
 }
 
-function currentSlide(n) {
-    showSlides(slideIndexWindow = n)
+function currentSlideWindow(n) {
+    showSlidesWindow(slideIndexWindow = n)
 }
 
-function showSlides(n) {
+function showSlidesWindow(n) {
     let i;
     let slides = document.getElementsByClassName('window');
     let dots = document.getElementsByClassName('dot-windows');
@@ -28,7 +28,7 @@ function showSlides(n) {
     for (i=0; i<slides.length; i++) {
         slides[i].style.display = "grid";
         slides[i].style.height = "auto";
-        currentHeight = window.getComputedStyle(slides[i], null).height
+        currentHeight = parseFloat(window.getComputedStyle(slides[i], null).height)
         if (currentHeight > maxheight){
             maxheight = currentHeight
         }
@@ -40,7 +40,7 @@ function showSlides(n) {
     }
 
     slides[slideIndexWindow-1].style.display = "grid";
-    slides[slideIndexWindow-1].style.height = maxheight
+    slides[slideIndexWindow-1].style.height = maxheight + "px"
     dots[slideIndexWindow-1].className += " active";
 }
 
@@ -57,6 +57,6 @@ function start() {
         }
     }
     else {
-        showSlides(slideIndexWindow);
+        showSlidesWindow(slideIndexWindow);
     }
 }

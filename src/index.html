@@ -27,39 +27,42 @@
         </div>
         <div>
             <div class="hat-bar">
-                <div class="logo"><a href="#">РемМаш<span>Сервис</a></span></div>
-                <nav class="navbar">
-                    <ul>
-                        <li>
-                            <a href="">Двери <i class="fa-solid fa-chevron-down fa-beat-fade"></i></a>
-                            <ul class="sub-menu">
-                                <li><a href="">Противопожарные</a></li>
-                                <li><a href="">Входные</a></li>
-                                <li><a href="">Технические</a></li>
-                                <li><a href="">Межкомнатные</a></li>
-                                <li><a href="">Алюминиевые</a></li>
-                                <li><a href="">ПВХ</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="">Окна <i class="fa-solid fa-chevron-down fa-beat-fade"></i></a>
-                            <ul class="sub-menu">
-                                <li><a href="">Противопожарные</a></li>
-                                <li><a href="">Алюминиевые</a></li>
-                                <li><a href="">ПВХ</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="">Люки</a></li>
-                        <li><a href="">Фотогалерея</a></li>
-                        <li><a href="">Контакты</a></li>
-                    </ul>
-                </nav>
-                <div class="search"></div>
-                <div class="givePhone"><a href="#">Заказать звонок</a></div>
-                <div class="burger">
+                <div class="wrapped">
+                    <div class="logo"><a href="#">РемМаш<span>Сервис</a></span></div>
+                    <nav class="navbar">
+                        <ul>
+                            <li>
+                                <a href="">Двери <i class="fa-solid fa-chevron-down fa-beat-fade"></i></a>
+                                <ul class="sub-menu">
+                                    <li><a href="">Противопожарные</a></li>
+                                    <li><a href="">Входные</a></li>
+                                    <li><a href="">Технические</a></li>
+                                    <li><a href="">Межкомнатные</a></li>
+                                    <li><a href="">Алюминиевые</a></li>
+                                    <li><a href="">ПВХ</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">Окна <i class="fa-solid fa-chevron-down fa-beat-fade"></i></a>
+                                <ul class="sub-menu">
+                                    <li><a href="">Противопожарные</a></li>
+                                    <li><a href="">Алюминиевые</a></li>
+                                    <li><a href="">ПВХ</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">Люки</a></li>
+                            <li><a href="">Фотогалерея</a></li>
+                            <li><a href="">Контакты</a></li>
+                        </ul>
+                    </nav>
+                    <div class="search"></div>
+                    <div class="givePhone"><a href="#">Заказать звонок</a></div>
+                </div>
+                <div id="burger" class="burger">
                     <span></span>
                     <span></span>
                     <span></span>
                 </div>
+                <script src="./js/burger.js"></script>
             </div>
         </div>
         <div class="head-bar">
@@ -235,15 +238,15 @@
                     <a href="#">Подробнее</a>
                 </div>
             </div>
-            <a class="prev" onclick="plusSlides(-1)">&#10094</a>
-            <a class="next" onclick="plusSlides(1)">&#10095</a>
+            <a class="prev" onclick="plusSlidesDoor(-1)">&#10094</a>
+            <a class="next" onclick="plusSlidesDoor(1)">&#10095</a>
             <div class="dots-doors" style="text-align: center">
-                <span class="dot-doors" onclick="currentSlide(1)"></span>
-                <span class="dot-doors" onclick="currentSlide(3)"></span>
-                <span class="dot-doors" onclick="currentSlide(4)"></span>
-                <span class="dot-doors" onclick="currentSlide(2)"></span>
-                <span class="dot-doors" onclick="currentSlide(5)"></span>
-                <span class="dot-doors" onclick="currentSlide(6)"></span>
+                <span class="dot-doors" onclick="currentSlideDoor(1)"></span>
+                <span class="dot-doors" onclick="currentSlideDoor(2)"></span>
+                <span class="dot-doors" onclick="currentSlideDoor(3)"></span>
+                <span class="dot-doors" onclick="currentSlideDoor(4)"></span>
+                <span class="dot-doors" onclick="currentSlideDoor(5)"></span>
+                <span class="dot-doors" onclick="currentSlideDoor(6)"></span>
             </div>
         </div>
         <script src="./js/sliderDoor.js"></script>
@@ -280,12 +283,12 @@
                     <a href="#">Подробнее</a>
                 </div>
             </div>
-            <a class="prev" onclick="plusSlides(-1)">&#10094</a>
-            <a class="next" onclick="plusSlides(1)">&#10095</a>
+            <a class="prev" onclick="plusSlidesWindow(-1)">&#10094</a>
+            <a class="next" onclick="plusSlidesWindow(1)">&#10095</a>
             <div class="dots-windows" style="text-align: center">
-                <span class="dot-windows" onclick="currentSlide(1)"></span>
-                <span class="dot-windows" onclick="currentSlide(2)"></span>
-                <span class="dot-windows" onclick="currentSlide(3)"></span>
+                <span class="dot-windows" onclick="currentSlideWindow(1)"></span>
+                <span class="dot-windows" onclick="currentSlideWindow(2)"></span>
+                <span class="dot-windows" onclick="currentSlideWindow(3)"></span>
             </div>
         </div>
         <script src="./js/sliderWindow.js"></script>
@@ -345,7 +348,7 @@
                     <div class="text"><i class="fa-solid fa-phone-volume"></i><a href="tel:+79583935153">+7 (958)
                             393-51-53</a></div>
                 </div>
-                <div class="phone">
+                <div class="address">
                     <div class="text"><i class="fa-solid fa-location-dot"></i>ООО "РемМашСервис", Россия, Кировская
                         обл., г. Киров, ул. Сормовская, 2, 610044</div>
                 </div>
