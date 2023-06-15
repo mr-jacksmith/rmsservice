@@ -12,7 +12,7 @@ burger.addEventListener("click", () => {
     navigation.style.display = "flex";
   
     setTimeout(() => {
-      navigation.style.height = "180px";
+      navigation.style.height = "auto";
     }, 10);
   } else {
     // Если бургер неактивен, скрываем навигацию плавно

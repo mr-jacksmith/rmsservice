@@ -1,7 +1,12 @@
 let slideIndexWindow = 1;
 let windowInnerWidthWindow = window.innerWidth;
-if (windowInnerWidthWindow < 768)
-    showSlidesWindow(slideIndexWindow);
+let maxheightDetWindow = NaN
+
+window.addEventListener('load', (event) => {
+    if (windowInnerWidthWindow < 768) {
+        showSlidesWindow(slideIndexWindow);
+    }
+})
 
 function plusSlidesWindow(n) {
     showSlidesWindow(slideIndexWindow += n);
@@ -26,11 +31,13 @@ function showSlidesWindow(n) {
     }
 
     for (i=0; i<slides.length; i++) {
-        slides[i].style.display = "grid";
-        slides[i].style.height = "auto";
-        currentHeight = parseFloat(window.getComputedStyle(slides[i], null).height)
-        if (currentHeight > maxheight){
-            maxheight = currentHeight
+        if (isNaN(maxheightDetWindow)) {
+            slides[i].style.display = "grid";
+            slides[i].style.height = "auto";
+            currentHeight = parseFloat(window.getComputedStyle(slides[i], null).height)
+            if (currentHeight > maxheight){
+                maxheight = currentHeight
+            }
         }
         slides[i].style.display = "none";
     }
@@ -39,8 +46,11 @@ function showSlidesWindow(n) {
         dots[i].className = dots[i].className.replace(" active", "");
     }
 
+    if (isNaN(maxheightDetWindow)) {
+        maxheightDetWindow = maxheight
+    }
     slides[slideIndexWindow-1].style.display = "grid";
-    slides[slideIndexWindow-1].style.height = maxheight + "px"
+    slides[slideIndexWindow-1].style.height = maxheightDetWindow + "px"
     dots[slideIndexWindow-1].className += " active";
 }
 

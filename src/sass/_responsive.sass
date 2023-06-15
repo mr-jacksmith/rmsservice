@@ -28,8 +28,9 @@
                                 transition: all 0.5s ease
                                 i
                                     display: none
-                                li .sub-menu
-                                    display: none
+                                li:not(.givePhone)
+                                    .sub-menu
+                                        display: none
                     .burger
                         display: flex
         .head-bar
@@ -60,7 +61,7 @@
                     grid-template-rows: auto calc(130 * 1vw/17.11)
                     .wrapped
                         .door-text-title, .door-text
-                            margin-inline: 3%
+                            margin-inline: clamp(24px, calc(16 * 1vw/17.11), 48px)
         .windows
             .variants
                 width: 80%
@@ -69,7 +70,7 @@
                     grid-template-rows: auto calc(130 * 1vw/17.11)
                     .wrapped
                         .window-text-title, .window-text
-                            margin-inline: 3%
+                            margin-inline: clamp(24px, calc(16 * 1vw/17.11), 48px)
                     &:nth-of-type(3)
                         justify-self: center
                         width: 50%
@@ -112,11 +113,19 @@
 
 @media (max-width: 768px)
     header
-        >div
+        .fixed
+            .hat-bar
+                width: 90%
+                .wrapped
+                    .navbar
+                        width: auto
+        .soff-main
             .special-offer
+                width: 90%
                 .alignCenter
                     flex-direction: column
         .head-bar
+            width: 90%
             .right-bar
                 background-size: 120%
     main
@@ -125,6 +134,14 @@
                 width: 90%
             .services
                 width: 90%
+                .service
+                    .titleText
+                        margin-top: 50px
+            .prevService, .nextService
+                display: block
+            .dots-service
+                .dot-service
+                    display: inline-block
         .doors
             .prev, .next
                 display: block
@@ -186,6 +203,10 @@
         .fixed
             .hat-bar
                 .wrapped
+                    .navbar
+                        ul
+                            .givePhone
+                                display: flex
                     .givePhone
                         display: none
             

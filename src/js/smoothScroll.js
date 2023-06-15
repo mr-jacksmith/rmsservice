@@ -22,7 +22,6 @@ const smoothScroll = (target) => {
   }
 
   const links = document.querySelectorAll('a[href^="#"]')
-  console.log(links)
   links.forEach(link => {
     link.addEventListener('click', (event) => {
       event.preventDefault()

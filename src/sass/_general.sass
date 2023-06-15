@@ -96,7 +96,25 @@ header
                         justify-content: space-between
                         align-items: center
                         list-style: none
-                        li
+                        .givePhone
+                            display: none
+                            align-items: center
+                            justify-content: flex-end
+                            margin-left: calc(30 * 1vw/17.11)
+                            a
+                                text-align: center
+                                color: $colorButton
+                                text-decoration: none
+                                border: solid calc(1.5 * 1vw/17.11) $colorButton
+                                border-radius: 50px
+                                padding: clamp(5px, calc(10 * 1vw/17.11), 24px) clamp(10px, calc(20 * 1vw/17.11), 48px)
+                                transition: all 0.3s
+                                margin-block: calc(7 * 1vw/17.11)
+                                font-size: clamp(16px, 0.2rem + 0.8vw, 48px)
+                                &:hover
+                                    background-color: $colorButton
+                                    color: #fff
+                        li:not(.givePhone)
                             display: flex
                             align-items: center
                             height: 100%
@@ -148,7 +166,7 @@ header
                                     .sub-menu
                                         height: 200%
                             
-                .givePhone
+                >.givePhone
                     display: flex
                     align-items: center
                     justify-content: flex-end
@@ -159,7 +177,7 @@ header
                         text-decoration: none
                         border: solid calc(1.5 * 1vw/17.11) $colorButton
                         border-radius: 50px
-                        padding: calc(10 * 1vw/17.11) calc(20 * 1vw/17.11)
+                        padding: clamp(5px, calc(10 * 1vw/17.11), 24px) clamp(10px, calc(20 * 1vw/17.11), 48px)
                         transition: all 0.3s
                         margin-block: calc(7 * 1vw/17.11)
                         font-size: clamp(16px, 0.2rem + 0.8vw, 48px)
@@ -284,31 +302,34 @@ header
                     cursor: pointer
                     margin-bottom: 70px
         .right-bar
+            position: relative
             display: flex
             flex-direction: column
             justify-content: center
-            align-items: center
             width: 48%
             min-height: 60vh
-            background: url(https://doorhan.ru/upload/spravka/data/1C_KTR//%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D0%BE%D0%B5%20%D1%84%D0%BE%D1%82%D0%BE%2001.07.21/%D0%9D%D0%B5%D1%87%D0%B0%D0%B9%20%D0%AE%D0%BB%D0%B8%D1%8F%20%D0%AE%D1%80%D1%8C%D0%B5%D0%B2%D0%BD%D0%B0/%D0%91%D1%8B%D1%82%D0%BE%D0%B2%D1%8B%D0%B5%20%D0%B4%D0%B2%D0%B5%D1%80%D0%B8/%D0%94%D0%B2%D0%B5%D1%80%D0%B8%20%D0%B1%D1%8B%D1%82%D0%BE%D0%B2%D1%8B%D0%B5%20%D0%9B%D0%B8%D0%B4%D0%B5%D1%80.png)
-            background-size: 70vh
-            background-repeat: no-repeat
-            background-position: center center
-            >div
+            img
+                width: 100%
+                margin: clamp(20px, calc(20 * 1vw/17.11), 48px)
+            div
+                position: absolute
                 margin-top: clamp(18px, calc(18 * 1vw/17.11), 35px)
                 padding: 10px
                 border-radius: 10px
                 user-select: none
-                font-size: clamp(18px, calc(18 * 1vw/17.11), 35px)
-                &:nth-of-type(1), &:nth-of-type(3)
-                    position: relative
-                    left: 100px
+                font-size: clamp(15px, calc(18 * 1vw/17.11), 35px)
                 &:nth-of-type(1)
                     background-color: $firstOfType
+                    top: 40%
+                    left: 33%
                 &:nth-of-type(2)
                     background-color: $secondOfType
+                    top: 50%
+                    left: 40%
                 &:nth-of-type(3)
                     background-color: $thirdOfType
+                    top: 60%
+                    left: 33%
 main
     .advantages
         width: 100%
@@ -316,6 +337,7 @@ main
         background-color: $colorSlider
         @include flexbox($d: column, $a:center, $j: flex-start)
         overflow: hidden
+        position: relative
         .advantageText
             width: 80%
             color: #fff
@@ -374,6 +396,8 @@ main
                         background-color: $thirdOfType
                     i
                         color: $brightFour
+                // &:nth-of-type(7)
+                //     justify-self: flex-start
                 &:nth-of-type(8), &:nth-of-type(9), &:nth-of-type(7)
                     .background
                         background-color: $colorFiveBackground
@@ -381,13 +405,47 @@ main
                         color: $brightFive
                 
                 .titleText, .text
-                    margin-inline: clamp(10px, calc(16 * 1vw/17.11), 24px)
+                    margin: clamp(24px, calc(16 * 1vw/17.11), 48px)
                     user-select: none
                 .titleText
                     @include titles
                 .text
                     @include text
-                    @include marbot-mm
+        .prevService, .nextService
+            display: none
+            cursor: pointer
+            position: absolute
+            top: 50%
+            width: auto
+            margin-top: -22px
+            padding: 16px
+            color: $colorButton
+            font-weight: bold
+            font-size: 24px
+            transition: 0.6s ease
+            border-radius: 0 3px 3px 0
+            user-select: none
+        .prevService
+            left: 0
+        .nextService
+            right: 0
+            border-radius: 3px 0 0 3px
+        .prevService:hover, .nextService:hover
+            color: $colorFont
+            background-color: $colorButton
+        .dots-service
+            @include marbot
+            .dot-service
+                cursor: pointer
+                height: clamp(14px, calc(16 * 1vw/17.11), 24px)
+                width: clamp(14px, calc(16 * 1vw/17.11), 24px)
+                margin: 0 clamp(2px, calc(4 * 1vw/17.11), 4px)
+                background-color: #bbb
+                border-radius: 50%
+                display: none
+                transition: background-color 0.6s ease
+                &.active, &:hover
+                    background-color: #717171
     .doors
         position: relative
         width: 100%
@@ -700,3 +758,22 @@ footer
             color: $colorAllRightsReserved
             text-align: center
             @include marbot
+.go-to-top
+    position: fixed
+    right: 5%
+    bottom: 5%
+    z-index: 5
+    font-size: clamp(20px, calc(30 * 1vw/17.11), 50px)
+    cursor: pointer
+    padding: 25px 15px
+    border-radius: 10px
+    border: solid 1.5px $colorButton
+    transition: 0.3s ease
+    i
+        color: $colorButton
+    &:hover
+        background-color: $colorButton
+        i
+            color: white
+    &.btn-up_hide
+        display: none
