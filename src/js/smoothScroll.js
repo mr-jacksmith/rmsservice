@@ -1,6 +1,14 @@
 const smoothScroll = (target) => {
+    const navbar = document.getElementById("fixed")
+    let heightNavbar = parseFloat(window.getComputedStyle(navbar, null).height)
+    if (navbar.classList.contains("pp")) {
+      heightNavbar = heightNavbar
+    } else {
+      heightNavbar = heightNavbar*2
+    }
+    console.log(heightNavbar)
     const start = window.scrollY
-    const end = target.offsetTop
+    const end = target.offsetTop - heightNavbar
     const distance = end - start
     const duration = 1000 // время анимации в мс
     let startTime = null

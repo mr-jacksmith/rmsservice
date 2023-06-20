@@ -79,10 +79,17 @@ header
                 .logo
                     display: flex
                     align-items: center
-                    font-size: clamp(20px, 0.2rem + 1.6vw, 56px)
                     user-select: none
-                    span
-                        color: $colorButton
+                    a
+                        display: flex
+                        align-items: center
+                        padding: 5px 0
+                        img
+                            height: 100px
+                            z-index: 2
+                            position: relative
+                            // top: -50px
+                            // left: 200px
                 .navbar
                     display: flex
                     width: 50%
@@ -159,11 +166,11 @@ header
                             &:nth-of-type(1)
                                 &:hover
                                     .sub-menu
-                                        height: 400%
+                                        height: 300%
                             &:nth-of-type(2)
                                 &:hover
                                     .sub-menu
-                                        height: 200%
+                                        height: 150%
                             
                 >.givePhone
                     display: flex
@@ -472,10 +479,11 @@ main
                     flex-direction: column
                     img
                         align-self: center
-                        width: 80%
+                        width: 90%
                         margin-top: 30px
                     .door-text-title, .door-text
-                        margin-inline: 5%
+                        margin-inline: auto
+                        width: 90%
                     .door-text-title
                         @include titles
                     .door-text
@@ -556,10 +564,11 @@ main
                     flex-direction: column
                     img
                         align-self: center
-                        width: 80%
+                        width: 90%
                         margin-top: 30px
                     .window-text-title, .window-text
-                        margin-inline: 5%
+                        margin-inline: auto
+                        width: 90%
                     .window-text-title
                         @include titles
                     .window-text
@@ -689,6 +698,8 @@ footer
                 user-select: none
                 a
                     color: white
+                    img
+                        height: 50%
                 span
                     color: $colorButton
                 .text
