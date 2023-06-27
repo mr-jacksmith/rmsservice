@@ -1,37 +1,37 @@
-let slideIndexWindow = 1;
+let slideIndexService = 1;
 let windowInnerWidthWindow = window.innerWidth;
-let maxheightDetWindow = NaN
+let maxheightDetService = NaN
 
 window.addEventListener('load', (event) => {
     if (windowInnerWidthWindow < 768) {
-        showSlidesWindow(slideIndexWindow);
+        showSlidesWindow(slideIndexService);
     }
 })
 
 function plusSlidesWindow(n) {
-    showSlidesWindow(slideIndexWindow += n);
+    showSlidesWindow(slideIndexService += n);
 }
 
 function currentSlideWindow(n) {
-    showSlidesWindow(slideIndexWindow = n)
+    showSlidesWindow(slideIndexService = n)
 }
 
 function showSlidesWindow(n) {
     let i;
     let slides = document.getElementsByClassName('window');
     let dots = document.getElementsByClassName('dot-windows');
-    let maxheight = "0"
+    let maxheight = 0
 
     if (n > slides.length) {
-        slideIndexWindow = 1
+        slideIndexService = 1
     }
 
     if (n < 1) {
-        slideIndexWindow = slides.length
+        slideIndexService = slides.length
     }
 
     for (i=0; i<slides.length; i++) {
-        if (isNaN(maxheightDetWindow)) {
+        if (isNaN(maxheightDetService)) {
             slides[i].style.display = "grid";
             slides[i].style.height = "auto";
             currentHeight = parseFloat(window.getComputedStyle(slides[i], null).height)
@@ -46,12 +46,12 @@ function showSlidesWindow(n) {
         dots[i].className = dots[i].className.replace(" active", "");
     }
 
-    if (isNaN(maxheightDetWindow)) {
-        maxheightDetWindow = maxheight
+    if (isNaN(maxheightDetService)) {
+        maxheightDetService = maxheight
     }
-    slides[slideIndexWindow-1].style.display = "grid";
-    slides[slideIndexWindow-1].style.height = maxheightDetWindow + "px"
-    dots[slideIndexWindow-1].className += " active";
+    slides[slideIndexService-1].style.display = "grid";
+    slides[slideIndexService-1].style.height = maxheightDetService + "px"
+    dots[slideIndexService-1].className += " active";
 }
 
 window.addEventListener('resize', startWindow);
@@ -67,6 +67,6 @@ function startWindow() {
         }
     }
     else {
-        showSlidesWindow(slideIndexWindow);
+        showSlidesWindow(slideIndexService);
     }
 }

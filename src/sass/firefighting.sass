@@ -1,0 +1,173 @@
+@import './_mixins'
+@import './_variables'
+    
+
+main
+    .title
+        @include container
+        padding-bottom: 0
+        background-color: $colorSecondaryBackground
+        h1
+            @include title
+            margin-block: 0
+            text-align: center
+    .container
+        @include container
+        min-height: 1100px
+        .info
+            h2
+                @include title-text
+            .text
+                @include text
+        .cards
+            margin-top: 30px
+            width: 100%
+            display: grid
+            grid-template-columns: repeat(3, 1fr)
+            gap: 30px
+            overflow: hidden
+            .card
+                position: relative
+                display: flex
+                flex-direction: column
+                justify-content: space-between
+                width: 100%
+                height: 72vh
+                background-color: white
+                border-radius: 16px
+                padding: 24px
+                cursor: pointer
+                overflow: hidden
+                .fa-solid.fa-chevron-down
+                    display: none
+                    position: absolute
+                    right: 30px
+                    font-size: clamp(20px, 1.4026884863vw, 32px)
+                    color: white
+                    background-color: $colorButton
+                    padding-inline: 5%
+                    padding-block: 2%
+                    border-radius: 6px
+                    opacity: 0.9
+                    transform: scale(1, -1)
+                &:hover
+                    .imgPc
+                        margin: 0
+                        width: 10%
+                        height: 10%
+                    .title-text
+                        margin-top: 0
+                        margin-bottom: clamp(10px, .9351256575vw, 24px)
+                .imgPc
+                    width: 100%
+                    height: 82%
+                    transition: 0.5s
+                    img
+                        width: 100%
+                        height: 100%
+                        object-fit: contain
+                .title-text
+                    @include title-text
+                    @include martop-mm
+                    margin-bottom: 500px
+                .text
+                    .parph
+                        @include text
+                .price
+                    @include martop-mm
+                    display: flex
+                    flex-direction: column
+                    .parph
+                        @include title-text
+                        color: $colorButton
+                        align-self: flex-end
+                    a
+                        background-color: $colorButton
+                        padding: 12px 32px
+                        border-radius: 32px
+                        color: white
+                        text-align: center
+        .prevCardDoor, .nextCardDoor
+            display: none
+            cursor: pointer
+            position: absolute
+            top: 50%
+            width: auto
+            margin-top: -22px
+            padding: 16px
+            color: $colorButton
+            font-weight: bold
+            font-size: 24px
+            transition: 0.6s ease
+            border-radius: 0 3px 3px 0
+            user-select: none
+        .prevCardDoor
+            left: 0
+        .nextCardDoor
+            right: 0
+            border-radius: 3px 0 0 3px
+        .prevCardDoor:hover, .nextCardDoor:hover
+            color: $colorFont
+            background-color: $colorButton
+        .dots-card-door
+            @include martop
+            @include marbot
+            .dot-card-door
+                cursor: pointer
+                height: clamp(14px, calc(16 * 1vw/17.11), 24px)
+                width: clamp(14px, calc(16 * 1vw/17.11), 24px)
+                margin: 0 clamp(2px, calc(4 * 1vw/17.11), 4px)
+                background-color: #bbb
+                border-radius: 50%
+                display: none
+                transition: background-color 0.6s ease
+                &.active, &:hover
+                    background-color: #717171
+
+
+@media (max-width: 1250px)
+    main
+        .container
+            .cards
+                grid-template-columns: 1fr
+                grid-template-rows: repeat(3, 1fr)
+                .card
+                    &:hover
+                        .imgPc
+                            width: 20%
+                            height: 40%
+        
+
+@media (max-width: 768px)
+    main
+        .title
+            h1
+                margin-top: clamp(40px,2.9222676797vw,60px)
+        .container
+            grid-template-columns: 1fr
+            .info
+                grid-column: 1/2
+            .cards
+                display: flex
+                .card
+                    justify-self: center
+                    .fa-solid.fa-chevron-down
+                        display: block
+                    &:hover
+                        .imgPc
+                            margin: 0
+                            width: 100%
+                            height: 82%
+                        .title-text
+                            @include martop-mm
+                            margin-bottom: 500px
+                    &.active
+                        .imgPc
+                            width: 20%
+                            height: 40%
+            .prevCardDoor, .nextCardDoor
+                display: block
+            .dots-card-door
+                .dot-card-door
+                    display: inline-block
+

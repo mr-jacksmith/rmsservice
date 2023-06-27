@@ -7,6 +7,9 @@
 
 @mixin martop
     margin-top: clamp(40px, calc(50 * 1vw/17.11), 60px)
+
+@mixin martop-mm
+    margin-top: clamp(13px, calc(20 * 1vw/17.11), 30px)
     
 @mixin marbot
     margin-bottom: clamp(40px, calc(50 * 1vw/17.11), 60px)
@@ -30,3 +33,28 @@
 
 @mixin marbot-mm
     margin-bottom: clamp(13px, calc(20 * 1vw/17.11), 30px)
+
+@mixin container
+    padding-block: 3%
+    padding-inline: 10%
+    @media (max-width: 768px)
+        padding-block: 1%
+        padding-inline: 5%
+
+@mixin title
+    font-family: "AvenirNextCyr-Bold"
+    font-size: clamp(32px,2.1040327294vw,48px)
+    margin-top: clamp(40px,2.9222676797vw,60px)
+    margin-bottom: clamp(40px,2.9222676797vw,60px)
+    text-align: center
+    text-transform: uppercase
+
+@mixin title-text
+    font-family: "AvenirNextCyr-Bold"
+    font-size: clamp(20px, 1.4026884863vw, 32px)
+    margin-bottom: clamp(10px, .9351256575vw, 24px)
+
+@mixin simple-text
+    color: #56566d
+    font-size: clamp(14px,.9351256575vw,24px)
+    line-height: clamp(24px,1.4026884863vw,48px)
