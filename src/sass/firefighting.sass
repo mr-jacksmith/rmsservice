@@ -1,6 +1,23 @@
 @import './_mixins'
 @import './_variables'
-    
+
+@keyframes bounce
+    0%
+        transform: translateY(0)
+    2%
+        transform: translateY(-10px) rotateZ(30deg)
+    4%
+        transform: translateY(-10px) rotateZ(-30deg)
+    6%
+        transform: translateY(-10px) rotateZ(30deg)
+    8%
+        transform: translateY(-10px) rotateZ(-30deg)
+    10%
+        transform: translateY(0)
+    75%
+        transform: translateY(0)
+    100%
+        transform: translateY(0)    
 
 main
     .title
@@ -13,13 +30,17 @@ main
             text-align: center
     .container
         @include container
-        min-height: 1100px
+        min-height: 800px
+        overflow: hidden
         .info
             h2
                 @include title-text
+                @include martop-mm
+                @include marbot-mm
             .text
                 @include text
         .cards
+            position: relative
             margin-top: 30px
             width: 100%
             display: grid
@@ -45,19 +66,24 @@ main
                     font-size: clamp(20px, 1.4026884863vw, 32px)
                     color: white
                     background-color: $colorButton
-                    padding-inline: 5%
-                    padding-block: 2%
+                    padding-inline: clamp(12px, calc(32 * 1vw/17.11),32px)
+                    padding-block: clamp(6px, calc(16 * 1vw/17.11), 16px)
                     border-radius: 6px
                     opacity: 0.9
                     transform: scale(1, -1)
-                &:hover
+                    transition: all 0.5s
+                    animation: bounce 8s linear infinite
+                &:hover, &.active
                     .imgPc
                         margin: 0
                         width: 10%
                         height: 10%
                     .title-text
                         margin-top: 0
-                        margin-bottom: clamp(10px, .9351256575vw, 24px)
+                        margin-bottom: 0
+                &.active
+                    .fa-solid.fa-chevron-down
+                        transform: scale(1, 1)
                 .imgPc
                     width: 100%
                     height: 82%
@@ -69,12 +95,12 @@ main
                 .title-text
                     @include title-text
                     @include martop-mm
-                    margin-bottom: 500px
-                .text
-                    .parph
-                        @include text
+                    margin-bottom: 100px
+                .right-block>.parph, >.parph
+                    @include text
+                    margin-top: 0
                 .price
-                    @include martop-mm
+                    // @include martop-mm
                     display: flex
                     flex-direction: column
                     .parph
@@ -123,19 +149,68 @@ main
                 transition: background-color 0.6s ease
                 &.active, &:hover
                     background-color: #717171
+    .lukes, .windows
+        background-color: $colorThirdaryBackground
+        .cards
+            display: block
+            .card
+                grid-column: 1/4
+                display: grid
+                grid-template-columns: repeat(2, 1fr)
+                height: auto
+                min-height: 72vh
+                &:hover
+                    .title-text
+                        @include martop-mm
+                        @include marbot-mm
+                    .imgPc
+                        width: 100%
+                        height: 100%
+                .right-block
+                    display: flex
+                    flex-direction: column
+                    justify-content: space-between
+                    height: 90%
+                .title-text
+                    @include marbot-mm
+    .windows
+        background-color: $colorFourBackground
+                
 
-
-@media (max-width: 1250px)
+@media (max-width: 1440px)
     main
         .container
             .cards
                 grid-template-columns: 1fr
-                grid-template-rows: repeat(3, 1fr)
+                grid-template-rows: 1fr
+                .card
+                    height: 80vh
+                    .fa-solid.fa-chevron-down
+                        display: block
+                    &:hover:not(.active)
+                        .imgPc
+                            width: 100%
+                            height: 82%
+                        .title-text
+                            @include martop-mm
+                            margin-bottom: 100px
+            .prevCardDoor, .nextCardDoor
+                display: block
+            .dots-card-door
+                .dot-card-door
+                    display: inline-block
+        .lukes, .windows
+            .cards
+                grid-template-columns: 1fr
+                grid-template-rows: 1fr
                 .card
                     &:hover
                         .imgPc
-                            width: 20%
-                            height: 40%
+                            width: 100%
+                            height: 82%
+                        .title-text
+                            @include martop-mm
+                            @include marbot-mm
         
 
 @media (max-width: 768px)
@@ -143,6 +218,7 @@ main
         .title
             h1
                 margin-top: clamp(40px,2.9222676797vw,60px)
+                font-size: clamp(26px,2.1040327294vw,48px)
         .container
             grid-template-columns: 1fr
             .info
@@ -151,23 +227,38 @@ main
                 display: flex
                 .card
                     justify-self: center
-                    .fa-solid.fa-chevron-down
-                        display: block
-                    &:hover
+                    &:hover:not(.active)
                         .imgPc
                             margin: 0
                             width: 100%
                             height: 82%
                         .title-text
                             @include martop-mm
-                            margin-bottom: 500px
+                            margin-bottom: 100px
                     &.active
+                        height: auto
                         .imgPc
                             width: 20%
                             height: 40%
-            .prevCardDoor, .nextCardDoor
-                display: block
-            .dots-card-door
-                .dot-card-door
-                    display: inline-block
-
+                    .title-text
+                        font-size: clamp(18px,1.4026884863vw,32px)
+        .lukes, .windows
+            .info
+                h2
+                    @include martop
+            .cards
+                .card
+                    grid-template-columns: 1fr
+                    height: auto
+                    @include marbot
+                    .imgPc
+                        width: 100%
+                        height: 100%
+                    .title-text
+                        @include marbot-mm
+                    &:hover:not(.active)
+                        .title-text
+                            @include marbot-mm
+                        .imgPc
+                            width: 100%
+                            height: 100%

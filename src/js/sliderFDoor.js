@@ -2,7 +2,7 @@ let slideIndexCardDoor = 1;
 let windowInnerWidthCardDoor = window.innerWidth;
 
 window.addEventListener('load', (event) => {
-    if (windowInnerWidthCardDoor < 768) {
+    if (windowInnerWidthCardDoor < 1441) {
         showSlideCardDoor(slideIndexCardDoor);
     }
 })
@@ -17,9 +17,8 @@ function currentSlideCardDoor(n) {
 
 function showSlideCardDoor(n) {
     let i;
-    let slides = document.getElementsByClassName('card');
+    let slides = document.getElementsByClassName('card-door');
     let dots = document.getElementsByClassName('dot-card-door');
-    let maxheight = 0
 
     if (n > slides.length) {
         slideIndexCardDoor = 1
@@ -45,8 +44,8 @@ window.addEventListener('resize', startCardDoor);
 
 function startCardDoor() {
     windowInnerWidthCardDoor = window.innerWidth;
-    if (windowInnerWidthCardDoor > 768) {
-        let slides = document.getElementsByClassName('card');
+    if (windowInnerWidthCardDoor > 1440) {
+        let slides = document.getElementsByClassName('card-door');
 
         for (i=0; i<slides.length; i++) {
             slides[i].style.display = "flex";
