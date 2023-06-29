@@ -1,5 +1,10 @@
 let cardsDoors = document.getElementsByClassName('card-door');
+let windowInnerWidthActiveCardDoor = window.innerWidth;
 
 const openCard = (n) => {
-    cardsDoors[n-1].classList.toggle('active');
+    if (windowInnerWidthActiveCardDoor < 1440) {
+        for (let i=0; i < cardsDoors.length; i++) {
+            cardsDoors[i].classList.toggle('active');
+        }
+    }
 }

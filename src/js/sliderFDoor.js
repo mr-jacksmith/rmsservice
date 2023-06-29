@@ -30,6 +30,7 @@ function showSlideCardDoor(n) {
 
     for (i=0; i<slides.length; i++) {
         slides[i].style.display = "none";
+        slides[i].style.height = "auto"
     }
     
     for (i=0; i<dots.length; i++) {
@@ -37,6 +38,7 @@ function showSlideCardDoor(n) {
     }
 
     slides[slideIndexCardDoor-1].style.display = "flex";
+    slides[slideIndexCardDoor-1].style.height = "auto"
     dots[slideIndexCardDoor-1].className += " active";
 }
 

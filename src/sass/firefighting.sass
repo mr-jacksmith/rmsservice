@@ -2,28 +2,29 @@
 @import './_variables'
 
 @keyframes bounce
-    0%
-        transform: translateY(0)
     2%
-        transform: translateY(-10px) rotateZ(30deg)
+        transform: scale(0.8)
     4%
-        transform: translateY(-10px) rotateZ(-30deg)
+        transform: scale(0.7)
     6%
-        transform: translateY(-10px) rotateZ(30deg)
+        transform: scale(0.6)
     8%
-        transform: translateY(-10px) rotateZ(-30deg)
+        transform: scale(0.7)
     10%
-        transform: translateY(0)
+        transform: scale(0.8)
+    12%
+        transform: scale(1)
     75%
-        transform: translateY(0)
+        transform: scale(1)
     100%
-        transform: translateY(0)    
+        transform: scale(1)
 
 main
     .title
         @include container
         padding-bottom: 0
         background-color: $colorSecondaryBackground
+        overflow: hidden
         h1
             @include title
             margin-block: 0
@@ -52,26 +53,27 @@ main
                 display: flex
                 flex-direction: column
                 justify-content: space-between
+                gap: clamp(13px, calc(20 * 1vw/17.11), 30px)
                 width: 100%
-                height: 72vh
+                height: auto
                 background-color: white
                 border-radius: 16px
                 padding: 24px
-                cursor: pointer
+                // cursor: pointer
                 overflow: hidden
-                .fa-solid.fa-chevron-down
+                max-height: 120vh
+                .fa-solid.fa-fingerprint
                     display: none
                     position: absolute
                     right: 30px
-                    font-size: clamp(20px, 1.4026884863vw, 32px)
-                    color: white
-                    background-color: $colorButton
-                    padding-inline: clamp(12px, calc(32 * 1vw/17.11),32px)
-                    padding-block: clamp(6px, calc(16 * 1vw/17.11), 16px)
-                    border-radius: 6px
+                    font-size: clamp(32px, 3.5vw, 48px)
+                    color: $colorButton
+                    // background-color: $colorButton
+                    // padding-inline: clamp(12px, calc(32 * 1vw/17.11),32px)
+                    // padding-block: clamp(6px, calc(16 * 1vw/17.11), 16px)
+                    // border-radius: 6px
                     opacity: 0.9
-                    transform: scale(1, -1)
-                    transition: all 0.5s
+                    // transition: all 0.5s
                     animation: bounce 8s linear infinite
                 &:hover, &.active
                     .imgPc
@@ -81,21 +83,25 @@ main
                     .title-text
                         margin-top: 0
                         margin-bottom: 0
-                &.active
-                    .fa-solid.fa-chevron-down
-                        transform: scale(1, 1)
+                    .parph
+                        position: static
+                        display: block              
                 .imgPc
                     width: 100%
                     height: 82%
-                    transition: 0.5s
                     img
                         width: 100%
                         height: 100%
                         object-fit: contain
                 .title-text
                     @include title-text
-                    @include martop-mm
-                    margin-bottom: 100px
+                    margin-bottom: 0
+                    // margin-top: clamp(13px, calc(30 * 1vh/10), 70px)
+                    // margin-bottom: 250px
+                .parph
+                    display: none
+                .price
+                    display: none
                 .right-block>.parph, >.parph
                     @include text
                     margin-top: 0
@@ -132,9 +138,9 @@ main
         .nextCardDoor
             right: 0
             border-radius: 3px 0 0 3px
-        .prevCardDoor:hover, .nextCardDoor:hover
-            color: $colorFont
-            background-color: $colorButton
+        // .prevCardDoor:hover, .nextCardDoor:hover
+        //     color: $colorFont
+        //     background-color: $colorButton
         .dots-card-door
             @include martop
             @include marbot
@@ -159,20 +165,23 @@ main
                 grid-template-columns: repeat(2, 1fr)
                 height: auto
                 min-height: 72vh
+                max-height: none
                 &:hover
-                    .title-text
-                        @include martop-mm
-                        @include marbot-mm
                     .imgPc
                         width: 100%
                         height: 100%
+                .imgPc
+                    transition: 0.5s
+                    .imgPc
+                        width: 100%
+                        height: 100%
+                .parph
+                    display: block
                 .right-block
                     display: flex
                     flex-direction: column
                     justify-content: space-between
                     height: 90%
-                .title-text
-                    @include marbot-mm
     .windows
         background-color: $colorFourBackground
                 
@@ -185,15 +194,18 @@ main
                 grid-template-rows: 1fr
                 .card
                     height: 80vh
-                    .fa-solid.fa-chevron-down
+                    .fa-solid.fa-fingerprint
                         display: block
-                    &:hover:not(.active)
-                        .imgPc
-                            width: 100%
-                            height: 82%
-                        .title-text
-                            @include martop-mm
-                            margin-bottom: 100px
+                    &:hover
+                        &:not(.active)
+                            .imgPc
+                                width: 100%
+                                height: 82%
+                        .parph
+                            display: none
+                    &.active
+                        .parph
+                            display: block
             .prevCardDoor, .nextCardDoor
                 display: block
             .dots-card-door
@@ -208,10 +220,22 @@ main
                         .imgPc
                             width: 100%
                             height: 82%
-                        .title-text
-                            @include martop-mm
-                            @include marbot-mm
-        
+
+
+// @media (max-width: 950px)
+//     main
+//         .container
+//             .cards
+//                 .card
+//                     &:not(.active)
+//                         height: auto
+//                         .title-text
+//                             margin-bottom: 0
+//                         .parph
+//                             display: none
+//                         .price
+//                             display: none
+
 
 @media (max-width: 768px)
     main
@@ -227,14 +251,19 @@ main
                 display: flex
                 .card
                     justify-self: center
+                    .imgPc
+                        width: 100%
+                        height: 60%
                     &:hover:not(.active)
                         .imgPc
                             margin: 0
                             width: 100%
-                            height: 82%
-                        .title-text
-                            @include martop-mm
-                            margin-bottom: 100px
+                            height: 60%
+                        // .title-text
+                            // margin-top: clamp(13px,3vh,70px)
+                            // margin-bottom: 250px
+                        .parph
+                            display: none
                     &.active
                         height: auto
                         .imgPc
@@ -262,3 +291,57 @@ main
                         .imgPc
                             width: 100%
                             height: 100%
+                        .parph
+                            display: block
+
+@media (max-width: 768px) and (min-aspect-ratio: 1.6)
+    main
+        .doors
+            .cards
+                .card
+                    max-height: 200vh
+
+
+@media (min-width: 650px) and (min-aspect-ratio: 0.6) and (max-aspect-ratio: 1)
+    main
+        .doors
+            .cards
+                .card
+                    max-height: 60vh
+                    &:hover
+                        .parph
+                            display: none
+                    &.active
+                        .parph
+                            display: block
+
+@media (min-aspect-ratio: 0.5) and (max-aspect-ratio: 1)
+    main
+        .doors
+            .cards
+                .card
+                    max-height: 80vh
+
+@media (max-width: 550px) and (min-aspect-ratio: 0.5) and (max-aspect-ratio: 1)
+    main
+        .doors
+            .cards
+                .card
+                    max-height: 160vh
+
+@media (max-width: 1000px) and (min-aspect-ratio: 1.2)
+    main
+        .doors
+            .cards
+                .card
+                    max-height: 250vh
+
+@media (max-width: 360px)
+    main
+        .title
+            h1
+                font-size: 20px
+        .doors
+            .cards
+                .card
+                    max-height: 400vh
