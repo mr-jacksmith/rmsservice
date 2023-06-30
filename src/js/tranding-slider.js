@@ -23,9 +23,15 @@ class Carousel {
             el.classList.remove('gallery-item-7');
         });
         
+        let num = -4
         for (let i=-1; i<8; i++) {
-            console.log(this.carouselArray)
-            this.carouselArray[i+1].classList.add(`gallery-item-${i}`)
+            console.log(this.carouselArray.length + num)
+            if (i < 3) {
+                this.carouselArray[this.carouselArray.length + num].classList.add(`gallery-item-${i}`);
+                num++;
+            } else {
+                this.carouselArray[i-3].classList.add(`gallery-item-${i}`)
+            }
         }
         // this.carouselArray.slice(0, 5).forEach((el, i) => {
         //     el.classList.add(`gallery-item-${i+1}`);

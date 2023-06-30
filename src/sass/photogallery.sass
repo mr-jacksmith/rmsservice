@@ -1,3 +1,6 @@
+@import '_mixins'
+@import '_variables'
+    
 .gallery 
     width: 100%
 
@@ -10,6 +13,7 @@
     position: relative
 
 .gallery-item
+    display: none
     height: 25%
     opacity: 0
     position: absolute
@@ -18,11 +22,56 @@
     z-index: 0
     border-radius: 15px
     background-size: contain
+    >div
+        position: absolute
+    .name-of-model
+        width: 100%
+        text-align: center
+        margin-top: clamp(13px, calc(20 * 1vw/17.11), 30px)
+        display: none
+        >div
+            margin: 0 auto
+            width: 84%
+            color: white
+            font-size: clamp(16px, 1.2vw,24px)
+            background-color: rgba(0, 0, 0, 0.5)
+            padding-inline: clamp(13px, calc(20 * 1vw/17.11), 30px)
+    .wrapped
+        display: none
+        width: 100%
+        bottom: 0
+        right: 0
+        flex-direction: column
+        .price
+            align-self: flex-end
+            @include marbot-mm
+            margin-right: clamp(13px, calc(20 * 1vw/17.11), 30px)
+            padding-inline: clamp(10px, calc(14 * 1vw/17.11), 30px)
+            font-family: AvenirNextCyr-Bold
+            font-size: clamp(20px,1.4026884863vw,32px)
+            color: $colorButton
+            box-shadow: -2px 5px 33px 6px rgba(0,0,0,0.35)
+        .order
+            align-self: center
+            background-color: $colorButton
+            padding: 12px 32px
+            border-radius: 32px
+            text-align: center
+            @include marbot-mm
+            cursor: pointer
+            a
+                color: #fff
+    img
+        border-radius: 6px
+        height: 100%
+        width: 100%
 
 .gallery-item--1
+    display: block
     left: 14%
 
 .gallery-item--1, .gallery-item-7
+    display: block
     height: 15%
     opacity: .1
     transform: translateX(-50%)
@@ -33,6 +82,7 @@
 
 
 .gallery-item-0, .gallery-item-6
+    display: block
     height: 30%
     opacity: .2
     transform: translateX(-50%)
@@ -42,6 +92,7 @@
     left: 30%
 
 .gallery-item-1, .gallery-item-5
+    display: block
     height: 45%
     opacity: .3
     transform: translateX(-50%)
@@ -49,6 +100,7 @@
 
 
 .gallery-item-2, .gallery-item-4 
+    display: block
     height: 60%
     opacity: 0.8
     width: auto
@@ -60,6 +112,7 @@
 
 
 .gallery-item-3 
+    display: block
     box-shadow: -2px 5px 33px 6px rgba(0,0,0,0.35)
     height: 75%
     opacity: 1
@@ -67,6 +120,10 @@
     transform: translateX(-50%)
     width: auto
     z-index: 1
+    .name-of-model
+        display: block
+    .wrapped
+        display: flex
 
 .gallery-item-4 
     left: 60%
@@ -189,3 +246,44 @@
         left: -30px
     .gallery-controls-next:hover::before 
         right: -30px
+
+main
+    .title
+        @include container
+        padding-bottom: 0
+        background-color: white
+        overflow: hidden
+        h1
+            @include title
+            margin-block: 0
+            text-align: center
+    .container
+        @include container
+        overflow: hidden
+        .info
+            h2
+                @include title-text
+                @include martop-mm
+                @include marbot-mm
+            .text
+                @include text
+                ul
+                    list-style-type: disclosure-closed
+                    li
+                        margin-left: clamp(14px, calc(18 * 1vw/17.11), 24px)
+                        @include text
+                        i
+                            margin-right: clamp(14px, calc(18 * 1vw/17.11), 24px)
+                .parph
+                    @include text
+                .imgPc
+                    display: flex
+                    justify-content: center
+                    img
+                        width: 15%
+            >.imgPc
+                display: flex
+                justify-content: center
+                width: 100%
+                img
+                    width: 75%

@@ -10,7 +10,9 @@
         content="Окна ПВХ. Металлические двери, противопожарные двери, аллюминиевые двери. Противопожарные люки." />
     <meta name="keywords" content="окна, двери, пвх, металлические, противопожарные, аллюминиевые, люки" />
     <link rel="stylesheet" href="../css/style.min.css" />
+    <link rel="stylesheet" href="../css/photogallery.min.css">
     <script src="https://kit.fontawesome.com/328cbe3bb0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -18,7 +20,8 @@
         <div class="soff-main">
             <div class="special-offer">
                 <div class="alignCenter">
-                    <div class="offerText"><i class="fa-solid fa-door-open"></i>Специальное предложение от РемМашСервис</div>
+                    <div class="offerText"><i class="fa-solid fa-door-open"></i>Специальное предложение от РемМашСервис
+                    </div>
                     <div class="more-info"><a href="">Узнать больше <i class="fa-solid fa-angles-right"></i></a></div>
                 </div>
                 <i class="fa-solid fa-xmark" onclick="closeSoff()"></i>
@@ -27,28 +30,29 @@
         <div id="fixed" class="fixed">
             <div class="hat-bar">
                 <div class="wrapped">
-                    <div class="logo"><a href="../"><img src="../img/logo.png" alt="logo"></a></span></div>
+                    <div class="logo"><a href="/">
+                        <img src="../img/logo.png" alt="logo"></a></span></div>
                     <nav class="navbar">
                         <ul>
                             <li>
-                                <a href="/#doors">Двери <i class="fa-solid fa-chevron-down fa-beat-fade"></i></a>
+                                <a href="#doors">Двери <i class="fa-solid fa-chevron-down fa-beat-fade"></i></a>
                                 <ul class="sub-menu">
-                                    <li><a href="./firefighting.html#doors">Противопожарные</a></li>
+                                    <li><a href="./firefighting.html">Противопожарные</a></li>
                                     <li><a href="./entrance-doors.html">Входные</a></li>
                                     <li><a href="./tech-doors.html">Технические</a></li>
                                     <li><a href="./interior-doors.html">Межкомнатные</a></li>
-                                    <li><a href="./other-doors.html#alum">Алюминиевые</a></li>
-                                    <li><a href="./other-doors.html#pvch">ПВХ</a></li>
+                                    <li><a href="./alum.html#doors">Алюминиевые</a></li>
+                                    <li><a href="./pvch.html#doors">ПВХ</a></li>
                                 </ul>
                             </li>
-                            <li><a href="/#windows">Окна <i class="fa-solid fa-chevron-down fa-beat-fade"></i></a>
+                            <li><a href="#windows">Окна <i class="fa-solid fa-chevron-down fa-beat-fade"></i></a>
                                 <ul class="sub-menu">
-                                    <li><a href="./firefighting.html#windows">Противопожарные</a></li>
-                                    <li><a href="./windows.html#alum">Алюминиевые</a></li>
-                                    <li><a href="./windows.html#pvch">ПВХ</a></li>
+                                    <li><a href="./firefighting.html">Противопожарные</a></li>
+                                    <li><a href="./alum.html#windows">Алюминиевые</a></li>
+                                    <li><a href="./pvch.html#windows">ПВХ</a></li>
                                 </ul>
                             </li>
-                            <li><a href="./firefighting.html#lukes">Люки</a></li>
+                            <li><a href="./firefighting.html">Люки</a></li>
                             <li><a href="./photogallery.html">Фотогалерея</a></li>
                             <li><a href="./contacts.html">Контакты</a></li>
                             <li class="givePhone"><a href="">Заказать звонок</a></li>
@@ -67,7 +71,612 @@
         </div>
     </header>
     <main>
-        
+        <div class="title">
+            <h1>МЕЖКОМНАТНЫЕ ДВЕРИ</h1>
+        </div>
+        <div id="doors" class="container">
+            <div class="info">
+                <h2>ДВЕРИ МЕЖКОМНАТНЫЕ МДФ (ОБЛИЦОВАННЫЕ ПВХ)</h2>
+                <div class="text">
+                    <h3>Конструкция дверей:</h3> 
+                    <ul>
+                        <li><i class="fa-regular fa-circle-check fa-fade"></i>Каркас из хвойных пород древесины. Используемая древесина проходит жесткий отбор по нескольким критериям в соответствии с ГОСТ. </li>
+                        <li><i class="fa-regular fa-circle-check fa-fade"></i>Пять слоев МДФ, склеенных и спрессованных между собой в несколько этапов в соответствии с технологическим процессом, что обеспечивает целостность, надежность и прочность дверного полотна. Вес такой двери в зависимости от модели может составлять от 20 до 55 кг.</li>
+                        <li><i class="fa-regular fa-circle-check fa-fade"></i>Использование современного оборудования с программным обеспечением в сочетании с большим количеством режущих инструментов обеспечивают создание огромного количества рисунков, в том числе индивидуальных проектов.</li>
+                        <li><i class="fa-regular fa-circle-check fa-fade"></i>Основательная подготовка полотна к облицовке пленкой ПВХ, исключающая появление различных дефектов и неровностей.</li>
+                        <li><i class="fa-regular fa-circle-check fa-fade"></i>По технологиям допускается использование толщины пленок, используемых для облицовки полотен, от 0,1 до 0,45 мм. Мы используем пленку толщиной от 0,3 до 0,45 мм, что способствует значительному повышению влагостойкости, прочности и эстетичности. </li>
+                        <li><i class="fa-regular fa-circle-check fa-fade"></i>Применение наиболее сложной технологии облицовки дверного полотна обеспечивает исключение необлицованных частей полотна, а один шов вместо двух, возникающих при использовании кромочных материалов, способствует максимальной защите от внешних факторов.</li>
+                        <li><i class="fa-regular fa-circle-check fa-fade"></i>Использование широкого спектра стекол с различной художественной обработкой и большой цветовой гаммой дополняет качество дверей и придает привлекательный вид. </li>
+                    </ul>
+                    <div class="parph">Благодаря использованию современного оборудования и полноценному циклу производства, а также опытным конструкторам и технологам, компания РемМашСервис предлагает высококачественный погонаж (дверные коробки, пороги, наличники), отвечающий требованиям ГОСТ, отличающийся высоким качеством, надежностью, прочностью и отлично сочетающийся с дверным полотном.</div>
+                    <div class="imgPc"><img src="../img/doors/interior/technology.webp" alt="technology"></div>
+                </div>
+            </div>
+            <div class="info">
+                <h2>МОДЕЛЬНЫЙ РЯД МЕЖКОМНАТНЫХ ДВЕРЕЙ РМС</h2>
+            </div>
+        </div>
+        <div class="gallery">
+            <div class="gallery-container">
+                <div class="gallery-item card gallery-item-3">
+                    <div class="name-of-model"><div>Модель № 1</div></div>
+                    <img src="../img/doors/interior/model-1.jpg" alt="" data-index="-1">
+                    <div class="wrapped">
+                        <div class="price">от 5000 &#8381;</div>
+                        <div class="order"><a>Заказать</a></div>
+                    </div>
+                </div>
+                <div class="gallery-item card gallery-item-4">
+                    <div class="name-of-model"><div>Модель № 1 (O)</div></div>
+                    <img src="../img/doors/interior/model-1-O.jpg" alt="" data-index="0">
+                    <div class="wrapped">
+                        <div class="price">от 5000 &#8381;</div>
+                        <div class="order"><a>Заказать</a></div>
+                    </div>
+                </div>
+                <div class="gallery-item card gallery-item-5">
+                    <div class="name-of-model"><div>Модель № 2</div></div>
+                    <img src="../img/doors/interior/model-2.jpg" alt="" data-index="1">
+                    <div class="wrapped">
+                        <div class="price">от 5000 &#8381;</div>
+                        <div class="order"><a>Заказать</a></div>
+                    </div>
+                </div>
+                <div class="gallery-item card gallery-item-6">
+                    <div class="name-of-model"><div>Модель № 2 (О)</div></div>
+                    <img src="../img/doors/interior/model-2-O.jpg" alt="" data-index="2">
+                    <div class="wrapped">
+                        <div class="price">от 5000 &#8381;</div>
+                        <div class="order"><a>Заказать</a></div>
+                    </div>
+                </div>
+                <div class="gallery-item card gallery-item-7">
+                    <div class="name-of-model"><div>Модель № 3</div></div>
+                    <img src="../img/doors/interior/model-3.jpg" alt="" data-index="3">
+                    <div class="wrapped">
+                        <div class="price">от 5000 &#8381;</div>
+                        <div class="order"><a>Заказать</a></div>
+                    </div>
+                </div>
+                <div class="gallery-item card">
+                    <div class="name-of-model"><div>Модель № 3 (О)</div></div>
+                    <img src="../img/doors/interior/model-3-O.jpg" alt="" data-index="4">
+                    <div class="wrapped">
+                        <div class="price">от 5000 &#8381;</div>
+                        <div class="order"><a>Заказать</a></div>
+                    </div>
+                </div>
+                <div class="gallery-item card">
+                    <div class="name-of-model"><div>Модель № 4</div></div>
+                    <img src="../img/doors/interior/model-4.jpg" alt="" data-index="5">
+                    <div class="wrapped">
+                        <div class="price">от 5000 &#8381;</div>
+                        <div class="order"><a>Заказать</a></div>
+                    </div>
+                </div>
+                <div class="gallery-item card">
+                    <div class="name-of-model"><div>Модель № 4 (О)</div></div>
+                    <img src="../img/doors/interior/model-4-O.jpg" alt="" data-index="6">
+                    <div class="wrapped">
+                        <div class="price">от 5000 &#8381;</div>
+                        <div class="order"><a>Заказать</a></div>
+                    </div>
+                </div>
+                <div class="gallery-item card">
+                    <div class="name-of-model"><div>Модель № 5</div></div>
+                    <img src="../img/doors/interior/model-5.jpg" alt="" data-index="7">
+                    <div class="wrapped">
+                        <div class="price">от 5000 &#8381;</div>
+                        <div class="order"><a>Заказать</a></div>
+                    </div>
+                </div>
+                <div class="gallery-item card">
+                    <div class="name-of-model"><div>Модель № 6</div></div>
+                    <img src="../img/doors/interior/model-6.jpg" alt="" data-index="7">
+                    <div class="wrapped">
+                        <div class="price">от 5000 &#8381;</div>
+                        <div class="order"><a>Заказать</a></div>
+                    </div>
+                </div>
+                <div class="gallery-item card">
+                    <div class="name-of-model"><div>Модель № 7</div></div>
+                    <img src="../img/doors/interior/model-7.jpg" alt="" data-index="7">
+                    <div class="wrapped">
+                        <div class="price">от 5000 &#8381;</div>
+                        <div class="order"><a>Заказать</a></div>
+                    </div>
+                </div>
+                <div class="gallery-item card">
+                    <div class="name-of-model"><div>Модель № 8</div></div>
+                    <img src="../img/doors/interior/model-8.jpg" alt="" data-index="7">
+                    <div class="wrapped">
+                        <div class="price">от 5000 &#8381;</div>
+                        <div class="order"><a>Заказать</a></div>
+                    </div>
+                </div>
+                <div class="gallery-item card">
+                    <div class="name-of-model"><div>Модель № 8 (О)</div></div>
+                    <img src="../img/doors/interior/model-8-O.jpg" alt="" data-index="7">
+                    <div class="wrapped">
+                        <div class="price">от 5000 &#8381;</div>
+                        <div class="order"><a>Заказать</a></div>
+                    </div>
+                </div>
+                <div class="gallery-item card">
+                    <div class="name-of-model"><div>Модель № 9</div></div>
+                    <img src="../img/doors/interior/model-9.jpg" alt="" data-index="7">
+                    <div class="wrapped">
+                        <div class="price">от 5000 &#8381;</div>
+                        <div class="order"><a>Заказать</a></div>
+                    </div>
+                </div>
+                <div class="gallery-item card">
+                    <div class="name-of-model"><div>Модель № 9 (О)</div></div>
+                    <img src="../img/doors/interior/model-9-O.jpg" alt="" data-index="7">
+                    <div class="wrapped">
+                        <div class="price">от 5000 &#8381;</div>
+                        <div class="order"><a>Заказать</a></div>
+                    </div>
+                </div>
+                <div class="gallery-item card">
+                    <div class="name-of-model"><div>Модель № 10</div></div>
+                    <img src="../img/doors/interior/model-10.jpg" alt="" data-index="7">
+                    <div class="wrapped">
+                        <div class="price">от 5000 &#8381;</div>
+                        <div class="order"><a>Заказать</a></div>
+                    </div>
+                </div>
+                <div class="gallery-item card">
+                    <div class="name-of-model"><div>Модель № 10 (О)</div></div>
+                    <img src="../img/doors/interior/model-10-O.jpg" alt="" data-index="7">
+                    <div class="wrapped">
+                        <div class="price">от 5000 &#8381;</div>
+                        <div class="order"><a>Заказать</a></div>
+                    </div>
+                </div>
+                <div class="gallery-item card">
+                    <div class="name-of-model"><div>Модель № 11</div></div>
+                    <img src="../img/doors/interior/model-11.jpg" alt="" data-index="7">
+                    <div class="wrapped">
+                        <div class="price">от 5000 &#8381;</div>
+                        <div class="order"><a>Заказать</a></div>
+                    </div>
+                </div>
+                <div class="gallery-item card">
+                    <div class="name-of-model"><div>Модель № 11 (О)</div></div>
+                    <img src="../img/doors/interior/model-11-O.jpg" alt="" data-index="7">
+                    <div class="wrapped">
+                        <div class="price">от 5000 &#8381;</div>
+                        <div class="order"><a>Заказать</a></div>
+                    </div>
+                </div>
+                <div class="gallery-item card">
+                    <div class="name-of-model"><div>Модель № 12</div></div>
+                    <img src="../img/doors/interior/model-12.jpg" alt="" data-index="7">
+                    <div class="wrapped">
+                        <div class="price">от 5000 &#8381;</div>
+                        <div class="order"><a>Заказать</a></div>
+                    </div>
+                </div>
+                <div class="gallery-item card">
+                    <div class="name-of-model"><div>Модель № 12 (О)</div></div>
+                    <img src="../img/doors/interior/model-12-O.jpg" alt="" data-index="7">
+                    <div class="wrapped">
+                        <div class="price">от 5000 &#8381;</div>
+                        <div class="order"><a>Заказать</a></div>
+                    </div>
+                </div>
+                <div class="gallery-item card">
+                    <div class="name-of-model"><div>Модель № 13</div></div>
+                    <img src="../img/doors/interior/model-13.jpg" alt="" data-index="7">
+                    <div class="wrapped">
+                        <div class="price">от 5000 &#8381;</div>
+                        <div class="order"><a>Заказать</a></div>
+                    </div>
+                </div>
+                <div class="gallery-item card">
+                    <div class="name-of-model"><div>Модель № 13 (О)</div></div>
+                    <img src="../img/doors/interior/model-13-O.jpg" alt="" data-index="7">
+                    <div class="wrapped">
+                        <div class="price">от 5000 &#8381;</div>
+                        <div class="order"><a>Заказать</a></div>
+                    </div>
+                </div>
+                <div class="gallery-item card">
+                    <div class="name-of-model"><div>Модель № 14</div></div>
+                    <img src="../img/doors/interior/model-14.jpg" alt="" data-index="7">
+                    <div class="wrapped">
+                        <div class="price">от 5000 &#8381;</div>
+                        <div class="order"><a>Заказать</a></div>
+                    </div>
+                </div>
+                <div class="gallery-item card">
+                    <div class="name-of-model"><div>Модель № 14 (О)</div></div>
+                    <img src="../img/doors/interior/model-14-O.jpg" alt="" data-index="7">
+                    <div class="wrapped">
+                        <div class="price">от 5000 &#8381;</div>
+                        <div class="order"><a>Заказать</a></div>
+                    </div>
+                </div>
+                <div class="gallery-item card">
+                    <div class="name-of-model"><div>Модель № 15</div></div>
+                    <img src="../img/doors/interior/model-15.jpg" alt="" data-index="7">
+                    <div class="wrapped">
+                        <div class="price">от 5000 &#8381;</div>
+                        <div class="order"><a>Заказать</a></div>
+                    </div>
+                </div>
+                <div class="gallery-item card">
+                    <div class="name-of-model"><div>Модель № 15 (О)</div></div>
+                    <img src="../img/doors/interior/model-15-O.jpg" alt="" data-index="7">
+                    <div class="wrapped">
+                        <div class="price">от 5000 &#8381;</div>
+                        <div class="order"><a>Заказать</a></div>
+                    </div>
+                </div>
+                <div class="gallery-item card">
+                    <div class="name-of-model"><div>Модель № 16</div></div>
+                    <img src="../img/doors/interior/model-16.jpg" alt="" data-index="7">
+                    <div class="wrapped">
+                        <div class="price">от 5000 &#8381;</div>
+                        <div class="order"><a>Заказать</a></div>
+                    </div>
+                </div>
+                <div class="gallery-item card">
+                    <div class="name-of-model"><div>Модель № 16 (О)</div></div>
+                    <img src="../img/doors/interior/model-16-O.jpg" alt="" data-index="7">
+                    <div class="wrapped">
+                        <div class="price">от 5000 &#8381;</div>
+                        <div class="order"><a>Заказать</a></div>
+                    </div>
+                </div>
+                <div class="gallery-item card">
+                    <div class="name-of-model"><div>Модель № 17</div></div>
+                    <img src="../img/doors/interior/model-17.jpg" alt="" data-index="7">
+                    <div class="wrapped">
+                        <div class="price">от 5000 &#8381;</div>
+                        <div class="order"><a>Заказать</a></div>
+                    </div>
+                </div>
+                <div class="gallery-item card">
+                    <div class="name-of-model"><div>Модель № 17 (О)</div></div>
+                    <img src="../img/doors/interior/model-17-O.jpg" alt="" data-index="7">
+                    <div class="wrapped">
+                        <div class="price">от 5000 &#8381;</div>
+                        <div class="order"><a>Заказать</a></div>
+                    </div>
+                </div>
+                <div class="gallery-item card">
+                    <div class="name-of-model"><div>Модель № 18</div></div>
+                    <img src="../img/doors/interior/model-18.jpg" alt="" data-index="7">
+                    <div class="wrapped">
+                        <div class="price">от 5000 &#8381;</div>
+                        <div class="order"><a>Заказать</a></div>
+                    </div>
+                </div>
+                <div class="gallery-item card">
+                    <div class="name-of-model"><div>Модель № 18 (О)</div></div>
+                    <img src="../img/doors/interior/model-18-O.jpg" alt="" data-index="7">
+                    <div class="wrapped">
+                        <div class="price">от 5000 &#8381;</div>
+                        <div class="order"><a>Заказать</a></div>
+                    </div>
+                </div>
+                <div class="gallery-item card">
+                    <div class="name-of-model"><div>Модель № 19</div></div>
+                    <img src="../img/doors/interior/model-19.jpg" alt="" data-index="7">
+                    <div class="wrapped">
+                        <div class="price">от 5000 &#8381;</div>
+                        <div class="order"><a>Заказать</a></div>
+                    </div>
+                </div>
+                <div class="gallery-item card">
+                    <div class="name-of-model"><div>Модель № 19 (О)</div></div>
+                    <img src="../img/doors/interior/model-19-O.jpg" alt="" data-index="7">
+                    <div class="wrapped">
+                        <div class="price">от 5000 &#8381;</div>
+                        <div class="order"><a>Заказать</a></div>
+                    </div>
+                </div>
+                <div class="gallery-item card">
+                    <div class="name-of-model"><div>Модель № 20</div></div>
+                    <img src="../img/doors/interior/model-20.jpg" alt="" data-index="7">
+                    <div class="wrapped">
+                        <div class="price">от 5000 &#8381;</div>
+                        <div class="order"><a>Заказать</a></div>
+                    </div>
+                </div>
+                <div class="gallery-item card">
+                    <div class="name-of-model"><div>Модель № 20 (О)</div></div>
+                    <img src="../img/doors/interior/model-20-O.jpg" alt="" data-index="7">
+                    <div class="wrapped">
+                        <div class="price">от 5000 &#8381;</div>
+                        <div class="order"><a>Заказать</a></div>
+                    </div>
+                </div>
+                <div class="gallery-item card">
+                    <div class="name-of-model"><div>Модель № 21</div></div>
+                    <img src="../img/doors/interior/model-21.jpg" alt="" data-index="7">
+                    <div class="wrapped">
+                        <div class="price">от 5000 &#8381;</div>
+                        <div class="order"><a>Заказать</a></div>
+                    </div>
+                </div>
+                <div class="gallery-item card">
+                    <div class="name-of-model"><div>Модель № 2</div></div>
+                    <img src="../img/doors/interior/model-22.jpg" alt="" data-index="7">
+                    <div class="wrapped">
+                        <div class="price">от 5000 &#8381;</div>
+                        <div class="order"><a>Заказать</a></div>
+                    </div>
+                </div>
+                <div class="gallery-item card">
+                    <div class="name-of-model"><div>Модель № 23</div></div>
+                    <img src="../img/doors/interior/model-23.jpg" alt="" data-index="7">
+                    <div class="wrapped">
+                        <div class="price">от 5000 &#8381;</div>
+                        <div class="order"><a>Заказать</a></div>
+                    </div>
+                </div>
+                <div class="gallery-item card">
+                    <div class="name-of-model"><div>Модель № 23 (О)</div></div>
+                    <img src="../img/doors/interior/model-23-O.jpg" alt="" data-index="7">
+                    <div class="wrapped">
+                        <div class="price">от 5000 &#8381;</div>
+                        <div class="order"><a>Заказать</a></div>
+                    </div>
+                </div>
+                <div class="gallery-item card">
+                    <div class="name-of-model"><div>Модель № 24</div></div>
+                    <img src="../img/doors/interior/model-24.jpg" alt="" data-index="7">
+                    <div class="wrapped">
+                        <div class="price">от 5000 &#8381;</div>
+                        <div class="order"><a>Заказать</a></div>
+                    </div>
+                </div>
+                <div class="gallery-item card">
+                    <div class="name-of-model"><div>Модель № 24 (О)</div></div>
+                    <img src="../img/doors/interior/model-24-O.jpg" alt="" data-index="7">
+                    <div class="wrapped">
+                        <div class="price">от 5000 &#8381;</div>
+                        <div class="order"><a>Заказать</a></div>
+                    </div>
+                </div>
+                <div class="gallery-item card">
+                    <div class="name-of-model"><div>Модель № 25</div></div>
+                    <img src="../img/doors/interior/model-25.jpg" alt="" data-index="7">
+                    <div class="wrapped">
+                        <div class="price">от 5000 &#8381;</div>
+                        <div class="order"><a>Заказать</a></div>
+                    </div>
+                </div>
+                <div class="gallery-item card">
+                    <div class="name-of-model"><div>Модель № 25 (О)</div></div>
+                    <img src="../img/doors/interior/model-25-O.jpg" alt="" data-index="7">
+                    <div class="wrapped">
+                        <div class="price">от 5000 &#8381;</div>
+                        <div class="order"><a>Заказать</a></div>
+                    </div>
+                </div>
+                <div class="gallery-item card">
+                    <div class="name-of-model"><div>Модель № 26</div></div>
+                    <img src="../img/doors/interior/model-26.jpg" alt="" data-index="7">
+                    <div class="wrapped">
+                        <div class="price">от 5000 &#8381;</div>
+                        <div class="order"><a>Заказать</a></div>
+                    </div>
+                </div>
+                <div class="gallery-item card">
+                    <div class="name-of-model"><div>Модель № 26 (О)</div></div>
+                    <img src="../img/doors/interior/model-26-O.jpg" alt="" data-index="7">
+                    <div class="wrapped">
+                        <div class="price">от 5000 &#8381;</div>
+                        <div class="order"><a>Заказать</a></div>
+                    </div>
+                </div>
+                <div class="gallery-item card">
+                    <div class="name-of-model"><div>Модель № 27</div></div>
+                    <img src="../img/doors/interior/model-27.jpg" alt="" data-index="7">
+                    <div class="wrapped">
+                        <div class="price">от 5000 &#8381;</div>
+                        <div class="order"><a>Заказать</a></div>
+                    </div>
+                </div>
+                <div class="gallery-item card">
+                    <div class="name-of-model"><div>Модель № 27 (О)</div></div>
+                    <img src="../img/doors/interior/model-27-O.jpg" alt="" data-index="7">
+                    <div class="wrapped">
+                        <div class="price">от 5000 &#8381;</div>
+                        <div class="order"><a>Заказать</a></div>
+                    </div>
+                </div>
+                <div class="gallery-item card">
+                    <div class="name-of-model"><div>Модель № 28</div></div>
+                    <img src="../img/doors/interior/model-28.jpg" alt="" data-index="7">
+                    <div class="wrapped">
+                        <div class="price">от 5000 &#8381;</div>
+                        <div class="order"><a>Заказать</a></div>
+                    </div>
+                </div>
+                <div class="gallery-item card">
+                    <div class="name-of-model"><div>Модель № 28 (О)</div></div>
+                    <img src="../img/doors/interior/model-28-O.jpg" alt="" data-index="7">
+                    <div class="wrapped">
+                        <div class="price">от 5000 &#8381;</div>
+                        <div class="order"><a>Заказать</a></div>
+                    </div>
+                </div>
+                <div class="gallery-item card">
+                    <div class="name-of-model"><div>Модель № 29</div></div>
+                    <img src="../img/doors/interior/model-29.jpg" alt="" data-index="7">
+                    <div class="wrapped">
+                        <div class="price">от 5000 &#8381;</div>
+                        <div class="order"><a>Заказать</a></div>
+                    </div>
+                </div>
+                <div class="gallery-item card">
+                    <div class="name-of-model"><div>Модель № 29 (О)</div></div>
+                    <img src="../img/doors/interior/model-29-O.jpg" alt="" data-index="7">
+                    <div class="wrapped">
+                        <div class="price">от 5000 &#8381;</div>
+                        <div class="order"><a>Заказать</a></div>
+                    </div>
+                </div>
+                <div class="gallery-item card">
+                    <div class="name-of-model"><div>Модель № 30</div></div>
+                    <img src="../img/doors/interior/model-30.jpg" alt="" data-index="7">
+                    <div class="wrapped">
+                        <div class="price">от 5000 &#8381;</div>
+                        <div class="order"><a>Заказать</a></div>
+                    </div>
+                </div>
+                <div class="gallery-item card">
+                    <div class="name-of-model"><div>Модель № 30 (О)</div></div>
+                    <img src="../img/doors/interior/model-30-O.jpg" alt="" data-index="7">
+                    <div class="wrapped">
+                        <div class="price">от 5000 &#8381;</div>
+                        <div class="order"><a>Заказать</a></div>
+                    </div>
+                </div>
+                <div class="gallery-item card">
+                    <div class="name-of-model"><div>Модель № 31 (О)</div></div>
+                    <img src="../img/doors/interior/model-31-O.jpg" alt="" data-index="7">
+                    <div class="wrapped">
+                        <div class="price">от 5000 &#8381;</div>
+                        <div class="order"><a>Заказать</a></div>
+                    </div>
+                </div>
+                <div class="gallery-item card">
+                    <div class="name-of-model"><div>Модель № 32</div></div>
+                    <img src="../img/doors/interior/model-32.jpg" alt="" data-index="7">
+                    <div class="wrapped">
+                        <div class="price">от 5000 &#8381;</div>
+                        <div class="order"><a>Заказать</a></div>
+                    </div>
+                </div>
+                <div class="gallery-item card">
+                    <div class="name-of-model"><div>Модель № 32 (О)</div></div>
+                    <img src="../img/doors/interior/model-32-O.jpg" alt="" data-index="7">
+                    <div class="wrapped">
+                        <div class="price">от 5000 &#8381;</div>
+                        <div class="order"><a>Заказать</a></div>
+                    </div>
+                </div>
+                <div class="gallery-item card">
+                    <div class="name-of-model"><div>Модель № 33 (О)</div></div>
+                    <img src="../img/doors/interior/model-33-O.jpg" alt="" data-index="7">
+                    <div class="wrapped">
+                        <div class="price">от 5000 &#8381;</div>
+                        <div class="order"><a>Заказать</a></div>
+                    </div>
+                </div>
+                <div class="gallery-item card">
+                    <div class="name-of-model"><div>Модель № 34</div></div>
+                    <img src="../img/doors/interior/model-34.jpg" alt="" data-index="7">
+                    <div class="wrapped">
+                        <div class="price">от 5000 &#8381;</div>
+                        <div class="order"><a>Заказать</a></div>
+                    </div>
+                </div>
+                <div class="gallery-item card">
+                    <div class="name-of-model"><div>Модель № 34 (О)</div></div>
+                    <img src="../img/doors/interior/model-34-O.jpg" alt="" data-index="7">
+                    <div class="wrapped">
+                        <div class="price">от 5000 &#8381;</div>
+                        <div class="order"><a>Заказать</a></div>
+                    </div>
+                </div>
+                <div class="gallery-item card">
+                    <div class="name-of-model"><div>Модель № 35</div></div>
+                    <img src="../img/doors/interior/model-35.jpg" alt="" data-index="7">
+                    <div class="wrapped">
+                        <div class="price">от 5000 &#8381;</div>
+                        <div class="order"><a>Заказать</a></div>
+                    </div>
+                </div>
+                <div class="gallery-item card">
+                    <div class="name-of-model"><div>Модель № 35 (О)</div></div>
+                    <img src="../img/doors/interior/model-35-O.jpg" alt="" data-index="7">
+                    <div class="wrapped">
+                        <div class="price">от 5000 &#8381;</div>
+                        <div class="order"><a>Заказать</a></div>
+                    </div>
+                </div>
+                <div class="gallery-item card">
+                    <div class="name-of-model"><div>Модель № 36</div></div>
+                    <img src="../img/doors/interior/model-36.jpg" alt="" data-index="7">
+                    <div class="wrapped">
+                        <div class="price">от 5000 &#8381;</div>
+                        <div class="order"><a>Заказать</a></div>
+                    </div>
+                </div>
+                <div class="gallery-item card">
+                    <div class="name-of-model"><div>Модель № 36 (О)</div></div>
+                    <img src="../img/doors/interior/model-36-O.jpg" alt="" data-index="7">
+                    <div class="wrapped">
+                        <div class="price">от 5000 &#8381;</div>
+                        <div class="order"><a>Заказать</a></div>
+                    </div>
+                </div>
+                <div class="gallery-item card">
+                    <div class="name-of-model"><div>Модель № 37</div></div>
+                    <img src="../img/doors/interior/model-37.jpg" alt="" data-index="7">
+                    <div class="wrapped">
+                        <div class="price">от 5000 &#8381;</div>
+                        <div class="order"><a>Заказать</a></div>
+                    </div>
+                </div>
+                <div class="gallery-item card">
+                    <div class="name-of-model"><div>Модель № 37 (О)</div></div>
+                    <img src="../img/doors/interior/model-37-O.jpg" alt="" data-index="7">
+                    <div class="wrapped">
+                        <div class="price">от 5000 &#8381;</div>
+                        <div class="order"><a>Заказать</a></div>
+                    </div>
+                </div>
+                <div class="gallery-item card gallery-item--1">
+                    <div class="name-of-model"><div>Модель № 38</div></div>
+                    <img src="../img/doors/interior/model-38.jpg" alt="" data-index="7">
+                    <div class="wrapped">
+                        <div class="price">от 5000 &#8381;</div>
+                        <div class="order"><a>Заказать</a></div>
+                    </div>
+                </div>
+                <div class="gallery-item card gallery-item-0">
+                    <div class="name-of-model"><div>Модель № 39 (О)</div></div>
+                    <img src="../img/doors/interior/model-39-O.jpg" alt="" data-index="7">
+                    <div class="wrapped">
+                        <div class="price">от 5000 &#8381;</div>
+                        <div class="order"><a>Заказать</a></div>
+                    </div>
+                </div>
+                <div class="gallery-item card gallery-item-1">
+                    <div class="name-of-model"><div>Модель № 40 (О)</div></div>
+                    <img src="../img/doors/interior/model-40-O.jpg" alt="" data-index="7">
+                    <div class="wrapped">
+                        <div class="price">от 5000 &#8381;</div>
+                        <div class="order"><a>Заказать</a></div>
+                    </div>
+                </div>
+                <div class="gallery-item card gallery-item-2">
+                    <div class="name-of-model"><div>Модель № 41 (О)</div></div>
+                    <img src="../img/doors/interior/model-41-O.jpg" alt="" data-index="7">
+                    <div class="wrapped">
+                        <div class="price">от 5000 &#8381;</div>
+                        <div class="order"><a>Заказать</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-controls">
+    
+            </div>
+        </div>
+        <div class="container">
+            <div class="info">
+                <h2>ВАРИАНТЫ ЦВЕТА МЕЖКОМНАТНЫХ ДВЕРЕЙ</h2>
+                <div class="imgPc"><img src="../img/doors/interior/colors-of-doors.webp" alt="colours"></div>
+            </div>
+        </div>
     </main>
     <footer>
         <div class="container">
@@ -114,9 +723,9 @@
     </footer>
     <div class="go-to-top btn-up_hide"><i class="fa-solid fa-arrow-turn-up"></i></div>
     <script src="../js/smoothScroll.js"></script>
-    <script src="../js/fixedNavbar.js"></script>
     <script src="../js/closeSpecialOffer.js"></script>
     <script src="../js/go-to-top.js"></script>
+    <script src="../js/tranding-slider.js"></script>
 </body>
 
 </html>
