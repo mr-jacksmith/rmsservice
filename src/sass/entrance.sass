@@ -23,7 +23,7 @@ main
     .title
         @include container
         padding-bottom: 0
-        background-color: $colorSecondaryBackground
+        background-color: $colorThirdaryBackground
         overflow: hidden
         h1
             @include title
@@ -170,7 +170,7 @@ main
                 transition: background-color 0.6s ease
                 &.active, &:hover
                     background-color: #717171
-    .lukes, .windows
+    .optima, .econom, .windows
         background-color: $colorThirdaryBackground
         .cards
             display: block
@@ -201,7 +201,7 @@ main
                     flex-direction: column
                     justify-content: space-between
                     height: 90%
-    .windows
+    .econom
         background-color: $colorFourBackground
                 
 
@@ -230,7 +230,7 @@ main
             .dots-card-door
                 .dot-card-door
                     display: inline-block
-        .lukes, .windows
+        .optima, .econom
             .cards
                 grid-template-columns: 1fr
                 grid-template-rows: 1fr
@@ -290,7 +290,7 @@ main
                             height: 40%
                     .title-text
                         font-size: clamp(18px,1.4026884863vw,32px)
-        .lukes, .windows
+        .optima, .econom
             .info
                 h2
                     @include martop
