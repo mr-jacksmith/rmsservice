@@ -52,13 +52,16 @@ header
                         width: 100%
     .fixed
         position: relative
-        &.pp
+        transition: 2s
+        &.pre-pp
             position: fixed
-            top: 0
+            top: -100%
             left: 0
             right: 0
             background-color: white
             z-index: 2
+        &.pp
+            top: 0
         &::after
             position: absolute
             top: 100%
@@ -436,9 +439,6 @@ main
         .nextService
             right: 0
             border-radius: 3px 0 0 3px
-        .prevService:hover, .nextService:hover
-            color: $colorFont
-            background-color: $colorButton
         .dots-service
             @include marbot
             .dot-service
@@ -521,9 +521,6 @@ main
         .next
             right: 0
             border-radius: 3px 0 0 3px
-        .prev:hover, .next:hover
-            color: $colorFont
-            background-color: $colorButton
         .dots-doors
             @include marbot
             .dot-doors
@@ -606,9 +603,6 @@ main
         .next
             right: 0
             border-radius: 3px 0 0 3px
-        .prev:hover, .next:hover
-            color: $colorFont
-            background-color: $colorButton
         .dots-windows
             @include marbot
             .dot-windows

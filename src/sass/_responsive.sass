@@ -15,6 +15,8 @@
                             right: 0
                             transition: all 0.5s ease
                             z-index: 2
+                            &:focus, &:hover
+                                overflow: visible
                             >ul
                                 flex-direction: column
                                 width: auto
@@ -26,11 +28,60 @@
                                 padding: 15px
                                 border: solid calc(2 * 1vw/17.11) #CFCFE2
                                 transition: all 0.5s ease
-                                i
-                                    display: none
+                                // i
+                                //     display: none
                                 li:not(.givePhone)
-                                    .sub-menu
-                                        display: none
+                                    &:nth-of-type(1)
+                                        cursor: pointer
+                                        &:hover
+                                            .sub-menu
+                                                height: 0
+                                                padding: 0
+                                                border-width: 0
+                                        &.active
+                                            .sub-menu
+                                                height: 1000%
+                                                top: 110%
+                                                left: auto
+                                                right: 0
+                                                width: 300%
+                                                align-items: flex-end
+                                                padding: 15px
+                                                border-width: calc(2 * 1vw/17.11)
+                                        .sub-menu
+                                            left: auto
+                                            right: 0
+                                            width: 300%
+                                            align-items: flex-end
+                                    &:nth-of-type(2)
+                                        cursor: pointer
+                                        &:hover
+                                            .sub-menu
+                                                height: 0
+                                                padding: 0
+                                                border-width: 0
+                                        &.active
+                                            .sub-menu
+                                                height: 500%
+                                                top: 110%
+                                                left: auto
+                                                right: 0
+                                                width: 400%
+                                                align-items: flex-end
+                                                padding: 15px
+                                                border-width: calc(2 * 1vw/17.11)
+                                        .sub-menu
+                                            left: auto
+                                            right: 0
+                                            width: 400%
+                                            align-items: flex-end
+                                    a
+                                        &:hover
+                                            color: $colorFontFirstly
+                                            i
+                                                color: $colorFontFirstly
+                                        &:hover::after, &:focus::after
+                                            width: 0
                     .burger
                         display: flex
         .head-bar
@@ -119,6 +170,19 @@
                 .wrapped
                     .navbar
                         width: auto
+                .burger
+                    &:hover
+                        span
+                            &:nth-of-type(1)
+                                transform: translateY(-8px)
+                            &:nth-of-type(3)
+                                transform: translateY(8px)
+                    &:hover.active
+                        span
+                            &:nth-of-type(1)
+                                transform: rotateZ(-45deg) translateX(14.5px) translateY(7.9px)
+                            &:nth-of-type(3)
+                                transform: rotateZ(-45deg) translateX(-0.5px) translateY(5.1px)
         .soff-main
             .special-offer
                 width: 90%
@@ -187,6 +251,7 @@
                 grid-template-columns: 1fr
                 >div
                     height: auto
+
 @media (max-width: 600px)
     header
         .head-bar
@@ -209,7 +274,6 @@
                                 display: flex
                     .givePhone
                         display: none
-            
 
 @media (max-width: 359px)
     main

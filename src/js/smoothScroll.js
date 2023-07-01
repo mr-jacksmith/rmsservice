@@ -6,7 +6,7 @@ const smoothScroll = (target) => {
     } else {
       heightNavbar = heightNavbar*2
     }
-    console.log(heightNavbar)
+
     const start = window.scrollY
     const end = target.offsetTop - heightNavbar
     const distance = end - start

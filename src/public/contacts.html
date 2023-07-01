@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Контакты | РемМашСервис - Окна и двери</title>
     <meta name="description"
-        content="Окна ПВХ. Металлические двери, противопожарные двери, аллюминиевые двери. Противопожарные люки." />
-    <meta name="keywords" content="окна, двери, пвх, металлические, противопожарные, аллюминиевые, люки" />
+        content="Окна ПВХ. Металлические двери, противопожарные двери и окна, алюминиевые двери и окна, технические двери. Противопожарные люки." />
+    <meta name="keywords" content="окна, двери, пвх, металлические, противопожарные, алюминиевые, технические люки" />
     <link rel="stylesheet" href="../css/style.min.css" />
     <script src="https://kit.fontawesome.com/328cbe3bb0.js" crossorigin="anonymous"></script>
 </head>
@@ -30,10 +30,10 @@
                     <div class="logo"><a href="/"><img src="../img/logo.png" alt="logo"></a></span></div>
                     <nav class="navbar">
                         <ul>
-                            <li>
-                                <a href="#doors">Двери <i class="fa-solid fa-chevron-down fa-beat-fade"></i></a>
+                            <li class="nav-active-item" onclick="activeItem(1)">
+                                <a>Двери <i class="fa-solid fa-chevron-down fa-beat-fade"></i></a>
                                 <ul class="sub-menu">
-                                    <li><a href="./firefighting.html">Противопожарные</a></li>
+                                    <li><a href="./firefighting.html#doors">Противопожарные</a></li>
                                     <li><a href="./entrance-doors.html">Входные</a></li>
                                     <li><a href="./tech-doors.html">Технические</a></li>
                                     <li><a href="./interior-doors.html">Межкомнатные</a></li>
@@ -41,14 +41,15 @@
                                     <li><a href="./pvch.html#doors">ПВХ</a></li>
                                 </ul>
                             </li>
-                            <li><a href="#windows">Окна <i class="fa-solid fa-chevron-down fa-beat-fade"></i></a>
+                            <li class="nav-active-item" onclick="activeItem(2)">
+                                <a>Окна <i class="fa-solid fa-chevron-down fa-beat-fade"></i></a>
                                 <ul class="sub-menu">
-                                    <li><a href="./firefighting.html">Противопожарные</a></li>
+                                    <li><a href="./firefighting.html#windows">Противопожарные</a></li>
                                     <li><a href="./alum.html#windows">Алюминиевые</a></li>
                                     <li><a href="./pvch.html#windows">ПВХ</a></li>
                                 </ul>
                             </li>
-                            <li><a href="./firefighting.html">Люки</a></li>
+                            <li><a href="./firefighting.html#lukes">Люки</a></li>
                             <li><a href="./photogallery.html">Фотогалерея</a></li>
                             <li><a href="./contacts.html">Контакты</a></li>
                             <li class="givePhone"><a href="">Заказать звонок</a></li>
@@ -62,7 +63,9 @@
                     <span></span>
                     <span></span>
                 </div>
+                <script src="../js/activeSubMenu.js"></script>
                 <script src="../js/burger.js"></script>
+                <script src="../js/resetBurger.js"></script>
             </div>
         </div>
     </header>

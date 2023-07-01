@@ -10,6 +10,7 @@ burger.addEventListener("click", () => {
   if (burger.classList.contains("active")) {
     // Если бургер активен, отображаем навигацию плавно
     navigation.style.display = "flex";
+    navigation.style.overflow = "visible"
   
     setTimeout(() => {
       navigation.style.height = "auto";
@@ -17,10 +18,12 @@ burger.addEventListener("click", () => {
   } else {
     // Если бургер неактивен, скрываем навигацию плавно
     navigation.style.height = "0px";
+    navigation.style.overflow = "hidden"
+    navActiveItems.forEach(el => el.classList.remove('active'))
     
     setTimeout(() => {
       navigation.style.display = "none";
-    }, 1000);
+    }, 10);
   }
 });
 

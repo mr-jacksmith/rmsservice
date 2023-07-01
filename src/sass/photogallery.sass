@@ -234,19 +234,6 @@
 .gallery-nav li.gallery-item-selected 
     background: #555
 
-
-@media (max-width: 768px)
-    .gallery-container
-        height: 60vh
-    .gallery-controls 
-        margin: 0
-        button
-            padding: 0
-    .gallery-controls-previous:hover::before 
-        left: -30px
-    .gallery-controls-next:hover::before 
-        right: -30px
-
 main
     .title
         @include container
@@ -287,3 +274,29 @@ main
                 width: 100%
                 img
                     width: 75%
+
+@media (max-width: 768px)
+    main
+        .title
+            h1
+                margin-top: clamp(40px, 2.9222676797vw, 60px)
+    .gallery-container
+        height: 60vh
+    .gallery-controls 
+        margin: 0
+        button
+            padding: 0
+    .gallery-controls-previous:hover::before 
+        left: -30px
+    .gallery-controls-next:hover::before 
+        right: -30px
+
+@media (max-width: 360px)
+    main
+        .title
+            h1
+                font-size: 20px
+        .doors
+            .cards
+                .card
+                    max-height: 400vh
