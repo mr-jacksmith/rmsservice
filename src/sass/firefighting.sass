@@ -61,7 +61,7 @@ main
                 padding: 24px
                 // cursor: pointer
                 overflow: hidden
-                max-height: 120vh
+                // max-height: 120vh
                 .fa-solid.fa-fingerprint
                     display: none
                     position: absolute
@@ -75,7 +75,7 @@ main
                     opacity: 0.9
                     // transition: all 0.5s
                     animation: bounce 8s linear infinite
-                &:hover, &.active
+                &:hover:not(.active), &.active
                     .imgPc
                         margin: 0
                         width: 10%
@@ -86,34 +86,33 @@ main
                     .parphs
                         display: flex
                         flex-direction: column
-                        flex-wrap: wrap
-                        .parph
-                            display: block       
+                        // flex-wrap: wrap  
                 .imgPc
                     width: 100%
                     height: 82%
+                    display: flex
+                    justify-content: center
                     img
                         width: 40%
                         height: 100%
-                        // object-fit: contain
-                        margin: 0 auto
+                        object-fit: contain
                 .title-text
                     @include title-text
                     margin-bottom: 0
                     // margin-top: clamp(13px, calc(30 * 1vh/10), 70px)
                     // margin-bottom: 250px
-                >.parph
-                    display: none
-                .parphs 
-                    width: 100% 
-                    height: 72% 
-                    overflow: hidden 
-                    display: none
-                    flex-wrap: nowrap
-                    // flex-direction: column 
-                    justify-content: space-between 
-                    .parph 
+                &:not(.active)
+                    .parphs
                         display: none
+                .parphs
+                    width: 100% 
+                    height: 72%
+                    // overflow: hidden 
+                    flex-wrap: nowrap
+                    flex-direction: column 
+                    justify-content: space-between 
+                    gap: 10px
+                    .parph 
                         @include text
                         margin-top: 0
                 .price
@@ -182,7 +181,7 @@ main
                 height: auto
                 min-height: 72vh
                 max-height: none
-                &:hover
+                &:hover:not(.active)
                     .imgPc
                         width: 100%
                         height: 100%
@@ -216,7 +215,7 @@ main
                 grid-template-columns: 1fr
                 grid-template-rows: 1fr
                 .card
-                    height: 80vh
+                    // height: 80vh
                     .fa-solid.fa-fingerprint
                         display: block
                     &:hover
@@ -224,15 +223,15 @@ main
                             .imgPc
                                 width: 100%
                                 height: 82%
-                        .parph
-                            display: none
-                    &.active
-                        .parph
-                            display: block
-                    .imgPc
-                        img
-                            object-fit: contain
-                            width: 100%
+                            .parphs
+                                display: none
+                    // &.active
+                    //     .parph
+                    //         display: block
+                    // .imgPc
+                    //     img
+                    //         object-fit: contain
+                    //         width: 100%
             .prevCardDoor, .nextCardDoor
                 display: block
             .dots-card-door
@@ -278,14 +277,14 @@ main
                 display: flex
                 .card
                     justify-self: center
-                    .imgPc
-                        width: 100%
-                        height: 60%
+                    // .imgPc
+                    //     width: 100%
+                    //     height: 60%
                     &:hover:not(.active)
-                        .imgPc
-                            margin: 0
-                            width: 100%
-                            height: 60%
+                        // .imgPc
+                        //     margin: 0
+                        //     width: 100%
+                        //     height: 60%
                         // .title-text
                             // margin-top: clamp(13px,3vh,70px)
                             // margin-bottom: 250px
@@ -294,8 +293,11 @@ main
                     &.active
                         height: auto
                         .imgPc
-                            width: 20%
+                            width: 30%
                             height: 40%
+                            img
+                                width: 100%
+                                height: 100%
                     .title-text
                         font-size: clamp(18px,1.4026884863vw,32px)
         .lukes, .windows
@@ -318,57 +320,61 @@ main
                         .imgPc
                             width: 100%
                             height: 100%
-                        .parph
-                            display: block
 
-@media (max-width: 768px) and (min-aspect-ratio: 1.6)
-    main
-        .doors
-            .cards
-                .card
-                    max-height: 200vh
+// @media (max-width: 768px) and (min-aspect-ratio: 1.6)
+//     main
+//         .doors
+//             .cards
+//                 .card
+//                     max-height: 200vh
 
 
-@media (min-width: 650px) and (min-aspect-ratio: 0.6) and (max-aspect-ratio: 1)
-    main
-        .doors
-            .cards
-                .card
-                    max-height: 60vh
-                    &:hover
-                        .parph
-                            display: none
-                    &.active
-                        .parph
-                            display: block
+// @media (min-width: 650px) and (min-aspect-ratio: 0.6) and (max-aspect-ratio: 1)
+//     main
+//         .doors
+//             .cards
+//                 .card
+//                     max-height: 60vh
+                    // &:hover
+                    //     .parph
+                    //         display: none
+                    // &.active
+                    //     .parph
+                    //         display: block
 
-@media (min-aspect-ratio: 0.5) and (max-aspect-ratio: 1)
-    main
-        .doors
-            .cards
-                .card
-                    max-height: 80vh
+// @media (min-aspect-ratio: 0.5) and (max-aspect-ratio: 1)
+//     main
+//         .doors
+//             .cards
+//                 .card
+//                     max-height: 80vh
 
-@media (max-width: 550px) and (min-aspect-ratio: 0.5) and (max-aspect-ratio: 1)
-    main
-        .doors
-            .cards
-                .card
-                    max-height: 160vh
+// @media (max-width: 550px) and (min-aspect-ratio: 0.5) and (max-aspect-ratio: 1)
+    // main
+    //     .doors
+    //         .cards
+    //             .card
+    //                 max-height: 160vh
 
-@media (max-width: 1000px) and (min-aspect-ratio: 1.2)
-    main
-        .doors
-            .cards
-                .card
-                    max-height: 250vh
+// @media (max-width: 1000px) and (min-aspect-ratio: 1.2)
+    // main
+    //     .doors
+    //         .cards
+    //             .card
+    //                 .imgPc
+    //                     width: 50%
+    //                     height: 50%
+    //                 &:hover:not(.active)
+    //                     .imgPc
+    //                         width: 50%
+    //                         height: 50%
 
 @media (max-width: 360px)
     main
         .title
             h1
                 font-size: 20px
-        .doors
-            .cards
-                .card
-                    max-height: 400vh
+        // .doors
+        //     .cards
+        //         .card
+        //             max-height: 400vh

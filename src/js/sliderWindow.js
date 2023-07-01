@@ -1,19 +1,19 @@
-let slideIndexService = 1;
+let slideIndexWindow = 1;
 let windowInnerWidthWindow = window.innerWidth;
-let maxheightDetService = NaN
+let maxheightDetWindow = NaN
 
 window.addEventListener('load', (event) => {
     if (windowInnerWidthWindow < 768) {
-        showSlidesWindow(slideIndexService);
+        showSlidesWindow(slideIndexWindow);
     }
 })
 
 function plusSlidesWindow(n) {
-    showSlidesWindow(slideIndexService += n);
+    showSlidesWindow(slideIndexWindow += n);
 }
 
 function currentSlideWindow(n) {
-    showSlidesWindow(slideIndexService = n)
+    showSlidesWindow(slideIndexWindow = n)
 }
 
 function showSlidesWindow(n) {
@@ -23,15 +23,15 @@ function showSlidesWindow(n) {
     let maxheight = 0
 
     if (n > slides.length) {
-        slideIndexService = 1
+        slideIndexWindow = 1
     }
 
     if (n < 1) {
-        slideIndexService = slides.length
+        slideIndexWindow = slides.length
     }
 
     for (i=0; i<slides.length; i++) {
-        if (isNaN(maxheightDetService)) {
+        if (isNaN(maxheightDetWindow)) {
             slides[i].style.display = "grid";
             slides[i].style.height = "auto";
             currentHeight = parseFloat(window.getComputedStyle(slides[i], null).height)
@@ -46,12 +46,12 @@ function showSlidesWindow(n) {
         dots[i].className = dots[i].className.replace(" active", "");
     }
 
-    if (isNaN(maxheightDetService)) {
-        maxheightDetService = maxheight
+    if (isNaN(maxheightDetWindow)) {
+        maxheightDetWindow = maxheight
     }
-    slides[slideIndexService-1].style.display = "grid";
-    slides[slideIndexService-1].style.height = maxheightDetService + "px"
-    dots[slideIndexService-1].className += " active";
+    slides[slideIndexWindow-1].style.display = "grid";
+    slides[slideIndexWindow-1].style.height = maxheightDetWindow + "px"
+    dots[slideIndexWindow-1].className += " active";
 }
 
 window.addEventListener('resize', startWindow);
@@ -67,6 +67,6 @@ function startWindow() {
         }
     }
     else {
-        showSlidesWindow(slideIndexService);
+        showSlidesWindow(slideIndexWindow);
     }
 }
