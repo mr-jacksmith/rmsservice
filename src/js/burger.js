@@ -12,18 +12,18 @@ burger.addEventListener("click", () => {
     navigation.style.display = "flex";
     navigation.style.overflow = "visible"
   
-    setTimeout(() => {
+    // setTimeout(() => {
       navigation.style.height = "auto";
-    }, 10);
+    // }, 10);
   } else {
     // Если бургер неактивен, скрываем навигацию плавно
     navigation.style.height = "0px";
     navigation.style.overflow = "hidden"
     navActiveItems.forEach(el => el.classList.remove('active'))
     
-    setTimeout(() => {
+    // setTimeout(() => {
       navigation.style.display = "none";
-    }, 10);
+    // }, 10);
   }
 });
 

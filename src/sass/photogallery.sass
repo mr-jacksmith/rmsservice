@@ -33,7 +33,7 @@
             margin: 0 auto
             width: 84%
             color: white
-            font-size: clamp(16px, 1.2vw,24px)
+            font-size: clamp(12px, 1.2vw,24px)
             background-color: rgba(0, 0, 0, 0.5)
             padding-inline: clamp(13px, calc(20 * 1vw/17.11), 30px)
     .wrapped
@@ -267,13 +267,13 @@ main
                     display: flex
                     justify-content: center
                     img
-                        width: 15%
+                        width: clamp(150px, 15%, 450px)
             >.imgPc
                 display: flex
                 justify-content: center
                 width: 100%
                 img
-                    width: 75%
+                    width: clamp(280px, 75%, 1250px)
 
 @media (max-width: 768px)
     main
