@@ -25,7 +25,6 @@ class Carousel {
         
         let num = -4
         for (let i=-1; i<8; i++) {
-            console.log(this.carouselArray.length + num)
             if (i < 3) {
                 this.carouselArray[this.carouselArray.length + num].classList.add(`gallery-item-${i}`);
                 num++;
@@ -39,6 +38,7 @@ class Carousel {
     }
 
     setCurrentState(direction) {
+        console.log(this.carouselArray)
         if (direction.className == 'gallery-controls-previous') {
             this.carouselArray.unshift(this.carouselArray.pop());
         } else {

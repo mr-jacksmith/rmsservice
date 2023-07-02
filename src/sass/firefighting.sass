@@ -29,6 +29,23 @@ main
             @include title
             margin-block: 0
             text-align: center
+    .doors
+        .cards
+            .card
+                .imgPc
+                    position: relative
+                    .title
+                        position: absolute
+                        top: 0
+                        left: 0
+                        // left: 50%
+                        // transform: translateX(-50%)
+                        background-color: transparent
+                        @include title-text
+                        padding: 0
+                        margin-bottom: 0
+                    &:nth-of-type(2)
+                        display: none
     .container
         @include container
         min-height: 800px
@@ -51,9 +68,8 @@ main
             .card
                 position: relative
                 display: flex
-                flex-direction: column
-                justify-content: space-between
-                gap: clamp(13px, calc(20 * 1vw/17.11), 30px)
+                flex-direction: row
+                flex-wrap: nowrap
                 width: 100%
                 height: auto
                 background-color: white
@@ -62,6 +78,50 @@ main
                 // cursor: pointer
                 overflow: hidden
                 // max-height: 120vh
+                .wrap
+                    position: relative
+                    width: 100%
+                    height: 100%
+                    overflow: hidden
+                    display: flex
+                    flex-direction: column
+                    .wrapped-loop
+                        position: absolute
+                        transition: 0.5s
+                        display: inline-flex
+                        flex-direction: column
+                        justify-content: space-between
+                        gap: clamp(13px, calc(20 * 1vw/17.11), 30px)
+                        width: 100%
+                        height: 100%
+                        background-color: white
+                    .wrapped-1
+                        left: -100%
+                        z-index: -1
+                    .wrapped-2
+                        left: 0%
+                        z-index: 1
+                    .wrapped-3
+                        left: 100%
+                        z-index: -1
+                    .wrapped-4
+                        left: 200%
+                        z-index: -1
+                    .wrapped-static
+                        position: static
+                        display: inline-flex
+                        flex-direction: column
+                        justify-content: space-between
+                        gap: clamp(13px, calc(20 * 1vw/17.11), 30px)
+                        width: 100%
+                        height: 100%
+                        a
+                            color: white
+                        div, strong, button
+                            color: white
+                            background-color: white
+                        img
+                            opacity: 0
                 .fa-solid.fa-fingerprint
                     display: none
                     position: absolute
@@ -86,7 +146,13 @@ main
                     .parphs
                         display: flex
                         flex-direction: column
-                        // flex-wrap: wrap  
+                        // flex-wrap: wrap
+                    // .wrap
+                    //     .wrapped
+                    //         &:nth-of-type(2)
+                    //             left: -100%
+                    //         &:nth-of-type(3)
+                    //             left: 0%
                 .imgPc
                     width: 100%
                     height: 82%
@@ -134,6 +200,7 @@ main
                         border-radius: 32px
                         color: white
                         text-align: center
+                        border-width: 0
         .prevCardDoor, .nextCardDoor
             display: none
             cursor: pointer
