@@ -20,20 +20,19 @@ app.post("/contact", function (req, res) {
   });
 
   const mailOptions = {
-    from: `${req.body.name} <${req.body.email}>`,
+    // from: `${req.body.name} <${req.body.email}>`,
     to: "a.a.peshnin@gmail.com",
-    subject: "Website Inquiry",
-    text: req.body.message,
+    subject: "ПЕРЕЗВОН!!!",
+    text: `На сайт https://rmskirov.ru поступила заявка от ${req.body.name} с телефонным номером: ${req.body.phone}`,
   };
-  // res.send(req.body.email + " " + req.body.message);
 
   transporter.sendMail(mailOptions, function (error, info) {
     if (error) {
       console.log(error);
-      res.send("error");
+      res.render("error");
     } else {
       console.log("Email sent: " + info.response);
-      res.send("Sent");
+      res.render("successful");
     }
   });
 });
@@ -72,6 +71,18 @@ app.get("/pvch", (req, res) => {
 
 app.get("/tech-doors", (req, res) => {
   res.render("tech-doors");
+});
+
+app.get("/error", (req, res) => {
+  res.render("error-404");
+});
+
+app.get("/successful", (req, res) => {
+  res.render("error-404");
+});
+
+app.get("/*", (req, res) => {
+  res.render("error-404");
 });
 
 app.listen(3000, "localhost", function () {

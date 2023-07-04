@@ -58,11 +58,11 @@
                             <li><a href="/firefighting#lukes">Люки</a></li>
                             <li><a href="/photogallery">Фотогалерея</a></li>
                             <li><a href="/contacts">Контакты</a></li>
-                            <li class="givePhone"><a href="">Заказать звонок</a></li>
+                            <li class="givePhone"><a onclick="onOrderCall()">Заказать звонок</a></li>
                         </ul>
                     </nav>
                     <div class="search"></div>
-                    <div class="givePhone"><a href="">Заказать звонок</a></div>
+                    <div class="givePhone"><a onclick="onOrderCall()">Заказать звонок</a></div>
                 </div>
                 <div id="burger" class="burger">
                     <span></span>
@@ -81,7 +81,7 @@
         </div>
         <div id="doors" class="container doors">
             <div class="info">
-                <h2>ПРОТИВОПОЖАРНЫЕ ДВЕРИ (МЕТАЛЛИЧЕСКИЕ ИЛИ АЛЮМИНИЕВЫЕ)</h2>
+                <h2>МЕТАЛЛИЧЕСКИЕ И АЛЮМИНИЕВЫЕ ПРОТИВОПОЖАРНЫЕ ДВЕРИ</h2>
                 <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis facere rem nihil
                     voluptatibus asperiores, dicta unde dolorum suscipit repellendus animi deleniti odit fugiat corporis
                     vitae numquam doloribus totam sequi commodi!
@@ -93,7 +93,7 @@
                 <!-- 1 CARD -->
                 <div class="card card-door" onclick="openCard(1)">
                     <div class="wrap">
-                        <div class="wrapped-static">
+                        <div class="wrapped-loop wrapped-loop-1">
                             <a onclick="openCard(1)"><i class="fa-solid fa-fingerprint"></i></a>
                             <div class="imgPc">
                                 <img src="/img/firefighting/doors/door-d1.png" alt="door">
@@ -114,159 +114,115 @@
                             </div>
                             <div class="price">
                                 <div class="parph">от 8 000 &#8381;</div>
-                                <a href="#">Заказать</a>
+                                <a onclick="onOrderCall()">Заказать</a>
                             </div>
                         </div>
-                        <div class="wrapped-loop-1 wrapped-loop wrapped-1">
+                        <div class="wrapped-loop wrapped-loop-1">
                             <a onclick="openCard(1)"><i class="fa-solid fa-fingerprint"></i></a>
                             <div class="imgPc">
-                                <img src="/img/firefighting/doors/door-d1.png" alt="door">
+                                <img src="/img/firefighting/doors/door-d2.png" alt="door">
                             </div>
                             <div class="title-text">
-                                ДВЕРИ ПРОТИВОПОЖАРНЫЕ ОДНОПОЛЬНЫЕ МЕТАЛЛИЧЕСКИЕ<br>ДП-01 (EI 60)
+                                ДВЕРИ ПРОТИВОПОЖАРНЫЕ ДВУПОЛЬНЫЕ МЕТАЛЛИЧЕСКИЕ<br>ДП-02 (EI 60)
                             </div>
                             <div class="parphs">
-                                <div class="parph"><strong>Фурнитура:</strong> ручка п/п на планке Apecs, замок п/п Apecs 2000
-                                    (ц/м ключ/ключ, ключ/барашек)</div>
+                                <div class="parph"><strong>Фурнитура:</strong> ручка п/п на планке Apecs, замок п/п Apecs
+                                    2000 (ц/м ключ/ключ, ключ/барашек), на пассивной створке врезные торцевые задвижки.
+                                </div>
                                 <div class="parph"><strong>Толщина металла:</strong> 1,2мм-2мм</div>
-                                <div class="parph"><strong>Покраска:</strong> порошковое полимерное покрытие шагрень ral 8017,
-                                    9016, 7035, 7040 (любой другой по согласованию)</div>
+                                <div class="parph"><strong>Покраска:</strong> порошковое полимерное покрытие шагрень ral
+                                    8017, 9016, 7035, 7040 (любой другой по согласованию)</div>
                                 <div class="parph"><strong>Открывание:</strong> правое, левое, внутреннее открывание</div>
                                 <div class="parph"><strong>Порог:</strong> с порогом/без порога</div>
-                                <div class="parph"><strong>Остекление:</strong> без остекления</div>
                                 <div class="parph"><strong>Дополнительно:</strong> система антипаники с пуш-баром, доводчик.</div>
                             </div>
                             <div class="price">
-                                <div class="parph">от 8 000 &#8381;</div>
-                                <a href="#">Заказать</a>
+                                <div class="parph">от 12 000 &#8381;</div>
+                                <a onclick="onOrderCall()">Заказать</a>
                             </div>
                         </div>
-                        <div class="wrapped-loop-1 wrapped-loop wrapped-2">
+                        <div class="wrapped-loop wrapped-loop-1">
                             <a onclick="openCard(1)"><i class="fa-solid fa-fingerprint"></i></a>
                             <div class="imgPc">
-                                <img src="/img/firefighting/doors/door-d1.png" alt="door">
+                                <img src="/img/firefighting/doors/door-do.png" alt="door">
                             </div>
                             <div class="title-text">
-                                ДВЕРИ ПРОТИВОПОЖАРНЫЕ ОДНОПОЛЬНЫЕ АЛЮМИНИЕВЫЕ<br>ДП-01 (EI 60)
+                                ДВЕРИ ПРОТИВОПОЖАРНЫЕ ОДНОПОЛЬНЫЕ ОСТЕКЛЕННЫЕ МЕТАЛЛИЧЕСКИЕ<br>ДП-01-О (EI 60)
                             </div>
                             <div class="parphs">
-                                <div class="parph"><strong>Фурнитура:</strong> ручка п/п на планке Apecs, замок п/п Apecs 2000
-                                    (ц/м ключ/ключ, ключ/барашек)</div>
+                                <div class="parph"><strong>Фурнитура:</strong> ручка п/п на планке Apecs, замок п/п Apecs
+                                    2000 (ц/м ключ/ключ, ключ/барашек)</div>
                                 <div class="parph"><strong>Толщина металла:</strong> 1,2мм-2мм</div>
-                                <div class="parph"><strong>Покраска:</strong> порошковое полимерное покрытие шагрень ral 8017,
-                                    9016, 7035, 7040 (любой другой по согласованию)</div>
+                                <div class="parph"><strong>Покраска:</strong> порошковое полимерное покрытие шагрень ral
+                                    8017, 9016, 7035, 7040 (любой другой по согласованию)</div>
                                 <div class="parph"><strong>Открывание:</strong> правое, левое, внутреннее открывание</div>
                                 <div class="parph"><strong>Порог:</strong> с порогом/без порога</div>
-                                <div class="parph"><strong>Остекление:</strong> без остекления</div>
-                                <div class="parph"><strong>Дополнительно:</strong> система антипаники с пуш-баром, доводчик.</div>
+                                <div class="parph"><strong>Остекление:</strong> не более 25%</div>
+                                <div class="parph"><strong>Дополнительно:</strong> система антипаники с пуш-баром, доводчик.
+                                </div>
                             </div>
                             <div class="price">
-                                <div class="parph">от 8 000 &#8381;</div>
-                                <a href="#">Заказать</a>
+                                <div class="parph">от 12 000 &#8381;</div>
+                                <a onclick="onOrderCall()">Заказать</a>
                             </div>
                         </div>
-                        <div class="wrapped-loop-1 wrapped-loop wrapped-3">
+                        <div class="wrapped-loop wrapped-loop-1">
                             <a onclick="openCard(1)"><i class="fa-solid fa-fingerprint"></i></a>
                             <div class="imgPc">
-                                <img src="/img/firefighting/doors/door-d1.png" alt="door">
+                                <img src="/img/firefighting/doors/door-d2o.png" alt="door">
                             </div>
                             <div class="title-text">
-                                ДВЕРИ ПРОТИВОПОЖАРНЫЕ ОДНОПОЛЬНЫЕ МЕТАЛЛИЧЕСКИЕ<br>ДП-01 (EI 60)
+                                ДВЕРИ ПРОТИВОПОЖАРНЫЕ ДВУПОЛЬНЫЕ ОСТЕКЛЕННЫЕ МЕТАЛЛИЧЕСКИЕ<br>ДП-02-О (EI 60)
                             </div>
                             <div class="parphs">
-                                <div class="parph"><strong>Фурнитура:</strong> ручка п/п на планке Apecs, замок п/п Apecs 2000
-                                    (ц/м ключ/ключ, ключ/барашек)</div>
+                                <div class="parph"><strong>Фурнитура:</strong> ручка п/п на планке Apecs, замок п/п Apecs
+                                    2000 (ц/м ключ/ключ, ключ/барашек)</div>
                                 <div class="parph"><strong>Толщина металла:</strong> 1,2мм-2мм</div>
-                                <div class="parph"><strong>Покраска:</strong> порошковое полимерное покрытие шагрень ral 8017,
-                                    9016, 7035, 7040 (любой другой по согласованию)</div>
+                                <div class="parph"><strong>Покраска:</strong> порошковое полимерное покрытие шагрень ral
+                                    8017, 9016, 7035, 7040 (любой другой по согласованию)</div>
                                 <div class="parph"><strong>Открывание:</strong> правое, левое, внутреннее открывание</div>
                                 <div class="parph"><strong>Порог:</strong> с порогом/без порога</div>
-                                <div class="parph"><strong>Остекление:</strong> без остекления</div>
-                                <div class="parph"><strong>Дополнительно:</strong> система антипаники с пуш-баром, доводчик.</div>
+                                <div class="parph"><strong>Остекление:</strong> не более 25%</div>
+                                <div class="parph"><strong>Дополнительно:</strong> система антипаники с пуш-баром, доводчик.
+                                </div>
                             </div>
                             <div class="price">
-                                <div class="parph">от 8 000 &#8381;</div>
-                                <a href="#">Заказать</a>
+                                <div class="parph">от 12 000 &#8381;</div>
+                                <a onclick="onOrderCall()">Заказать</a>
                             </div>
                         </div>
-                        <div class="wrapped-loop-1 wrapped-loop wrapped-4">
-                            <a onclick="openCard(1)"><i class="fa-solid fa-fingerprint"></i></a>
-                            <div class="imgPc">
-                                <img src="/img/firefighting/doors/door-d1.png" alt="door">
-                            </div>
-                            <div class="title-text">
-                                ДВЕРИ ПРОТИВОПОЖАРНЫЕ ОДНОПОЛЬНЫЕ АЛЮМИНИЕВЫЕ<br>ДП-01 (EI 60)
-                            </div>
-                            <div class="parphs">
-                                <div class="parph"><strong>Фурнитура:</strong> ручка п/п на планке Apecs, замок п/п Apecs 2000
-                                    (ц/м ключ/ключ, ключ/барашек)</div>
-                                <div class="parph"><strong>Толщина металла:</strong> 1,2мм-2мм</div>
-                                <div class="parph"><strong>Покраска:</strong> порошковое полимерное покрытие шагрень ral 8017,
-                                    9016, 7035, 7040 (любой другой по согласованию)</div>
-                                <div class="parph"><strong>Открывание:</strong> правое, левое, внутреннее открывание</div>
-                                <div class="parph"><strong>Порог:</strong> с порогом/без порога</div>
-                                <div class="parph"><strong>Остекление:</strong> без остекления</div>
-                                <div class="parph"><strong>Дополнительно:</strong> система антипаники с пуш-баром, доводчик.</div>
-                            </div>
-                            <div class="price">
-                                <div class="parph">от 8 000 &#8381;</div>
-                                <a href="#">Заказать</a>
-                            </div>
-                        </div>
+                        <a class="prevCardDoor" onclick="plusSlideCardDoor(`metall`, -1)">&#10094</a>
+                        <a class="nextCardDoor" onclick="plusSlideCardDoor(`metall`, 1)">&#10095</a>
                     </div>
                 </div>
                 <!-- 2 CARD -->
                 <div class="card card-door" onclick="openCard(2)">
                     <div class="wrap">
-                        <div class="wrapped-static">
+                        <div class="wrapped-loop wrapped-loop-2">
                             <a onclick="openCard(2)"><i class="fa-solid fa-fingerprint"></i></a>
                             <div class="imgPc">
-                                <img src="/img/firefighting/doors/door-d2.png" alt="door">
+                                <img src="/img/firefighting/doors/door-d1.png" alt="door">
                             </div>
                             <div class="title-text">
-                                ДВЕРИ ПРОТИВОПОЖАРНЫЕ ДВУПОЛЬНЫЕ МЕТАЛЛИЧЕСКИЕ<br>ДП-02 (EI 60)
+                                ДВЕРИ ПРОТИВОПОЖАРНЫЕ ОДНОПОЛЬНЫЕ АЛЮМИНИЕВЫЕ<br>ДП-01 (EI 60)
                             </div>
                             <div class="parphs">
-                                <div class="parph"><strong>Фурнитура:</strong> ручка п/п на планке Apecs, замок п/п Apecs
-                                    2000 (ц/м ключ/ключ, ключ/барашек), на пассивной створке врезные торцевые задвижки.
-                                </div>
+                                <div class="parph"><strong>Фурнитура:</strong> ручка п/п на планке Apecs, замок п/п Apecs 2000
+                                    (ц/м ключ/ключ, ключ/барашек)</div>
                                 <div class="parph"><strong>Толщина металла:</strong> 1,2мм-2мм</div>
-                                <div class="parph"><strong>Покраска:</strong> порошковое полимерное покрытие шагрень ral
-                                    8017, 9016, 7035, 7040 (любой другой по согласованию)</div>
+                                <div class="parph"><strong>Покраска:</strong> порошковое полимерное покрытие шагрень ral 8017,
+                                    9016, 7035, 7040 (любой другой по согласованию)</div>
                                 <div class="parph"><strong>Открывание:</strong> правое, левое, внутреннее открывание</div>
                                 <div class="parph"><strong>Порог:</strong> с порогом/без порога</div>
+                                <div class="parph"><strong>Остекление:</strong> без остекления</div>
                                 <div class="parph"><strong>Дополнительно:</strong> система антипаники с пуш-баром, доводчик.</div>
                             </div>
                             <div class="price">
-                                <div class="parph">от 12 000 &#8381;</div>
-                                <a href="#">Заказать</a>
+                                <div class="parph">от 8 000 &#8381;</div>
+                                <a onclick="onOrderCall()">Заказать</a>
                             </div>
                         </div>
-                        <div class="wrapped-loop-2 wrapped-loop wrapped-1">
-                            <a onclick="openCard(2)"><i class="fa-solid fa-fingerprint"></i></a>
-                            <div class="imgPc">
-                                <img src="/img/firefighting/doors/door-d2.png" alt="door">
-                            </div>
-                            <div class="title-text">
-                                ДВЕРИ ПРОТИВОПОЖАРНЫЕ ДВУПОЛЬНЫЕ МЕТАЛЛИЧЕСКИЕ<br>ДП-02 (EI 60)
-                            </div>
-                            <div class="parphs">
-                                <div class="parph"><strong>Фурнитура:</strong> ручка п/п на планке Apecs, замок п/п Apecs
-                                    2000 (ц/м ключ/ключ, ключ/барашек), на пассивной створке врезные торцевые задвижки.
-                                </div>
-                                <div class="parph"><strong>Толщина металла:</strong> 1,2мм-2мм</div>
-                                <div class="parph"><strong>Покраска:</strong> порошковое полимерное покрытие шагрень ral
-                                    8017, 9016, 7035, 7040 (любой другой по согласованию)</div>
-                                <div class="parph"><strong>Открывание:</strong> правое, левое, внутреннее открывание</div>
-                                <div class="parph"><strong>Порог:</strong> с порогом/без порога</div>
-                                <div class="parph"><strong>Дополнительно:</strong> система антипаники с пуш-баром, доводчик.</div>
-                            </div>
-                            <div class="price">
-                                <div class="parph">от 12 000 &#8381;</div>
-                                <a href="#">Заказать</a>
-                            </div>
-                        </div>
-                        <div class="wrapped-loop-2 wrapped-loop wrapped-2">
+                        <div class="wrapped-loop wrapped-loop-2">
                             <a onclick="openCard(2)"><i class="fa-solid fa-fingerprint"></i></a>
                             <div class="imgPc">
                                 <img src="/img/firefighting/doors/door-d2.png" alt="door">
@@ -287,114 +243,11 @@
                             </div>
                             <div class="price">
                                 <div class="parph">от 12 000 &#8381;</div>
-                                <a href="#">Заказать</a>
+                                <a onclick="onOrderCall()">Заказать</a>
                             </div>
                         </div>
-                        <div class="wrapped-loop-2 wrapped-loop wrapped-3">
+                        <div class="wrapped-loop wrapped-loop-2">
                             <a onclick="openCard(2)"><i class="fa-solid fa-fingerprint"></i></a>
-                            <div class="imgPc">
-                                <img src="/img/firefighting/doors/door-d2.png" alt="door">
-                            </div>
-                            <div class="title-text">
-                                ДВЕРИ ПРОТИВОПОЖАРНЫЕ ДВУПОЛЬНЫЕ МЕТАЛЛИЧЕСКИЕ<br>ДП-02 (EI 60)
-                            </div>
-                            <div class="parphs">
-                                <div class="parph"><strong>Фурнитура:</strong> ручка п/п на планке Apecs, замок п/п Apecs
-                                    2000 (ц/м ключ/ключ, ключ/барашек), на пассивной створке врезные торцевые задвижки.
-                                </div>
-                                <div class="parph"><strong>Толщина металла:</strong> 1,2мм-2мм</div>
-                                <div class="parph"><strong>Покраска:</strong> порошковое полимерное покрытие шагрень ral
-                                    8017, 9016, 7035, 7040 (любой другой по согласованию)</div>
-                                <div class="parph"><strong>Открывание:</strong> правое, левое, внутреннее открывание</div>
-                                <div class="parph"><strong>Порог:</strong> с порогом/без порога</div>
-                                <div class="parph"><strong>Дополнительно:</strong> система антипаники с пуш-баром, доводчик.</div>
-                            </div>
-                            <div class="price">
-                                <div class="parph">от 12 000 &#8381;</div>
-                                <a href="#">Заказать</a>
-                            </div>
-                        </div>
-                        <div class="wrapped-loop-2 wrapped-loop wrapped-4">
-                            <a onclick="openCard(2)"><i class="fa-solid fa-fingerprint"></i></a>
-                            <div class="imgPc">
-                                <img src="/img/firefighting/doors/door-d2.png" alt="door">
-                            </div>
-                            <div class="title-text">
-                                ДВЕРИ ПРОТИВОПОЖАРНЫЕ ДВУПОЛЬНЫЕ АЛЮМИНИЕВЫЕ<br>ДП-02 (EI 60)
-                            </div>
-                            <div class="parphs">
-                                <div class="parph"><strong>Фурнитура:</strong> ручка п/п на планке Apecs, замок п/п Apecs
-                                    2000 (ц/м ключ/ключ, ключ/барашек), на пассивной створке врезные торцевые задвижки.
-                                </div>
-                                <div class="parph"><strong>Толщина металла:</strong> 1,2мм-2мм</div>
-                                <div class="parph"><strong>Покраска:</strong> порошковое полимерное покрытие шагрень ral
-                                    8017, 9016, 7035, 7040 (любой другой по согласованию)</div>
-                                <div class="parph"><strong>Открывание:</strong> правое, левое, внутреннее открывание</div>
-                                <div class="parph"><strong>Порог:</strong> с порогом/без порога</div>
-                                <div class="parph"><strong>Дополнительно:</strong> система антипаники с пуш-баром, доводчик.</div>
-                            </div>
-                            <div class="price">
-                                <div class="parph">от 12 000 &#8381;</div>
-                                <a href="#">Заказать</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- 3 CARD -->
-                <div class="card card-door" onclick="openCard(3)">
-                    <div class="wrap">
-                        <div class="wrapped-static">
-                            <a onclick="openCard(3)"><i class="fa-solid fa-fingerprint"></i></a>
-                            <div class="imgPc">
-                                <img src="/img/firefighting/doors/door-do.png" alt="door">
-                            </div>
-                            <div class="title-text">
-                                ДВЕРИ ПРОТИВОПОЖАРНЫЕ ОДНОПОЛЬНЫЕ ОСТЕКЛЕННЫЕ МЕТАЛЛИЧЕСКИЕ<br>ДП-01-О (EI 60)
-                            </div>
-                            <div class="parphs">
-                                <div class="parph"><strong>Фурнитура:</strong> ручка п/п на планке Apecs, замок п/п Apecs
-                                    2000 (ц/м ключ/ключ, ключ/барашек)</div>
-                                <div class="parph"><strong>Толщина металла:</strong> 1,2мм-2мм</div>
-                                <div class="parph"><strong>Покраска:</strong> порошковое полимерное покрытие шагрень ral
-                                    8017, 9016, 7035, 7040 (любой другой по согласованию)</div>
-                                <div class="parph"><strong>Открывание:</strong> правое, левое, внутреннее открывание</div>
-                                <div class="parph"><strong>Порог:</strong> с порогом/без порога</div>
-                                <div class="parph"><strong>Остекление:</strong> не более 25%</div>
-                                <div class="parph"><strong>Дополнительно:</strong> система антипаники с пуш-баром, доводчик.
-                                </div>
-                            </div>
-                            <div class="price">
-                                <div class="parph">от 12 000 &#8381;</div>
-                                <a href="#">Заказать</a>
-                            </div>
-                        </div>
-                        <div class="wrapped-loop-3 wrapped-loop wrapped-1">
-                            <a onclick="openCard(3)"><i class="fa-solid fa-fingerprint"></i></a>
-                            <div class="imgPc">
-                                <img src="/img/firefighting/doors/door-do.png" alt="door">
-                            </div>
-                            <div class="title-text">
-                                ДВЕРИ ПРОТИВОПОЖАРНЫЕ ОДНОПОЛЬНЫЕ ОСТЕКЛЕННЫЕ МЕТАЛЛИЧЕСКИЕ<br>ДП-01-О (EI 60)
-                            </div>
-                            <div class="parphs">
-                                <div class="parph"><strong>Фурнитура:</strong> ручка п/п на планке Apecs, замок п/п Apecs
-                                    2000 (ц/м ключ/ключ, ключ/барашек)</div>
-                                <div class="parph"><strong>Толщина металла:</strong> 1,2мм-2мм</div>
-                                <div class="parph"><strong>Покраска:</strong> порошковое полимерное покрытие шагрень ral
-                                    8017, 9016, 7035, 7040 (любой другой по согласованию)</div>
-                                <div class="parph"><strong>Открывание:</strong> правое, левое, внутреннее открывание</div>
-                                <div class="parph"><strong>Порог:</strong> с порогом/без порога</div>
-                                <div class="parph"><strong>Остекление:</strong> не более 25%</div>
-                                <div class="parph"><strong>Дополнительно:</strong> система антипаники с пуш-баром, доводчик.
-                                </div>
-                            </div>
-                            <div class="price">
-                                <div class="parph">от 12 000 &#8381;</div>
-                                <a href="#">Заказать</a>
-                            </div>
-                        </div>
-                        <div class="wrapped-loop-3 wrapped-loop wrapped-2">
-                            <a onclick="openCard(3)"><i class="fa-solid fa-fingerprint"></i></a>
                             <div class="imgPc">
                                 <img src="/img/firefighting/doors/door-do.png" alt="door">
                             </div>
@@ -415,116 +268,11 @@
                             </div>
                             <div class="price">
                                 <div class="parph">от 12 000 &#8381;</div>
-                                <a href="#">Заказать</a>
+                                <a onclick="onOrderCall()">Заказать</a>
                             </div>
                         </div>
-                        <div class="wrapped-loop-3 wrapped-loop wrapped-3">
-                            <a onclick="openCard(3)"><i class="fa-solid fa-fingerprint"></i></a>
-                            <div class="imgPc">
-                                <img src="/img/firefighting/doors/door-do.png" alt="door">
-                            </div>
-                            <div class="title-text">
-                                ДВЕРИ ПРОТИВОПОЖАРНЫЕ ОДНОПОЛЬНЫЕ ОСТЕКЛЕННЫЕ МЕТАЛЛИЧЕСКИЕ<br>ДП-01-О (EI 60)
-                            </div>
-                            <div class="parphs">
-                                <div class="parph"><strong>Фурнитура:</strong> ручка п/п на планке Apecs, замок п/п Apecs
-                                    2000 (ц/м ключ/ключ, ключ/барашек)</div>
-                                <div class="parph"><strong>Толщина металла:</strong> 1,2мм-2мм</div>
-                                <div class="parph"><strong>Покраска:</strong> порошковое полимерное покрытие шагрень ral
-                                    8017, 9016, 7035, 7040 (любой другой по согласованию)</div>
-                                <div class="parph"><strong>Открывание:</strong> правое, левое, внутреннее открывание</div>
-                                <div class="parph"><strong>Порог:</strong> с порогом/без порога</div>
-                                <div class="parph"><strong>Остекление:</strong> не более 25%</div>
-                                <div class="parph"><strong>Дополнительно:</strong> система антипаники с пуш-баром, доводчик.
-                                </div>
-                            </div>
-                            <div class="price">
-                                <div class="parph">от 12 000 &#8381;</div>
-                                <a href="#">Заказать</a>
-                            </div>
-                        </div>
-                        <div class="wrapped-loop-3 wrapped-loop wrapped-4">
-                            <a onclick="openCard(3)"><i class="fa-solid fa-fingerprint"></i></a>
-                            <div class="imgPc">
-                                <img src="/img/firefighting/doors/door-do.png" alt="door">
-                            </div>
-                            <div class="title-text">
-                                ДВЕРИ ПРОТИВОПОЖАРНЫЕ ОДНОПОЛЬНЫЕ ОСТЕКЛЕННЫЕ АЛЮМИНИЕВЫЕ<br>ДП-01-О (EI 60)
-                            </div>
-                            <div class="parphs">
-                                <div class="parph"><strong>Фурнитура:</strong> ручка п/п на планке Apecs, замок п/п Apecs
-                                    2000 (ц/м ключ/ключ, ключ/барашек)</div>
-                                <div class="parph"><strong>Толщина металла:</strong> 1,2мм-2мм</div>
-                                <div class="parph"><strong>Покраска:</strong> порошковое полимерное покрытие шагрень ral
-                                    8017, 9016, 7035, 7040 (любой другой по согласованию)</div>
-                                <div class="parph"><strong>Открывание:</strong> правое, левое, внутреннее открывание</div>
-                                <div class="parph"><strong>Порог:</strong> с порогом/без порога</div>
-                                <div class="parph"><strong>Остекление:</strong> не более 25%</div>
-                                <div class="parph"><strong>Дополнительно:</strong> система антипаники с пуш-баром, доводчик.
-                                </div>
-                            </div>
-                            <div class="price">
-                                <div class="parph">от 12 000 &#8381;</div>
-                                <a href="#">Заказать</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- 4 CARD -->
-                <div class="card card-door" onclick="openCard(4)">
-                    <div class="wrap">
-                        <div class="wrapped-static">
-                            <a onclick="openCard(4)"><i class="fa-solid fa-fingerprint"></i></a>
-                            <div class="imgPc">
-                                <img src="/img/firefighting/doors/door-d2o.png" alt="door">
-                            </div>
-                            <div class="title-text">
-                                ДВЕРИ ПРОТИВОПОЖАРНЫЕ ДВУПОЛЬНЫЕ ОСТЕКЛЕННЫЕ МЕТАЛЛИЧЕСКИЕ<br>ДП-02-О (EI 60)
-                            </div>
-                            <div class="parphs">
-                                <div class="parph"><strong>Фурнитура:</strong> ручка п/п на планке Apecs, замок п/п Apecs
-                                    2000 (ц/м ключ/ключ, ключ/барашек)</div>
-                                <div class="parph"><strong>Толщина металла:</strong> 1,2мм-2мм</div>
-                                <div class="parph"><strong>Покраска:</strong> порошковое полимерное покрытие шагрень ral
-                                    8017, 9016, 7035, 7040 (любой другой по согласованию)</div>
-                                <div class="parph"><strong>Открывание:</strong> правое, левое, внутреннее открывание</div>
-                                <div class="parph"><strong>Порог:</strong> с порогом/без порога</div>
-                                <div class="parph"><strong>Остекление:</strong> не более 25%</div>
-                                <div class="parph"><strong>Дополнительно:</strong> система антипаники с пуш-баром, доводчик.
-                                </div>
-                            </div>
-                            <div class="price">
-                                <div class="parph">от 12 000 &#8381;</div>
-                                <a href="#">Заказать</a>
-                            </div>
-                        </div>
-                        <div class="wrapped-loop-4 wrapped-loop wrapped-1">
-                            <a onclick="openCard(4)"><i class="fa-solid fa-fingerprint"></i></a>
-                            <div class="imgPc">
-                                <img src="/img/firefighting/doors/door-d2o.png" alt="door">
-                            </div>
-                            <div class="title-text">
-                                ДВЕРИ ПРОТИВОПОЖАРНЫЕ ДВУПОЛЬНЫЕ ОСТЕКЛЕННЫЕ МЕТАЛЛИЧЕСКИЕ<br>ДП-02-О (EI 60)
-                            </div>
-                            <div class="parphs">
-                                <div class="parph"><strong>Фурнитура:</strong> ручка п/п на планке Apecs, замок п/п Apecs
-                                    2000 (ц/м ключ/ключ, ключ/барашек)</div>
-                                <div class="parph"><strong>Толщина металла:</strong> 1,2мм-2мм</div>
-                                <div class="parph"><strong>Покраска:</strong> порошковое полимерное покрытие шагрень ral
-                                    8017, 9016, 7035, 7040 (любой другой по согласованию)</div>
-                                <div class="parph"><strong>Открывание:</strong> правое, левое, внутреннее открывание</div>
-                                <div class="parph"><strong>Порог:</strong> с порогом/без порога</div>
-                                <div class="parph"><strong>Остекление:</strong> не более 25%</div>
-                                <div class="parph"><strong>Дополнительно:</strong> система антипаники с пуш-баром, доводчик.
-                                </div>
-                            </div>
-                            <div class="price">
-                                <div class="parph">от 12 000 &#8381;</div>
-                                <a href="#">Заказать</a>
-                            </div>
-                        </div>
-                        <div class="wrapped-loop-4 wrapped-loop wrapped-2">
-                            <a onclick="openCard(4)"><i class="fa-solid fa-fingerprint"></i></a>
+                        <div class="wrapped-loop wrapped-loop-2">
+                            <a onclick="openCard(2)"><i class="fa-solid fa-fingerprint"></i></a>
                             <div class="imgPc">
                                 <img src="/img/firefighting/doors/door-d2o.png" alt="door">
                             </div>
@@ -545,71 +293,14 @@
                             </div>
                             <div class="price">
                                 <div class="parph">от 12 000 &#8381;</div>
-                                <a href="#">Заказать</a>
+                                <a onclick="onOrderCall()">Заказать</a>
                             </div>
                         </div>
-                        <div class="wrapped-loop-4 wrapped-loop wrapped-3">
-                            <a onclick="openCard(4)"><i class="fa-solid fa-fingerprint"></i></a>
-                            <div class="imgPc">
-                                <img src="/img/firefighting/doors/door-d2o.png" alt="door">
-                            </div>
-                            <div class="title-text">
-                                ДВЕРИ ПРОТИВОПОЖАРНЫЕ ДВУПОЛЬНЫЕ ОСТЕКЛЕННЫЕ МЕТАЛЛИЧЕСКИЕ<br>ДП-02-О (EI 60)
-                            </div>
-                            <div class="parphs">
-                                <div class="parph"><strong>Фурнитура:</strong> ручка п/п на планке Apecs, замок п/п Apecs
-                                    2000 (ц/м ключ/ключ, ключ/барашек)</div>
-                                <div class="parph"><strong>Толщина металла:</strong> 1,2мм-2мм</div>
-                                <div class="parph"><strong>Покраска:</strong> порошковое полимерное покрытие шагрень ral
-                                    8017, 9016, 7035, 7040 (любой другой по согласованию)</div>
-                                <div class="parph"><strong>Открывание:</strong> правое, левое, внутреннее открывание</div>
-                                <div class="parph"><strong>Порог:</strong> с порогом/без порога</div>
-                                <div class="parph"><strong>Остекление:</strong> не более 25%</div>
-                                <div class="parph"><strong>Дополнительно:</strong> система антипаники с пуш-баром, доводчик.
-                                </div>
-                            </div>
-                            <div class="price">
-                                <div class="parph">от 12 000 &#8381;</div>
-                                <a href="#">Заказать</a>
-                            </div>
-                        </div>
-                        <div class="wrapped-loop-4 wrapped-loop wrapped-4">
-                            <a onclick="openCard(4)"><i class="fa-solid fa-fingerprint"></i></a>
-                            <div class="imgPc">
-                                <img src="/img/firefighting/doors/door-d2o.png" alt="door">
-                            </div>
-                            <div class="title-text">
-                                ДВЕРИ ПРОТИВОПОЖАРНЫЕ ДВУПОЛЬНЫЕ ОСТЕКЛЕННЫЕ АЛЮМИНИЕВЫЕ<br>ДП-02-О (EI 60)
-                            </div>
-                            <div class="parphs">
-                                <div class="parph"><strong>Фурнитура:</strong> ручка п/п на планке Apecs, замок п/п Apecs
-                                    2000 (ц/м ключ/ключ, ключ/барашек)</div>
-                                <div class="parph"><strong>Толщина металла:</strong> 1,2мм-2мм</div>
-                                <div class="parph"><strong>Покраска:</strong> порошковое полимерное покрытие шагрень ral
-                                    8017, 9016, 7035, 7040 (любой другой по согласованию)</div>
-                                <div class="parph"><strong>Открывание:</strong> правое, левое, внутреннее открывание</div>
-                                <div class="parph"><strong>Порог:</strong> с порогом/без порога</div>
-                                <div class="parph"><strong>Остекление:</strong> не более 25%</div>
-                                <div class="parph"><strong>Дополнительно:</strong> система антипаники с пуш-баром, доводчик.
-                                </div>
-                            </div>
-                            <div class="price">
-                                <div class="parph">от 12 000 &#8381;</div>
-                                <a href="#">Заказать</a>
-                            </div>
-                        </div>
+                        <a class="prevCardDoor" onclick="plusSlideCardDoor(`alum`, -1)">&#10094</a>
+                        <a class="nextCardDoor" onclick="plusSlideCardDoor(`alum`, 1)">&#10095</a>
                     </div>
                 </div>
-                <a class="prevCardDoor" onclick="plusSlideCardDoor(-1)">&#10094</a>
-                <a class="nextCardDoor" onclick="plusSlideCardDoor(1)">&#10095</a>
             </div>
-            <div class="dots-card-door" style="text-align: center">
-                <span class="dot-card-door" onclick="currentSlideCardDoor(1)"></span>
-                <span class="dot-card-door" onclick="currentSlideCardDoor(2)"></span>
-                <span class="dot-card-door" onclick="currentSlideCardDoor(3)"></span>
-                <span class="dot-card-door" onclick="currentSlideCardDoor(4)"></span>
-            </div>
-            <script async src="/js/intervalCards.js"></script>
             <script async src="/js/sliderFDoor.js"></script>
         </div>
         <div id="lukes" class="container lukes">
@@ -646,7 +337,7 @@
                             culpa hic enim. Nam cumque ipsam accusamus?</div>
                         <div class="price">
                             <div class="parph">от 6 500 &#8381;</div>
-                            <a href="#">Заказать</a>
+                            <a onclick="onOrderCall()">Заказать</a>
                         </div>
                     </div>
                 </div>
@@ -680,7 +371,7 @@
                         <div class="parph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa ad labore consequuntur perferendis veritatis facilis explicabo omnis porro aperiam debitis a, molestias placeat nostrum blanditiis praesentium fuga non fugit at mollitia. Asperiores sunt, autem recusandae doloremque ea, nihil soluta ipsum, dolor vitae obcaecati voluptate tempora excepturi ab alias dolorum labore! Deserunt ullam quidem perspiciatis iusto accusantium perferendis rerum enim eum nobis amet facilis repellat reprehenderit ratione, maiores dicta! Nulla, repellendus!</div>
                         <div class="price">
                             <div class="parph">от 6 500 &#8381;</div>
-                            <a href="#">Заказать</a>
+                            <a onclick="onOrderCall()">Заказать</a>
                         </div>
                     </div>
                 </div>

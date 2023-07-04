@@ -1,0 +1,13 @@
+@import '_mixins', '_variables'
+    
+main
+    background-color: $colorFiveBackground
+    .container
+        @include container
+        .contacts
+            .titleText
+                line-height: clamp(40px, 3vw, 64px)
+            .error-404
+                font-size: clamp(40px, 3vw, 64px)
+                margin-top: 0
+                line-height: clamp(50px, 4vw, 80px)

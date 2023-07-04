@@ -1,11 +1,14 @@
 const formSend = document.querySelector(".form-send-contacts");
 const wrap4form = document.querySelector(".wrap-4-form");
+const body = document.querySelector("body");
+
 let firstClick = false;
 
 document.addEventListener("click", (e) => {
   if (!wrap4form.contains(e.target)) {
     if ((formSend.classList.contains("active")) && (!firstClick)) {
       formSend.classList.remove("active");
+      body.style.overflow = 'scroll';
     }
     firstClick = false;
   }
@@ -13,5 +16,6 @@ document.addEventListener("click", (e) => {
 
 const onOrderCall = () => {
   formSend.classList.add("active");
+  body.style.overflow = 'hidden';
   firstClick = true;
 };
