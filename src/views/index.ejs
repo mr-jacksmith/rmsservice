@@ -9,7 +9,7 @@
     <meta name="description"
         content="Окна ПВХ. Металлические двери, противопожарные двери, аллюминиевые двери. Противопожарные люки." />
     <meta name="keywords" content="окна, двери, пвх, металлические, противопожарные, аллюминиевые, люки" />
-    <link rel="stylesheet" href="/css/style.min.css" />
+    <link rel="stylesheet" href="/css/style.min.css" type="text/css" />
     <link type="image/png" sizes="16x16" rel="icon" href="/img/favicon_16х16.png">
     <link type="image/png" sizes="32x32" rel="icon" href="/img/favicon_32x32.png">
     <link type="image/png" sizes="96x96" rel="icon" href="/img/favicon_96x96.png">
@@ -22,7 +22,8 @@
         <div class="soff-main">
             <div class="special-offer">
                 <div class="alignCenter">
-                    <div class="offerText"><i class="fa-solid fa-door-open"></i>Специальное предложение от РемМашСервис</div>
+                    <div class="offerText"><i class="fa-solid fa-door-open"></i>Специальное предложение от РемМашСервис
+                    </div>
                     <div class="more-info"><a href="">Узнать больше <i class="fa-solid fa-angles-right"></i></a></div>
                 </div>
                 <i class="fa-solid fa-xmark" onclick="closeSoff()"></i>
@@ -56,11 +57,11 @@
                             <li><a href="/firefighting#lukes">Люки</a></li>
                             <li><a href="/photogallery">Фотогалерея</a></li>
                             <li><a href="/contacts">Контакты</a></li>
-                            <li class="givePhone"><a href="">Заказать звонок</a></li>
+                            <li class="givePhone"><a onclick="onOrderCall()">Заказать звонок</a></li>
                         </ul>
                     </nav>
                     <div class="search"></div>
-                    <div class="givePhone"><a href="">Заказать звонок</a></div>
+                    <div class="givePhone"><a onclick="onOrderCall()">Заказать звонок</a></div>
                 </div>
                 <div id="burger" class="burger">
                     <span></span>
@@ -388,12 +389,32 @@
     <script async src="/js/fixedNavbar.js"></script>
     <script async src="/js/closeSpecialOffer.js"></script>
     <script async src="/js/go-to-top.js"></script>
-    <form method="post" action="/contact">
-        <input type="text" name="name" placeholder="Your Name">
-        <input type="email" name="email" placeholder="Email Address">
-        <textarea name="message" placeholder="Your message here"></textarea>
-        <input type="submit" value="Send">
-      </form>
+    <div class="form-send-contacts">
+        <div class="wrap-4-form">
+            <div class="wrap-inner">
+                <div class="title-text">
+                    ЗАКАЗАТЬ ЗВОНОК
+                </div>
+                <form method="post" action="/contact">
+                    <div class="input-box">
+                        <span class="icon"><i class="fa-regular fa-user"></i></span>
+                        <input id="name" type="text" name="name" required>
+                        <label>Ваше имя</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><i class="fa-solid fa-mobile-screen"></i></span>
+                        <input id="phone" type="tel" name="phone" required>
+                        <label>Ваш номер телефона</label>
+                    </div>
+                    <div class="submit">
+                        <input type="submit" value="Заказать звонок">
+                        <label>Нажимая кнопку «Заказать звонок», Вы даете свое согласие на обработку персональных данных</label>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <script async src="/js/showOrderCall.js"></script>
+    </div>
 </body>
 
 </html>

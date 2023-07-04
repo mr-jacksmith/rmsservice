@@ -7,36 +7,35 @@ const fs = require("fs");
 const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use(express.static("public"));
+app.use(express.static(__dirname + "/public"));
 app.set('view engine', 'ejs')
 
 app.post("/contact", function (req, res) {
-  // const transporter = nodemailer.createTransport({
-  //   service: "Gmail",
-  //   auth: {
-  //     user: "youremail@gmail.com",
-  //     pass: "yourpassword",
-  //   },
-  // });
+  const transporter = nodemailer.createTransport({
+    service: "Gmail",
+    auth: {
+      user: "a.a.peshnin@gmail.com",
+      pass: "ykgileysayblyzcp",
+    },
+  });
 
-  // const mailOptions = {
-  //   from: `${req.body.name} <${req.body.email}>`,
-  //   to: "recipientemail@gmail.com",
-  //   subject: "Website Inquiry",
-  //   text: req.body.message,
-  // };
-  res.send(req.body.email + " " + req.body.message);
-  // console.log();
+  const mailOptions = {
+    from: `${req.body.name} <${req.body.email}>`,
+    to: "a.a.peshnin@gmail.com",
+    subject: "Website Inquiry",
+    text: req.body.message,
+  };
+  // res.send(req.body.email + " " + req.body.message);
 
-  // transporter.sendMail(mailOptions, function (error, info) {
-  //   if (error) {
-  //     console.log(error);
-  //     res.send("error");
-  //   } else {
-  //     console.log("Email sent: " + info.response);
-  //     res.send("Sent");
-  //   }
-  // });
+  transporter.sendMail(mailOptions, function (error, info) {
+    if (error) {
+      console.log(error);
+      res.send("error");
+    } else {
+      console.log("Email sent: " + info.response);
+      res.send("Sent");
+    }
+  });
 });
 
 app.get("/", (req, res) => {
