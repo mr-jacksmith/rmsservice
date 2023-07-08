@@ -35,13 +35,16 @@
     margin-bottom: clamp(13px, calc(20 * 1vw/17.11), 30px)
 
 @mixin container
+    // width: 80%
     padding-block: 3%
     padding-inline: 10%
     @media (max-width: 768px)
         padding-block: 1%
         padding-inline: 5%
+        // width: 90%
     @media (max-width: 360px)
         padding-inline: 3%
+        // width: 95%
 
 @mixin title
     font-family: "AvenirNextCyr-Bold"

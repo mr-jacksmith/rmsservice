@@ -3,12 +3,13 @@ const nodemailer = require("nodemailer");
 const bodyParser = require("body-parser");
 const http = require("http");
 const fs = require("fs");
+const path = require("path");
 
 const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(express.static(__dirname + "/public"));
-app.set('view engine', 'ejs')
+app.set("view engine", "ejs");
 
 app.post("/contact", function (req, res) {
   const transporter = nodemailer.createTransport({
@@ -35,6 +36,34 @@ app.post("/contact", function (req, res) {
       res.render("successful");
     }
   });
+});
+
+app.get("/gallery-img", (req, res) => {
+  const imagesDirectory = path.join(__dirname, "public/img/photogallery");
+  fs.readdir(imagesDirectory, (err, files) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.send(files);
+    }
+  });
+});
+
+app.get("/interior-img", (req, res) => {
+  const imagesDirectory = path.join(__dirname, "public/img/doors/interior");
+  fs.readdir(imagesDirectory, (err, files) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.send(files.filter((el) => el.startsWith("model")));
+    }
+  });
+});
+
+app.get("/interior-json", (req, res) => {
+  const imagesDirectory = path.join(__dirname, "public/img/doors/interior/_models.txt");
+  let interiorJson = fs.readFileSync(imagesDirectory, "utf8");
+  res.send(interiorJson)
 });
 
 app.get("/", (req, res) => {

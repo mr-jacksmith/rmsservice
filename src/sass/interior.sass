@@ -2,7 +2,6 @@
 @import '_variables'
     
 .gallery 
-    overflow: hidden
     width: 100%
 
 .gallery-container
@@ -10,9 +9,8 @@
     display: flex
     height: 900px
     margin: 0 auto
+    max-width: 1800px
     position: relative
-    @include container
-    padding: 0
 
 .gallery-item
     display: none
@@ -68,19 +66,52 @@
         height: 100%
         width: 100%
 
-.gallery-item-1, .gallery-item-3
+.gallery-item--1
+    display: block
+    left: 14%
+
+.gallery-item--1, .gallery-item-7
+    display: block
+    height: 15%
+    opacity: .1
+    transform: translateX(-50%)
+    z-index: -3
+
+.gallery-item-0
+    left: 20%
+
+
+.gallery-item-0, .gallery-item-6
+    display: block
+    height: 30%
+    opacity: .2
+    transform: translateX(-50%)
+    z-index: -2
+
+.gallery-item-1 
+    left: 30%
+
+.gallery-item-1, .gallery-item-5
+    display: block
+    height: 45%
+    opacity: .3
+    transform: translateX(-50%)
+    z-index: -1
+
+
+.gallery-item-2, .gallery-item-4 
     display: block
     height: 60%
-    opacity: 0.5
+    opacity: 0.8
     width: auto
     z-index: 0
 
-.gallery-item-1
-    left: -10%
+.gallery-item-2 
+    left: 40%
     transform: translateX(-50%)
 
 
-.gallery-item-2
+.gallery-item-3 
     display: block
     box-shadow: -2px 5px 33px 6px rgba(0,0,0,0.35)
     height: 75%
@@ -94,8 +125,24 @@
     .wrapped
         display: flex
 
-.gallery-item-3
-    left: 110%
+.gallery-item-4 
+    left: 60%
+    transform: translateX(-50%)
+
+
+.gallery-item-5 
+    left: 70%
+    opacity: .3
+    transform: translateX(-50%)
+
+.gallery-item-6
+    left: 80%
+    opacity: .2
+    transform: translateX(-50%)
+
+.gallery-item-7
+    left: 86%
+    opacity: .1
     transform: translateX(-50%)
 
 
@@ -234,10 +281,7 @@ main
             h1
                 margin-top: clamp(40px, 2.9222676797vw, 60px)
     .gallery-container
-        @media ( min-aspect-ratio: 1 )
-            height: 80vh
-        @media screen and ( max-aspect-ratio: 1 )
-            height: 60vh
+        height: 60vh
     .gallery-controls 
         margin: 0
         button
