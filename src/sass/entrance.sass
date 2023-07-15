@@ -38,6 +38,7 @@ main
                 @include title-text
                 @include martop-mm
                 @include marbot-mm
+                text-align: center
             .text
                 @include text
         .cards
@@ -92,10 +93,31 @@ main
                 .imgPc
                     width: 100%
                     height: 82%
+                    position: relative
                     img
                         width: 100%
                         height: 100%
                         object-fit: contain
+                    .prevCardDoor, .nextCardDoor
+                        display: block
+                        cursor: pointer
+                        position: absolute
+                        top: 50%
+                        width: auto
+                        margin-top: -22px
+                        padding: 16px
+                        color: white
+                        background-color: $colorButton
+                        font-weight: bold
+                        font-size: 24px
+                        transition: 0.6s ease
+                        border-radius: 0 3px 3px 0
+                        user-select: none
+                    .prevCardDoor
+                        left: 0
+                    .nextCardDoor
+                        right: 0
+                        border-radius: 3px 0 0 3px
                 .title-text
                     @include title-text
                     margin-bottom: 0
@@ -120,6 +142,11 @@ main
                 .right-block>.parph, >.parph
                     @include text
                     margin-top: 0
+                .right-block>.parph-link
+                    @include martop-mm
+                    @include marbot-mm
+                    text-decoration: underline
+                    margin-inline: auto
                 .price
                     // @include martop-mm
                     display: flex
@@ -171,7 +198,9 @@ main
                 transition: background-color 0.6s ease
                 &.active, &:hover
                     background-color: #717171
-    .optima, .econom, .windows
+    .optima
+        padding-top: 0
+    .optima, .econom, .termospace, .windows
         background-color: $colorThirdaryBackground
         .cards
             display: block
@@ -207,6 +236,8 @@ main
                             text-align: right
     .econom
         background-color: $colorFourBackground
+    .termospace
+        background-color: $colorFiveBackground
                 
 
 @media (max-width: 1440px)
@@ -234,7 +265,7 @@ main
             .dots-card-door
                 .dot-card-door
                     display: inline-block
-        .optima, .econom
+        .optima, .econom, .windows, .termospace
             .cards
                 grid-template-columns: 1fr
                 grid-template-rows: 1fr
@@ -294,7 +325,7 @@ main
                             height: 40%
                     .title-text
                         font-size: clamp(18px,1.4026884863vw,32px)
-        .optima, .econom, .windows
+        .optima, .econom, .windows, .termospace
             .info
                 h2
                     @include martop

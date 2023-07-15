@@ -1,10 +1,10 @@
 window.addEventListener('scroll', function() {
     let navbar = document.querySelector('.fixed');
     let scrollTop = document.documentElement.scrollTop;
-    const soffMain = document.querySelector('.soff-main');
+    // const soffMain = document.querySelector('.soff-main');
     const fixed = document.querySelector('.fixed');
     const heightFixed = parseFloat(window.getComputedStyle(fixed, null).height)
-    const generalHeight = parseFloat(window.getComputedStyle(soffMain, null).height) + heightFixed
+    const generalHeight = heightFixed //+ parseFloat(window.getComputedStyle(soffMain, null).height)
   
     if (scrollTop > generalHeight) {
       navbar.classList.add('pre-pp');

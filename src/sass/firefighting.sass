@@ -55,8 +55,18 @@ main
                 @include title-text
                 @include martop-mm
                 @include marbot-mm
+                text-align: center
+            h3
+                @include martop-mm
             .text
                 @include text
+                ul
+                    list-style-type: disclosure-closed
+                    li
+                        margin-left: clamp(14px, calc(18 * 1vw/17.11), 24px)
+                        @include text
+                        i
+                            margin-right: clamp(14px, calc(18 * 1vw/17.11), 24px)
         .cards
             position: relative
             margin-top: 30px
@@ -106,17 +116,17 @@ main
                     opacity: 0.9
                     // transition: all 0.5s
                     animation: bounce 8s linear infinite
-                &:hover:not(.active), &.active
-                    .imgPc
-                        margin: 0
-                        width: 10%
-                        height: 10%
-                    .title-text
-                        margin-top: 0
-                        margin-bottom: 0
-                    .parphs
-                        display: flex
-                        flex-direction: column
+                // &:hover:not(.active), &.active
+                //     .imgPc
+                //         margin: 0
+                //         width: 10%
+                //         height: 10%
+                //     .title-text
+                //         margin-top: 0
+                //         margin-bottom: 0
+                //     .parphs
+                //         display: flex
+                //         flex-direction: column
                         // flex-wrap: wrap
                     // .wrap
                     //     .wrapped
@@ -157,6 +167,13 @@ main
                 .right-block>.parph, >.parph
                     @include text
                     margin-top: 0
+                .right-block
+                    .parph-li
+                        margin-left: clamp(14px, calc(18 * 1vw/17.11), 24px)
+                        @include text
+                        margin-bottom: 0
+                        i
+                            margin-right: clamp(14px, calc(18 * 1vw/17.11), 24px)
                 .price
                     // @include martop-mm
                     display: flex
@@ -216,7 +233,7 @@ main
             .card
                 grid-column: 1/4
                 display: grid
-                grid-template-columns: repeat(2, 1fr)
+                grid-template-columns: 2fr 3fr
                 height: auto
                 min-height: 72vh
                 max-height: none
@@ -236,12 +253,16 @@ main
                 //     height: 100%
                 .parph
                     display: block
+                    @include marbot-mm
+                    @include martop-mm
                 .title-text
                     @include martop-mm
+                    @include marbot-mm
+                    
                 .right-block
                     display: flex
                     flex-direction: column
-                    justify-content: space-between
+                    justify-content: flex-start
                     height: 90%
     .windows
         background-color: $colorFourBackground

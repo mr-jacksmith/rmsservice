@@ -1,0 +1,11 @@
+main 
+    .optima, .econom, .windows
+        .cards 
+            .card
+                grid-template-columns: 1fr 2fr
+                @media (max-width: 768px)
+                    grid-template-columns: 1fr
+                .right-block
+                    justify-content: flex-start
+                    .parph
+                        margin-top: clamp(10px, calc(16 * 1vw/17.11), 24px)

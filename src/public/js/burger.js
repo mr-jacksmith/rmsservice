@@ -40,7 +40,7 @@ function startBurger () {
     if (burger.classList.contains("active")) {
       navigation.style.display = "flex"
       navigation.style.height = "auto"
-    }
+  }
     else {
       navigation.style.display = "none"
       navigation.style.height = "0px"

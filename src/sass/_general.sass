@@ -1,7 +1,7 @@
 header
     >div
-        &:first-child
-            background-color: $colorSpecialOffer
+        // &:first-child
+        //     background-color: $colorSpecialOffer
         .special-offer
             font-family: "AvenirNextCyr-Light"
             font-weight: 800
@@ -320,8 +320,11 @@ header
             width: 48%
             min-height: 60vh
             img
-                width: 100%
-                margin: clamp(20px, calc(20 * 1vw/17.11), 48px)
+                // display: none
+                height: 100%
+                // margin: clamp(20px, calc(20 * 1vw/17.11), 48px)
+                border-radius: 30px
+                // object-fit: contain
             div
                 position: absolute
                 margin-top: clamp(18px, calc(18 * 1vw/17.11), 35px)
@@ -329,6 +332,7 @@ header
                 border-radius: 10px
                 user-select: none
                 font-size: clamp(15px, calc(18 * 1vw/17.11), 35px)
+                display: none
                 &:nth-of-type(1)
                     background-color: $firstOfType
                     top: 40%
