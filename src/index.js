@@ -22,8 +22,8 @@ app.post("/contact", function (req, res) {
 
   const mailOptions = {
     // from: `${req.body.name} <${req.body.email}>`,
-    // to: "mosunov_89@mail.ru",
-    to: "a.a.peshnin@gmail.com",
+    to: "mosunov_89@mail.ru",
+    // to: "a.a.peshnin@gmail.com",
     subject: "ПЕРЕЗВОН!!!",
     text: `На сайт https://rmskirov.ru поступила заявка от ${req.body.name} с телефонным номером: ${req.body.phone}`,
   };
@@ -50,8 +50,8 @@ app.post("/sendemail", function (req, res) {
 
   const mailOptions = {
     // from: `${req.body.name} <${req.body.email}>`,
-    // to: "mosunov_89@mail.ru",
-    to: "a.a.peshnin@gmail.com",
+    to: "mosunov_89@mail.ru",
+    // to: "a.a.peshnin@gmail.com",
     subject: "СКИДКА 10%!!!",
     text: `На сайт https://rmskirov.ru поступила заявка от ${req.body.email} с просьбой отправить коммерческое предложение и СКИДКУ 10% на ВСЕ УСЛУГИ!`,
   };
@@ -143,6 +143,6 @@ app.get("/*", (req, res) => {
   res.render("error-404");
 });
 
-app.listen(3000, "localhost", function () {
+app.listen(3000, "rmskirov.ru", function () {
   console.log("Server is running on port 3000");
 });
