@@ -85,10 +85,12 @@
                 <div class="h2">
                     <h2>Надежная защита и безопасность вашего предприятия с нашими специализированными противопожарными дверями</h2>
                 </div>
-                <div class="givePrice">Получите скидку 10% на свой E-mail: </div>
-                <input type="text" placeholder="Напишите свой e-mail адрес">
-                <div class="wrongInput">Введите e-mail в формате name@mail.com</div>
-                <div class="giveSale"><button>Получить скидку</button></div>
+                <form method="post" action="/sendemail">
+                    <div class="givePrice">Получите скидку 10% на свой E-mail: </div>
+                    <input type="text" name="email" placeholder="Напишите свой e-mail адрес">
+                    <div class="wrongInput">Введите e-mail в формате name@mail.com</div>
+                    <div class="giveSale"><button type="submit">Получить скидку</button></div>
+                </form>
             </div>
             <div class="right-bar">
                 <img src="/img/главная.jpg" alt="background">

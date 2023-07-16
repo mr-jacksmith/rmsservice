@@ -22,9 +22,38 @@ app.post("/contact", function (req, res) {
 
   const mailOptions = {
     // from: `${req.body.name} <${req.body.email}>`,
+    // to: "mosunov_89@mail.ru",
     to: "a.a.peshnin@gmail.com",
     subject: "ПЕРЕЗВОН!!!",
     text: `На сайт https://rmskirov.ru поступила заявка от ${req.body.name} с телефонным номером: ${req.body.phone}`,
+  };
+
+  transporter.sendMail(mailOptions, function (error, info) {
+    if (error) {
+      console.log(error);
+      res.render("error");
+    } else {
+      console.log("Email sent: " + info.response);
+      res.render("successful");
+    }
+  });
+});
+
+app.post("/sendemail", function (req, res) {
+  const transporter = nodemailer.createTransport({
+    service: "Gmail",
+    auth: {
+      user: "a.a.peshnin@gmail.com",
+      pass: "ykgileysayblyzcp",
+    },
+  });
+
+  const mailOptions = {
+    // from: `${req.body.name} <${req.body.email}>`,
+    // to: "mosunov_89@mail.ru",
+    to: "a.a.peshnin@gmail.com",
+    subject: "СКИДКА 10%!!!",
+    text: `На сайт https://rmskirov.ru поступила заявка от ${req.body.email} с просьбой отправить коммерческое предложение и СКИДКУ 10% на ВСЕ УСЛУГИ!`,
   };
 
   transporter.sendMail(mailOptions, function (error, info) {
