@@ -15,8 +15,8 @@ app.post("/contact", function (req, res) {
   const transporter = nodemailer.createTransport({
     service: "Gmail",
     auth: {
-      user: "a.a.peshnin@gmail.com",
-      pass: "ykgileysayblyzcp",
+      user: "rmskirov1@gmail.com",
+      pass: "qhdwuifvpskdfbik",
     },
   });
 
@@ -43,8 +43,8 @@ app.post("/sendemail", function (req, res) {
   const transporter = nodemailer.createTransport({
     service: "Gmail",
     auth: {
-      user: "a.a.peshnin@gmail.com",
-      pass: "ykgileysayblyzcp",
+      user: "rmskirov1@gmail.com",
+      pass: "qhdwuifvpskdfbik",
     },
   });
 
@@ -143,6 +143,6 @@ app.get("/*", (req, res) => {
   res.render("error-404");
 });
 
-app.listen(3000, "rmskirov.ru", function () {
+app.listen(3000, "localhost", function () {
   console.log("Server is running on port 3000");
 });
