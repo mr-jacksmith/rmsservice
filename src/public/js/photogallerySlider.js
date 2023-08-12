@@ -1,6 +1,6 @@
 const galleryContainer = document.querySelector(".gallery-container");
-const galleryControlsContainer = document.querySelector(".gallery-controls");
-const galleryControls = ["previous", "next"];
+// const galleryControlsContainer = document.querySelector(".gallery-controls");
+const galleryControls = ["prev", "next"];
 const galleryItems = document.querySelectorAll(".gallery-item");
 let imgList;
 let leftSideIndex;
@@ -35,7 +35,7 @@ class Carousel {
   }
 
   setCurrentState(direction) {
-    if (direction.className == "gallery-controls-previous") {
+    if (direction.className == "prev") {
       this.carouselArray.unshift(this.carouselArray.pop());
       leftSideIndex = (leftSideIndex - 1) % imgList.length;
     } else {
@@ -46,17 +46,15 @@ class Carousel {
     this.updateGallery();
   }
 
-  setControls() {
-    this.carouselControls.forEach((control) => {
-      galleryControlsContainer.appendChild(
-        document.createElement("button")
-      ).className = `gallery-controls-${control}`;
-      // document.querySelector(`.gallery-controls-${control}`).innerText = control;
-    });
-  }
+  // setControls() {
+  //   this.carouselControls.forEach((control) => {
+  //     // console.log()
+  //     document.querySelector("."+control).className = `gallery-controls-${control}`;
+  //   });
+  // }
 
   useControls() {
-    const triggers = [...galleryControlsContainer.childNodes];
+    const triggers = [document.querySelector('.prev'), document.querySelector('.next')];
     triggers.forEach((control) => {
       control.addEventListener("click", (e) => {
         e.preventDefault();
@@ -80,7 +78,7 @@ async function getImg() {
         galleryControls
       );
 
-      exampleCarousel.setControls();
+      // exampleCarousel.setControls();
       exampleCarousel.useControls();
     })
     .catch((error) => {

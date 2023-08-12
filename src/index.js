@@ -11,12 +11,14 @@ app.use(bodyParser.json());
 app.use(express.static(__dirname + "/public"));
 app.set("view engine", "ejs");
 
+passwordOfEmail = "zzvszjtknjswzkph"
+
 app.post("/contact", function (req, res) {
   const transporter = nodemailer.createTransport({
     service: "Gmail",
     auth: {
       user: "rmskirov1@gmail.com",
-      pass: "qhdwuifvpskdfbik",
+      pass: passwordOfEmail,
     },
   });
 
@@ -44,7 +46,7 @@ app.post("/sendemail", function (req, res) {
     service: "Gmail",
     auth: {
       user: "rmskirov1@gmail.com",
-      pass: "qhdwuifvpskdfbik",
+      pass: passwordOfEmail,
     },
   });
 
@@ -78,6 +80,11 @@ app.get("/gallery-img", (req, res) => {
   });
 });
 
+app.get("/robots.txt", (req, res) => {
+  let fileContent = fs.readFileSync("robots.txt", "utf8");
+  res.send(fileContent);
+});
+
 app.get("/interior-img", (req, res) => {
   const imagesDirectory = path.join(__dirname, "public/img/doors/interior");
   fs.readdir(imagesDirectory, (err, files) => {
@@ -87,6 +94,10 @@ app.get("/interior-img", (req, res) => {
       res.send(files.filter((el) => el.startsWith("model")));
     }
   });
+});
+
+app.get("/privacy-policy", (req, res) => {
+  res.render("privacy-policy");
 });
 
 app.get("/interior-json", (req, res) => {

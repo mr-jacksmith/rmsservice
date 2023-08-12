@@ -1,0 +1,99 @@
+@font-face {
+    font-family: AvenirNextCyr-Demi;
+    src: url("../fonts/Avenir Next Cyr/AvenirNextCyr-Demi.ttf")
+}
+
+@font-face {
+    font-family: AvenirNextCyr-Bold;
+    src: url("../fonts/Avenir Next Cyr/AvenirNextCyr-Bold.ttf")
+}
+
+@font-face {
+    font-family: AvenirNextCyr-Medium;
+    src: url("../fonts/Avenir Next Cyr/AvenirNextCyr-Medium.ttf")
+}
+
+@font-face {
+    font-family: AvenirNextCyr-Light;
+    src: url("../fonts/Avenir Next Cyr/AvenirNextCyr-Light.ttf")
+}
+
+@font-face {
+    font-family: AvenirNextCyr-Thin;
+    src: url("../fonts/Avenir Next Cyr/AvenirNextCyr-Thin.ttf")
+}
+
+@font-face {
+    font-family: AvenirNextCyr-Regular;
+    src: url("../fonts/Avenir Next Cyr/AvenirNextCyr-Regular.ttf")
+}
+
+.container-main {
+    width: 80%;
+    margin-inline: auto;
+    padding-block: 3%;
+}
+
+@media (max-width: 768px) {
+    .container-main {
+        width: 90%;
+        padding-block: 10%;
+    }
+}
+
+@media (max-width: 360px) {
+    .container-main {
+        width: 95%;
+    }
+}
+
+h4 {
+    font-family: AvenirNextCyr-Bold;
+    font-size: clamp(32px, 2.1040327294vw, 48px);
+    /* margin-top: clamp(40px,2.9222676797vw,60px); */
+    /* margin-bottom: clamp(40px,2.9222676797vw,60px); */
+    text-align: center;
+}
+
+h5 {
+    margin-top: clamp(20px,1.7533606078vw,60px);
+    font-family: AvenirNextCyr-Bold;
+    font-size: clamp(20px,1.4026884863vw,32px);
+}
+
+.descr, .li {
+    margin-top: clamp(10px,0.9351256575vw,24px);
+    color: #56566d;
+    line-height: clamp(24px,1.4026884863vw,48px);
+    font-size: clamp(14px,.9351256575vw,24px);
+}
+
+.purpose-table {
+    border-collapse: collapse;
+    margin-bottom: 24px;
+}
+
+.purpose-table th, .purpose-table td {
+    vertical-align: top;
+    padding: 0.5em 0.75em;
+}
+
+.purpose-table th {
+    width: 200px;
+    text-align: left;
+    font-weight: 500;
+}
+
+.purpose-table, .purpose-table th, .purpose-table td {
+    border: 1px solid #d8d8d8;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+.purpose-table li::before {
+    content: "●";
+    display: inline-block;
+    font-size: 10px;
+    line-height: 24px;
+    margin-right: 5px;
+}
